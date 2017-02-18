@@ -1,0 +1,24 @@
+PODS:
+  - CTMediator (0.0.3)
+  - CTMediator+Tower (1.0.0):
+    - CTMediator
+  - Tower (1.0.0)
+
+DEPENDENCIES:
+  - CTMediator+Tower (from `../CTMediator+Tower`)
+  - Tower (from `../Tower`)
+
+EXTERNAL SOURCES:
+  CTMediator+Tower:
+    :path: "../CTMediator+Tower"
+  Tower:
+    :path: "../Tower"
+
+SPEC CHECKSUMS:
+  CTMediator: c9a1203561e2232cb9a72822659159a02ae3cf20
+  CTMediator+Tower: 434484a52c1043093114532287234b473a64061f
+  Tower: c0ac4d2ff98fc4b562f220319b99195628b92fe9
+
+PODFILE CHECKSUM: d95ee8cca028efcf9aafe40e8809c8069a20dc45
+
+COCOAPODS: 1.2.0

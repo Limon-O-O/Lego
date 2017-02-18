@@ -1,0 +1,12 @@
+source 'https://github.com/Limon-O-O/Lego.git'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+
+target 'Lego' do
+  # Uncomment this line if you're using Swift or would like to use dynamic frameworks
+  use_frameworks!
+
+  pod "CTMediator+Tower", :path => "../CTMediator+Tower"
+  pod "Tower", :path => "../Tower"
+
+end
