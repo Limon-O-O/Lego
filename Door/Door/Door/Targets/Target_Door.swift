@@ -12,27 +12,27 @@ import UIKit
 class Target_Door: NSObject {
 
     func Action_WelcomeViewController(params: [String: Any]) -> UIViewController {
-        let towerViewController = WelcomeViewController()
-        towerViewController.innateParams = params
-        return towerViewController
+        let viewController = WelcomeViewController()
+        viewController.innateParams = params
+        return viewController
     }
 
     func Action_LoginViewController(params: [String: Any]) -> UIViewController {
-        let towerViewController = LoginViewController()
-        towerViewController.innateParams = params
-        return towerViewController
+        let viewController = LoginViewController()
+        viewController.innateParams = params
+        return viewController
     }
 
     func Action_PhoneNumberPickerViewController(params: [String: Any]) -> UIViewController {
-        let towerViewController = PhoneNumberPickerViewController()
-        towerViewController.innateParams = params
-        return towerViewController
+        let viewController = PhoneNumberPickerViewController()
+        viewController.innateParams = params
+        return viewController
     }
 
     func Action_ProfilePickerViewController(params: [String: Any]) -> UIViewController {
-        let towerViewController = ProfilePickerViewController()
-        towerViewController.innateParams = params
-        return towerViewController
+        let viewController = ProfilePickerViewController()
+        viewController.innateParams = params
+        return viewController
     }
 
 }
