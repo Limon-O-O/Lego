@@ -23,9 +23,7 @@ class FirstViewController: UIViewController {
             print("Tower callbacked with info: \(info)")
         }
 
-        let deliverParams: [String: Any] = ["color": UIColor.red, "callbackAction": callbackAction]
-
-        guard let towerViewController = CTMediator.sharedInstance().tower.towerViewController(with: deliverParams) else {
+        guard let towerViewController = CTMediator.sharedInstance().tower.towerViewController(with: UIColor.red, callbackAction: callbackAction) else {
             return
         }
         navigationController?.pushViewController(towerViewController, animated: true)

@@ -10,7 +10,8 @@ import UIKit
 import CTMediator
 
 extension Tower where Base: CTMediator {
-    public func towerViewController(with params: [String: Any], shouldCacheTarget: Bool = false) -> UIViewController? {
-        return base.performTarget("Tower", action: "viewController", params: params, shouldCacheTarget: shouldCacheTarget) as? UIViewController
+    public func towerViewController(with color: UIColor, callbackAction: (([String: Any]) -> Void)?) -> UIViewController? {
+        let deliverParams: [String: Any] = ["color": color, "callbackAction": callbackAction]
+        return base.performTarget("Tower", action: "viewController", params: deliverParams, shouldCacheTarget: false) as? UIViewController
     }
 }
