@@ -11,7 +11,7 @@ import UIKit
 @objc(Target_Tower)
 class Target_Tower: NSObject {
 
-    func Action_viewController(params: [String: Any]) -> UIViewController {
+    func Action_TowerViewController(params: [String: Any]) -> UIViewController {
         let towerViewController = TowerViewController()
         towerViewController.innateParams = params
         return towerViewController

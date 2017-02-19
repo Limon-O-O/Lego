@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0072A728A7E7126C1FF6C594 /* Pods_CTMediator_Tower.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E90D0399AE2B36EF21E2DD /* Pods_CTMediator_Tower.framework */; };
+		ED7A63001E59EA8500B1E085 /* Tower.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7A62FF1E59EA8500B1E085 /* Tower.swift */; };
 		EDCF7F021E58A4AA00D5CF94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCF7F011E58A4AA00D5CF94 /* AppDelegate.swift */; };
 		EDCF7F041E58A4AA00D5CF94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCF7F031E58A4AA00D5CF94 /* ViewController.swift */; };
 		EDCF7F071E58A4AA00D5CF94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDCF7F051E58A4AA00D5CF94 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 		6C3284574D527E22189ADCE5 /* Pods-CTMediator+Tower.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTMediator+Tower.release.xcconfig"; path = "Pods/Target Support Files/Pods-CTMediator+Tower/Pods-CTMediator+Tower.release.xcconfig"; sourceTree = "<group>"; };
 		AD34F4D35325AB1FFF8A0822 /* Pods-CTMediator+Tower.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTMediator+Tower.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CTMediator+Tower/Pods-CTMediator+Tower.debug.xcconfig"; sourceTree = "<group>"; };
 		C7E90D0399AE2B36EF21E2DD /* Pods_CTMediator_Tower.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CTMediator_Tower.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED7A62FF1E59EA8500B1E085 /* Tower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tower.swift; sourceTree = "<group>"; };
 		EDCF7EFE1E58A4AA00D5CF94 /* CTMediator+Tower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CTMediator+Tower.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDCF7F011E58A4AA00D5CF94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDCF7F031E58A4AA00D5CF94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		EDCF7F131E58A4C300D5CF94 /* CTMediator+Tower */ = {
 			isa = PBXGroup;
 			children = (
+				ED7A62FF1E59EA8500B1E085 /* Tower.swift */,
 				EDCF7F141E58A4F300D5CF94 /* CTMediator+Tower.swift */,
 			);
 			path = "CTMediator+Tower";
@@ -225,6 +228,7 @@
 				EDCF7F041E58A4AA00D5CF94 /* ViewController.swift in Sources */,
 				EDCF7F151E58A4F300D5CF94 /* CTMediator+Tower.swift in Sources */,
 				EDCF7F021E58A4AA00D5CF94 /* AppDelegate.swift in Sources */,
+				ED7A63001E59EA8500B1E085 /* Tower.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +390,7 @@
 				EDCF7F121E58A4AA00D5CF94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
