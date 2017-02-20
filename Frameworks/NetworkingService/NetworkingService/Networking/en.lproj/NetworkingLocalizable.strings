@@ -1,0 +1,13 @@
+/* 
+  NetworkingLocalizable.strings
+  NetworkingService
+
+  Created by Limon on 20/02/2017.
+  Copyright © 2017 Limon.F. All rights reserved.
+*/
+
+"The network isn't available" = "The network isn't available";
+"Invalid URL" = "Invalid URL";
+"Response json serialization failed" = "Response json serialization failed";
+
+"locate" = "en";

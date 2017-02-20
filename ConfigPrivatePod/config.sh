@@ -4,13 +4,18 @@ httpsRepo="https://github.com/Limon-O-O/Lego.git"
 sshRepo="git@github.com:Limon-O-O/Lego.git"
 specsRepo="https://github.com/Limon-O-O/Lego.git"
 homePage="https://github.com/Limon-O-O/Lego"
+author="Limon"
 
 BGreen='\033[1;32m'
 Default='\033[0;m'
 
 projectName=""
+projectType=""
+frameworkName=""
 confirmed="n"
 profilePath="./templates/Podfile"
+currentDate=`date +%Y-%m-%d`
+extensionPrefix="CTMediator+"
 
 getProjectName() {
     read -p "Enter Project Name: " projectName
@@ -21,6 +26,53 @@ getProjectName() {
 
     if test -z "$projectName"; then
         getProjectName
+    fi
+}
+
+getProjectType() {
+
+    echo -e "\n${Default}================================================"
+    echo -e " 1 :  ${BGreen}Module${Default}"
+    echo -e " 2 :  ${BGreen}Extension${Default}"
+    echo -e " 3 :  ${BGreen}Framework${Default}"
+    echo -e "================================================\n"
+
+    read -p "Enter Project Type Number: " projectTypeNumber
+
+    case $projectTypeNumber in  
+        "1"|"Module")  
+            projectType="Module"
+            projectDirectoryPath="../Modules/${projectName}"
+            ;;
+        "2"|"Extension")  
+            projectType="Extension"
+            projectName="${extensionPrefix}${projectName}"
+            projectDirectoryPath="../Modules/${projectName}"
+            ;;
+        "3"|"Framework") 
+            projectType="Framework"
+            projectDirectoryPath="../Frameworks/${projectName}"
+            ;;
+    esac
+
+    if [[ -z ${projectType} ]]; then
+        echo "Invalid type number." && exit 1
+    fi
+
+    if test -z "$projectType"; then
+        getProjectType
+    fi
+}
+
+getFrameworkName() {
+    read -p "Enter Framework Name: " frameworkName
+
+    if [[ -z ${frameworkName} ]]; then
+        echo "Invalid Framework name." && exit 1
+    fi
+
+    if test -z "$frameworkName"; then
+        getFrameworkName
     fi
 }
 
@@ -45,10 +97,17 @@ updatePodfile() {
 }
 
 getInfomation() {
+
     getProjectName
+    getProjectType
+
+    if [[ $projectType == "Framework" ]]; then
+        getFrameworkName
+    fi
 
     echo -e "\n${Default}================================================"
     echo -e "  Project Name  :  ${BGreen}${projectName}${Default}"
+    echo -e "  Project Type  :  ${BGreen}${projectType}${Default}"
     echo -e "  HTTPS Repo    :  ${BGreen}${httpsRepo}${Default}"
     echo -e "  SSH Repo      :  ${BGreen}${sshRepo}${Default}"
     echo -e "  Specs Repo    :  ${BGreen}${specsRepo}${Default}"
@@ -67,10 +126,6 @@ done
 
 updatePodfile
 
-projectDirectoryPath="../${projectName}"
-
-mkdir -p "${projectDirectoryPath}/${projectName}/${projectName}"
-
 licenseFilePath="${projectDirectoryPath}/FILE_LICENSE"
 gitignoreFilePath="${projectDirectoryPath}/.gitignore"
 specFilePath="${projectDirectoryPath}/${projectName}.podspec"
@@ -81,42 +136,107 @@ compareFilePath="${projectDirectoryPath}/version_compare.sh"
 podfilePath="${projectDirectoryPath}/Podfile"
 updateVersionPath="${projectDirectoryPath}/update_version.sh"
 
-echo "Copy to $licenseFilePath"
-cp -f ./templates/FILE_LICENSE            "$licenseFilePath"
-echo "Copy to $gitignoreFilePath"
-cp -f ./templates/gitignore               "$gitignoreFilePath"
-echo "Copy to $specFilePath"
-cp -f ./templates/pod.podspec             "$specFilePath"
-echo "Copy to $readmeFilePath"
-cp -f ./templates/README.md               "$readmeFilePath"
-echo "Copy to $uploadFilePath"
-cp -f ./templates/upload.sh               "$uploadFilePath"
-echo "Copy to $releaseFilePath"
-cp -f ./templates/release.sh              "$releaseFilePath"
-echo "Copy to $compareFilePath"
-cp -f ./templates/version_compare.sh      "$compareFilePath"
-echo "Copy to $podfilePath"
-cp -f ./templates/Podfile                 "$podfilePath"
-echo "Copy to $updateVersionPath"
-cp -f ./templates/update_version.sh       "$updateVersionPath"
+copyFiles() {
+    echo "Copy to $licenseFilePath"
+    cp -f ./templates/FILE_LICENSE            "$licenseFilePath"
+    echo "Copy to $gitignoreFilePath"
+    cp -f ./templates/gitignore               "$gitignoreFilePath"
+    echo "Copy to $specFilePath"
+    cp -f ./templates/pod.podspec             "$specFilePath"
+    echo "Copy to $readmeFilePath"
+    cp -f ./templates/README.md               "$readmeFilePath"
+    echo "Copy to $uploadFilePath"
+    cp -f ./templates/upload.sh               "$uploadFilePath"
+    echo "Copy to $releaseFilePath"
+    cp -f ./templates/release.sh              "$releaseFilePath"
+    echo "Copy to $compareFilePath"
+    cp -f ./templates/version_compare.sh      "$compareFilePath"
+    echo "Copy to $podfilePath"
+    cp -f ./templates/Podfile                 "$podfilePath"
+    echo "Copy to $updateVersionPath"
+    cp -f ./templates/update_version.sh       "$updateVersionPath"
+}
 
-echo "Editing..."
-sed -i "" "s%__ProjectName__%${projectName}%g" "$gitignoreFilePath"
-sed -i "" "s%__ProjectName__%${projectName}%g" "$uploadFilePath"
-sed -i "" "s%__ProjectName__%${projectName}%g" "$podfilePath"
+copyModuleFiles() {
+    targetFilePath="${projectDirectoryPath}/${projectName}/${projectName}/Target_${projectName}.swift"
 
-sed -i "" "s%__ProjectName__%${projectName}%g" "$readmeFilePath"
-sed -i "" "s%__SpecsRepo__%${specsRepo}%g" "$readmeFilePath"
+    echo "Copy to $targetFilePath"
+    cp -f ./templates/module/target/Target_Project.swift       "$targetFilePath"
 
-sed -i "" "s%__ProjectName__%${projectName}%g" "$releaseFilePath"
-sed -i "" "s%__HomePage__%${homePage}%g" "$releaseFilePath"
-sed -i "" "s%__HTTPSRepo__%${httpsRepo}%g" "$releaseFilePath"
+    sed -i "" "s%__ProjectName__%${projectName}%g" "$targetFilePath"
+    sed -i "" "s%__Author__%${author}%g" "$targetFilePath"
+    sed -i "" "s%__Time__%${currentDate}%g" "$targetFilePath"
+}
 
-sed -i "" "s%__ProjectName__%${projectName}%g" "$specFilePath"
-sed -i "" "s%__HomePage__%${homePage}%g"      "$specFilePath"
-sed -i "" "s%__HTTPSRepo__%${httpsRepo}%g"    "$specFilePath"
-echo "Edit finished"
+copyExtensionFiles() {
 
+    shortProjectName=${projectName##*$extensionPrefix}
+
+    extensionFilePath="${projectDirectoryPath}/${projectName}/${projectName}/${projectName}.swift"
+    projectProtocolFilePath="${projectDirectoryPath}/${projectName}/${projectName}/${shortProjectName}Protocol.swift"
+
+    echo "Copy to $extensionFilePath"
+    cp -f ./templates/module/extension/CTMediator+Project.swift                 "$extensionFilePath"
+    echo "Copy to $projectProtocolFilePath"
+    cp -f ./templates/module/extension/ProjectProtocol.swift       "$projectProtocolFilePath"
+
+    sed -i "" "s%__ProjectName__%${shortProjectName}%g" "$extensionFilePath"
+    sed -i "" "s%__Author__%${author}%g" "$extensionFilePath"
+    sed -i "" "s%__Time__%${currentDate}%g" "$extensionFilePath"
+
+    sed -i "" "s%__ProjectName__%${shortProjectName}%g" "$projectProtocolFilePath"
+    sed -i "" "s%__Author__%${author}%g" "$projectProtocolFilePath"
+    sed -i "" "s%__projectName__%$(tr '[:upper:]' '[:lower:]' <<< ${shortProjectName:0:1})${shortProjectName:1}%g" "$projectProtocolFilePath"
+    sed -i "" "s%__Time__%${currentDate}%g" "$projectProtocolFilePath"
+}
+
+editFiles() {
+    echo "Editing..."
+    sed -i "" "s%__ProjectName__%${projectName}%g" "$gitignoreFilePath"
+    sed -i "" "s%__ProjectName__%${projectName}%g" "$uploadFilePath"
+
+    [ $projectType != "Framework" ] && sed -i "" "s%__ProjectName__%${projectName}%g" "$podfilePath"
+
+    sed -i "" "s%__ProjectName__%${projectName}%g" "$readmeFilePath"
+    sed -i "" "s%__SpecsRepo__%${specsRepo}%g" "$readmeFilePath"
+
+    sed -i "" "s%__ProjectName__%${projectName}%g" "$releaseFilePath"
+    sed -i "" "s%__HomePage__%${homePage}%g" "$releaseFilePath"
+    sed -i "" "s%__HTTPSRepo__%${httpsRepo}%g" "$releaseFilePath"
+
+    sed -i "" "s%__ProjectName__%${projectName}%g" "$specFilePath"
+    sed -i "" "s%__HomePage__%${homePage}%g"      "$specFilePath"
+    sed -i "" "s%__HTTPSRepo__%${httpsRepo}%g"    "$specFilePath"
+    sed -i "" "s%__Author__%${author}%g"    "$specFilePath"
+    echo "Edit finished"
+}
+
+case $projectType in  
+    "Module")  
+        mkdir -p "${projectDirectoryPath}/${projectName}/${projectName}"
+        copyFiles
+        copyModuleFiles
+        editFiles
+        ;;
+    "Extension")
+        mkdir -p "${projectDirectoryPath}/${projectName}/${projectName}"
+        copyFiles
+        copyExtensionFiles
+        editFiles
+        ;;
+    "Framework")
+        mkdir -p "${projectDirectoryPath}/${projectName}/${frameworkName}"
+        specFilePath="${projectDirectoryPath}/${frameworkName}.podspec"
+        projectNameBuffer=$projectName
+        projectName=$frameworkName
+
+        copyFiles
+        editFiles
+        sed -i "" "s%__ProjectName__%${projectNameBuffer}%g" "$podfilePath"
+        ;;
+esac
+
+# [ $projectType != "Framework" ] && echo aaa || echo bbb
 # echo "cleaning..."
 # cd "${projectDirectoryPath}"
 # git init
