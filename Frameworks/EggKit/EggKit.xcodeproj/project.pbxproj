@@ -1,0 +1,349 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EDCBBCCC1E5AF44B00769112 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCBBCCB1E5AF44B00769112 /* AppDelegate.swift */; };
+		EDCBBCCE1E5AF44B00769112 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCBBCCD1E5AF44B00769112 /* ViewController.swift */; };
+		EDCBBCD11E5AF44B00769112 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDCBBCCF1E5AF44B00769112 /* Main.storyboard */; };
+		EDCBBCD31E5AF44B00769112 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDCBBCD21E5AF44B00769112 /* Assets.xcassets */; };
+		EDCBBCD61E5AF44B00769112 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDCBBCD41E5AF44B00769112 /* LaunchScreen.storyboard */; };
+		EDCBBCDF1E5AF47800769112 /* Egg.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCBBCDE1E5AF47800769112 /* Egg.swift */; };
+		EDCBBCE31E5AF4D300769112 /* String+Egg.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCBBCE21E5AF4D300769112 /* String+Egg.swift */; };
+		EDCBBCE61E5AF5A600769112 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCBBCE51E5AF5A600769112 /* SegueHandlerType.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EDCBBCC81E5AF44B00769112 /* EggKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EggKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDCBBCCB1E5AF44B00769112 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EDCBBCCD1E5AF44B00769112 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EDCBBCD01E5AF44B00769112 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EDCBBCD21E5AF44B00769112 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDCBBCD51E5AF44B00769112 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EDCBBCD71E5AF44B00769112 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDCBBCDE1E5AF47800769112 /* Egg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Egg.swift; sourceTree = "<group>"; };
+		EDCBBCE21E5AF4D300769112 /* String+Egg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Egg.swift"; sourceTree = "<group>"; };
+		EDCBBCE51E5AF5A600769112 /* SegueHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDCBBCC51E5AF44B00769112 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EDCBBCBF1E5AF44B00769112 = {
+			isa = PBXGroup;
+			children = (
+				EDCBBCCA1E5AF44B00769112 /* EggKit */,
+				EDCBBCC91E5AF44B00769112 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDCBBCC91E5AF44B00769112 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDCBBCC81E5AF44B00769112 /* EggKit.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDCBBCCA1E5AF44B00769112 /* EggKit */ = {
+			isa = PBXGroup;
+			children = (
+				EDCBBCDD1E5AF46000769112 /* EggKit */,
+				EDCBBCCB1E5AF44B00769112 /* AppDelegate.swift */,
+				EDCBBCCD1E5AF44B00769112 /* ViewController.swift */,
+				EDCBBCCF1E5AF44B00769112 /* Main.storyboard */,
+				EDCBBCD21E5AF44B00769112 /* Assets.xcassets */,
+				EDCBBCD41E5AF44B00769112 /* LaunchScreen.storyboard */,
+				EDCBBCD71E5AF44B00769112 /* Info.plist */,
+			);
+			path = EggKit;
+			sourceTree = "<group>";
+		};
+		EDCBBCDD1E5AF46000769112 /* EggKit */ = {
+			isa = PBXGroup;
+			children = (
+				EDCBBCDE1E5AF47800769112 /* Egg.swift */,
+				EDCBBCE41E5AF58E00769112 /* Protocols */,
+				EDCBBCE01E5AF4CE00769112 /* Components */,
+				EDCBBCE11E5AF4CE00769112 /* Extensions */,
+			);
+			path = EggKit;
+			sourceTree = "<group>";
+		};
+		EDCBBCE01E5AF4CE00769112 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		EDCBBCE11E5AF4CE00769112 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EDCBBCE21E5AF4D300769112 /* String+Egg.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EDCBBCE41E5AF58E00769112 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EDCBBCE51E5AF5A600769112 /* SegueHandlerType.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDCBBCC71E5AF44B00769112 /* EggKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDCBBCDA1E5AF44B00769112 /* Build configuration list for PBXNativeTarget "EggKit" */;
+			buildPhases = (
+				EDCBBCC41E5AF44B00769112 /* Sources */,
+				EDCBBCC51E5AF44B00769112 /* Frameworks */,
+				EDCBBCC61E5AF44B00769112 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EggKit;
+			productName = EggKit;
+			productReference = EDCBBCC81E5AF44B00769112 /* EggKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDCBBCC01E5AF44B00769112 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Limon.F;
+				TargetAttributes = {
+					EDCBBCC71E5AF44B00769112 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EDCBBCC31E5AF44B00769112 /* Build configuration list for PBXProject "EggKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDCBBCBF1E5AF44B00769112;
+			productRefGroup = EDCBBCC91E5AF44B00769112 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDCBBCC71E5AF44B00769112 /* EggKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDCBBCC61E5AF44B00769112 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDCBBCD61E5AF44B00769112 /* LaunchScreen.storyboard in Resources */,
+				EDCBBCD31E5AF44B00769112 /* Assets.xcassets in Resources */,
+				EDCBBCD11E5AF44B00769112 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDCBBCC41E5AF44B00769112 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDCBBCE31E5AF4D300769112 /* String+Egg.swift in Sources */,
+				EDCBBCDF1E5AF47800769112 /* Egg.swift in Sources */,
+				EDCBBCCE1E5AF44B00769112 /* ViewController.swift in Sources */,
+				EDCBBCE61E5AF5A600769112 /* SegueHandlerType.swift in Sources */,
+				EDCBBCCC1E5AF44B00769112 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EDCBBCCF1E5AF44B00769112 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDCBBCD01E5AF44B00769112 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EDCBBCD41E5AF44B00769112 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDCBBCD51E5AF44B00769112 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EDCBBCD81E5AF44B00769112 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EDCBBCD91E5AF44B00769112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDCBBCDB1E5AF44B00769112 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EggKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = top.limon.EggKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EDCBBCDC1E5AF44B00769112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EggKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = top.limon.EggKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDCBBCC31E5AF44B00769112 /* Build configuration list for PBXProject "EggKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDCBBCD81E5AF44B00769112 /* Debug */,
+				EDCBBCD91E5AF44B00769112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDCBBCDA1E5AF44B00769112 /* Build configuration list for PBXNativeTarget "EggKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDCBBCDB1E5AF44B00769112 /* Debug */,
+				EDCBBCDC1E5AF44B00769112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDCBBCC01E5AF44B00769112 /* Project object */;
+}

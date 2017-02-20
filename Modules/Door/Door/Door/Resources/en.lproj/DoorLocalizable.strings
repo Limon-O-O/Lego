@@ -1,0 +1,14 @@
+/* 
+  DoorLocalizable.strings
+  Door
+
+  Created by Limon on 20/02/2017.
+  Copyright © 2017 Limon.F. All rights reserved.
+*/
+
+"select_login_way" = "Login with";
+"button.weibo_login" = "Weibo";
+"button.qq_login" = "QQ";
+"button.wechat_login" = "WeChat";
+"button.phone_login" = "Phone";
+"button.register_by_phone" = "Sign Up with Phone";

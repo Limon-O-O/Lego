@@ -20,6 +20,8 @@
 		ED7A62DA1E59E20A00B1E085 /* PhoneNumberPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7A62D91E59E20A00B1E085 /* PhoneNumberPickerViewController.swift */; };
 		ED7A62DC1E59E84B00B1E085 /* ProfilePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7A62DB1E59E84B00B1E085 /* ProfilePickerViewController.swift */; };
 		ED7A63041E59ED0300B1E085 /* Target_Door.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7A63031E59ED0300B1E085 /* Target_Door.swift */; };
+		EDCBBCEA1E5AF6A800769112 /* Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCBBCE81E5AF6A800769112 /* Configure.swift */; };
+		EDCBBCEE1E5AFD2F00769112 /* DoorLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EDCBBCF01E5AFD2F00769112 /* DoorLocalizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,9 @@
 		ED7A62D91E59E20A00B1E085 /* PhoneNumberPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberPickerViewController.swift; sourceTree = "<group>"; };
 		ED7A62DB1E59E84B00B1E085 /* ProfilePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePickerViewController.swift; sourceTree = "<group>"; };
 		ED7A63031E59ED0300B1E085 /* Target_Door.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Target_Door.swift; sourceTree = "<group>"; };
+		EDCBBCE81E5AF6A800769112 /* Configure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configure.swift; sourceTree = "<group>"; };
+		EDCBBCEF1E5AFD2F00769112 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/DoorLocalizable.strings; sourceTree = "<group>"; };
+		EDCBBCF11E5AFD3C00769112 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/DoorLocalizable.strings"; sourceTree = "<group>"; };
 		FDE7A8DF01A284361DFF4F76 /* Pods-Door.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Door.release.xcconfig"; path = "Pods/Target Support Files/Pods-Door/Pods-Door.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				ED39E9FA1E5A9253003A0AE4 /* Door.xcassets */,
+				EDCBBCF01E5AFD2F00769112 /* DoorLocalizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -116,6 +122,7 @@
 			children = (
 				ED7A62CF1E59D5F200B1E085 /* Door.storyboard */,
 				ED7A62D11E59D60D00B1E085 /* WelcomeViewController.swift */,
+				EDCBBCE71E5AF6A800769112 /* Configures */,
 				ED39E9F91E5A9248003A0AE4 /* Resources */,
 				ED7A62DD1E59E99A00B1E085 /* Targets */,
 				ED7A62D31E59D67D00B1E085 /* Login */,
@@ -165,6 +172,14 @@
 			path = Targets;
 			sourceTree = "<group>";
 		};
+		EDCBBCE71E5AF6A800769112 /* Configures */ = {
+			isa = PBXGroup;
+			children = (
+				EDCBBCE81E5AF6A800769112 /* Configure.swift */,
+			);
+			path = Configures;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -211,6 +226,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = ED7A62B01E59D47500B1E085;
 			productRefGroup = ED7A62BA1E59D47500B1E085 /* Products */;
@@ -230,6 +246,7 @@
 				ED7A62C71E59D47500B1E085 /* LaunchScreen.storyboard in Resources */,
 				ED7A62C41E59D47500B1E085 /* Assets.xcassets in Resources */,
 				ED7A62D01E59D5F200B1E085 /* Door.storyboard in Resources */,
+				EDCBBCEE1E5AFD2F00769112 /* DoorLocalizable.strings in Resources */,
 				ED7A62C21E59D47500B1E085 /* Main.storyboard in Resources */,
 				ED39E9FB1E5A9253003A0AE4 /* Door.xcassets in Resources */,
 			);
@@ -294,6 +311,7 @@
 				ED7A62D81E59D69000B1E085 /* LoginViewController.swift in Sources */,
 				ED7A62DA1E59E20A00B1E085 /* PhoneNumberPickerViewController.swift in Sources */,
 				ED7A62D21E59D60D00B1E085 /* WelcomeViewController.swift in Sources */,
+				EDCBBCEA1E5AF6A800769112 /* Configure.swift in Sources */,
 				ED7A63041E59ED0300B1E085 /* Target_Door.swift in Sources */,
 				ED7A62BF1E59D47500B1E085 /* ViewController.swift in Sources */,
 				ED7A62BD1E59D47500B1E085 /* AppDelegate.swift in Sources */,
@@ -319,6 +337,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		EDCBBCF01E5AFD2F00769112 /* DoorLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDCBBCEF1E5AFD2F00769112 /* en */,
+				EDCBBCF11E5AFD3C00769112 /* zh-Hans */,
+			);
+			name = DoorLocalizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -326,6 +353,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -375,6 +403,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

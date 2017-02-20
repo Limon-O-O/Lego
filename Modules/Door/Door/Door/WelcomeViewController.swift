@@ -7,21 +7,53 @@
 //
 
 import UIKit
+import EggKit
 import RxSwift
 import MonkeyKing
-// import Networking
+import Networking
+
+enum LoginPlatform: String {
+    case weChat = "wechat"
+    case phone = "phone"
+    case weibo = "weibo"
+    case qq = "qq"
+}
+
+struct LoginUser {
+    let userID: Int
+    let nickname: String
+}
+
+extension LoginUser: Mappable {
+
+    init?(json: [String: Any]) {
+        guard let userID = json["user_id"] as? Int,
+            let nickname = json["user_nickname"] as? String
+            else { return nil }
+        self.userID = userID
+        self.nickname = nickname
+    }
+
+    static func mapping(json: [String: Any]) -> LoginUser? {
+        return LoginUser(json: json)
+    }
+}
 
 class WelcomeViewController: UIViewController {
 
+    var innateParams: [String: Any] = [:]
+
     @IBOutlet fileprivate weak var loginButton: UIButton!
 
-    @IBOutlet weak var registerButton: UIButton!
-    @IBOutlet weak var weiboButton: UIButton!
-    @IBOutlet weak var qqButton: UIButton!
-    @IBOutlet weak var wechatButton: UIButton!
-    @IBOutlet weak var phoneButton: UIButton!
-    @IBOutlet weak var loginWayLabel: UILabel!
+    @IBOutlet private weak var registerButton: UIButton!
+    @IBOutlet private weak var weiboButton: UIButton!
+    @IBOutlet private weak var qqButton: UIButton!
+    @IBOutlet private weak var wechatButton: UIButton!
+    @IBOutlet private weak var phoneButton: UIButton!
+    @IBOutlet private weak var loginWayLabel: UILabel!
     fileprivate var showStatusBar = false
+
+    fileprivate let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,22 +73,6 @@ class WelcomeViewController: UIViewController {
         wechatButton.setTitle("button.wechat_login".egg.localized, for: .normal)
         phoneButton.setTitle("button.phone_login".egg.localized, for: .normal)
         registerButton.setTitle("button.register_by_phone".egg.localized, for: .normal)
-
-        if !CrispUserDefaults.didRequestNetworking {
-
-            CrispUserDefaults.didRequestNetworking = true
-
-            EggAlert.confirmOrCancel(title: nil, message: "prompt.open_network_permission.description".egg.localized, confirmTitle: "prompt.open_now.action".egg.localized, cancelTitle: "prompt.cancel.action".egg.localized, inViewController: self, withConfirmAction: { [weak self] in
-
-                guard let `self` = self else { return }
-
-                NetworkingService.launch()
-                    .subscribe(onNext: { res in
-                    })
-                    .addDisposableTo(self.disposeBag)
-
-                }, cancelAction: {})
-        }
 
         showStatusBar = false
 
@@ -104,44 +120,16 @@ extension WelcomeViewController: SegueHandlerType {
         setNeedsStatusBarAppearanceUpdate()
     }
 
-    private func login(platform: CrispUserDefaults.LoginPlatform, token: String, openID: String) {
+    private func login(platform: LoginPlatform, token: String, openID: String) {
 
-        EggHUD.showActivityIndicator()
+        NetworkingService.login(phoneNumber: "", mapper: LoginUser.self)
+            .observeOn(MainScheduler.asyncInstance)
+            .subscribe(onNext: { success in
 
-        NetworkingService.login(platform: platform.rawValue, token: token, openID: openID).success { userJSON in
+            }, onError: { error in
 
-            guard let loginUser = LoginUser(json: userJSON) else { return }
-
-            UserService.shared.behaviorsAfterLogin(user: loginUser, completionHandler: {
-                EggHUD.hideActivityIndicator()
-                CrispUserDefaults.loginPlatform = platform
-
-                if loginUser.registerRequired {
-                    (UIApplication.shared.delegate as? AppDelegate)?.startPickNameStory()
-                } else if loginUser.recommendationsRequired {
-                    (UIApplication.shared.delegate as? AppDelegate)?.startRecommendationsStory()
-                } else {
-                    (UIApplication.shared.delegate as? AppDelegate)?.startMainStory()
-                }
             })
-
-            }.failure { [weak self] error, isCancelled in
-
-                EggHUD.hideActivityIndicator() {
-                    if let error = error, !isCancelled {
-                        if error.code == NetworkingErrorCode.networkingError {
-                            EggAlert.confirmOrCancel(title: nil, message: "prompt.open_network_permission.description".egg.localized, confirmTitle: "prompt.go_to_open_now.action".egg.localized, cancelTitle: "prompt.cancel.action".egg.localized, inViewController: self, withConfirmAction: {
-                                if let url = URL(string: UIApplicationOpenSettingsURLString) {
-                                    UIApplication.shared.openURL(url)
-                                }
-                            }, cancelAction: {})
-
-                        } else {
-                            EggAlert.alertSorry(message: error.failureReason, inViewController: self)
-                        }
-                    }
-                }
-        }
+            .addDisposableTo(disposeBag)
     }
 
     @IBAction private func qqLogin(_ sender: UIButton) {
@@ -185,9 +173,9 @@ extension WelcomeViewController: SegueHandlerType {
 
         let account = MonkeyKing.Account.weChat(appID: Configure.Account.Wechat.appID, appKey: Configure.Account.Wechat.appKey)
         MonkeyKing.registerAccount(account)
-        
+
         MonkeyKing.oauth(for: .weChat) { [weak self] oauthInfo, response, error in
-            
+
             guard
                 let token = oauthInfo?["access_token"] as? String,
                 let userID = oauthInfo?["openid"] as? String else {
