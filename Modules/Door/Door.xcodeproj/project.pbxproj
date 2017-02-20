@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EADF89393E618B4A6AFDFCAC /* Pods_Door.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A563E11A0505EC5B604FE7D /* Pods_Door.framework */; };
+		ED39E9FB1E5A9253003A0AE4 /* Door.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED39E9FA1E5A9253003A0AE4 /* Door.xcassets */; };
 		ED7A62BD1E59D47500B1E085 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7A62BC1E59D47500B1E085 /* AppDelegate.swift */; };
 		ED7A62BF1E59D47500B1E085 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7A62BE1E59D47500B1E085 /* ViewController.swift */; };
 		ED7A62C21E59D47500B1E085 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED7A62C01E59D47500B1E085 /* Main.storyboard */; };
@@ -21,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19FF648B2CA53A36E2C42E0F /* Pods-Door.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Door.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Door/Pods-Door.debug.xcconfig"; sourceTree = "<group>"; };
+		6A563E11A0505EC5B604FE7D /* Pods_Door.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Door.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED39E9FA1E5A9253003A0AE4 /* Door.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Door.xcassets; sourceTree = "<group>"; };
 		ED7A62B91E59D47500B1E085 /* Door.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Door.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED7A62BC1E59D47500B1E085 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED7A62BE1E59D47500B1E085 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +39,7 @@
 		ED7A62D91E59E20A00B1E085 /* PhoneNumberPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberPickerViewController.swift; sourceTree = "<group>"; };
 		ED7A62DB1E59E84B00B1E085 /* ProfilePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePickerViewController.swift; sourceTree = "<group>"; };
 		ED7A63031E59ED0300B1E085 /* Target_Door.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Target_Door.swift; sourceTree = "<group>"; };
+		FDE7A8DF01A284361DFF4F76 /* Pods-Door.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Door.release.xcconfig"; path = "Pods/Target Support Files/Pods-Door/Pods-Door.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +47,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EADF89393E618B4A6AFDFCAC /* Pods_Door.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF4E568113C88DBE6AEBDA5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A563E11A0505EC5B604FE7D /* Pods_Door.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2A9CC034061A10F23827178 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				19FF648B2CA53A36E2C42E0F /* Pods-Door.debug.xcconfig */,
+				FDE7A8DF01A284361DFF4F76 /* Pods-Door.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ED39E9F91E5A9248003A0AE4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ED39E9FA1E5A9253003A0AE4 /* Door.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		ED7A62B01E59D47500B1E085 = {
 			isa = PBXGroup;
 			children = (
 				ED7A62BB1E59D47500B1E085 /* Door */,
 				ED7A62BA1E59D47500B1E085 /* Products */,
+				D2A9CC034061A10F23827178 /* Pods */,
+				CF4E568113C88DBE6AEBDA5D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +116,7 @@
 			children = (
 				ED7A62CF1E59D5F200B1E085 /* Door.storyboard */,
 				ED7A62D11E59D60D00B1E085 /* WelcomeViewController.swift */,
+				ED39E9F91E5A9248003A0AE4 /* Resources */,
 				ED7A62DD1E59E99A00B1E085 /* Targets */,
 				ED7A62D31E59D67D00B1E085 /* Login */,
 				ED7A62D51E59D67D00B1E085 /* Register */,
@@ -137,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED7A62CB1E59D47500B1E085 /* Build configuration list for PBXNativeTarget "Door" */;
 			buildPhases = (
+				BB0848CE306E86FD06D7C133 /* [CP] Check Pods Manifest.lock */,
 				ED7A62B51E59D47500B1E085 /* Sources */,
 				ED7A62B61E59D47500B1E085 /* Frameworks */,
 				ED7A62B71E59D47500B1E085 /* Resources */,
+				69E31682C50B3505850897E0 /* [CP] Embed Pods Frameworks */,
+				9A21813237C6A6E0FBC82CA5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,10 +231,59 @@
 				ED7A62C41E59D47500B1E085 /* Assets.xcassets in Resources */,
 				ED7A62D01E59D5F200B1E085 /* Door.storyboard in Resources */,
 				ED7A62C21E59D47500B1E085 /* Main.storyboard in Resources */,
+				ED39E9FB1E5A9253003A0AE4 /* Door.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		69E31682C50B3505850897E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Door/Pods-Door-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A21813237C6A6E0FBC82CA5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Door/Pods-Door-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB0848CE306E86FD06D7C133 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ED7A62B51E59D47500B1E085 /* Sources */ = {
@@ -328,6 +415,7 @@
 		};
 		ED7A62CC1E59D47500B1E085 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19FF648B2CA53A36E2C42E0F /* Pods-Door.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Door/Info.plist;
@@ -340,6 +428,7 @@
 		};
 		ED7A62CD1E59D47500B1E085 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDE7A8DF01A284361DFF4F76 /* Pods-Door.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Door/Info.plist;
