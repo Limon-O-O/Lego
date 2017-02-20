@@ -64,18 +64,6 @@ getProjectType() {
     fi
 }
 
-getFrameworkName() {
-    read -p "Enter Framework Name: " frameworkName
-
-    if [[ -z ${frameworkName} ]]; then
-        echo "Invalid Framework name." && exit 1
-    fi
-
-    if test -z "$frameworkName"; then
-        getFrameworkName
-    fi
-}
-
 updatePodfile() {
 
     oldSpecsRepoLine=""
@@ -100,10 +88,6 @@ getInfomation() {
 
     getProjectName
     getProjectType
-
-    if [[ $projectType == "Framework" ]]; then
-        getFrameworkName
-    fi
 
     echo -e "\n${Default}================================================"
     echo -e "  Project Name  :  ${BGreen}${projectName}${Default}"
@@ -195,7 +179,7 @@ editFiles() {
     sed -i "" "s%__ProjectName__%${projectName}%g" "$gitignoreFilePath"
     sed -i "" "s%__ProjectName__%${projectName}%g" "$uploadFilePath"
 
-    [ $projectType != "Framework" ] && sed -i "" "s%__ProjectName__%${projectName}%g" "$podfilePath"
+    sed -i "" "s%__ProjectName__%${projectName}%g" "$podfilePath"
 
     sed -i "" "s%__ProjectName__%${projectName}%g" "$readmeFilePath"
     sed -i "" "s%__SpecsRepo__%${specsRepo}%g" "$readmeFilePath"
@@ -211,30 +195,23 @@ editFiles() {
     echo "Edit finished"
 }
 
+mkdir -p "${projectDirectoryPath}/${projectName}/${projectName}"
+
 case $projectType in  
     "Module")  
-        mkdir -p "${projectDirectoryPath}/${projectName}/${projectName}"
         copyFiles
         copyModuleFiles
-        editFiles
         ;;
     "Extension")
-        mkdir -p "${projectDirectoryPath}/${projectName}/${projectName}"
         copyFiles
         copyExtensionFiles
-        editFiles
         ;;
     "Framework")
-        mkdir -p "${projectDirectoryPath}/${projectName}/${frameworkName}"
-        specFilePath="${projectDirectoryPath}/${frameworkName}.podspec"
-        projectNameBuffer=$projectName
-        projectName=$frameworkName
-
         copyFiles
-        editFiles
-        sed -i "" "s%__ProjectName__%${projectNameBuffer}%g" "$podfilePath"
         ;;
 esac
+
+editFiles
 
 # [ $projectType != "Framework" ] && echo aaa || echo bbb
 # echo "cleaning..."
