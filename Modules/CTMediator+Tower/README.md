@@ -1,4 +1,14 @@
-# "CTMediator+Tower"
+# CTMediator+Tower
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects.
+
+You can install it with the following command:
+
+```bash
+$ [sudo] gem install cocoapods
+```
+
+To integrate CTMediator+Tower into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 source 'https://github.com/Limon-O-O/Lego.git'
@@ -16,3 +26,5 @@ Then, run the following command:
 ```bash
 $ pod install
 ```
+
+
