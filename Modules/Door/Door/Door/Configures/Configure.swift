@@ -49,4 +49,17 @@ struct Configure {
             static let appID = "1104881792"
         }
     }
+
+    class Empty {}
+
+    static var bundle: Bundle {
+        let classBundle = Bundle(for: Empty.self)
+        if let bundleURL = classBundle.url(forResource: "DoorBundle", withExtension: "bundle") {
+            return Bundle(url: bundleURL) ?? classBundle
+        } else {
+            return classBundle
+        }
+    }
+
+    static let tableName: String = "DoorLocalizable"
 }

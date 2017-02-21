@@ -22,6 +22,7 @@
 		ED7A63041E59ED0300B1E085 /* Target_Door.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7A63031E59ED0300B1E085 /* Target_Door.swift */; };
 		EDCBBCEA1E5AF6A800769112 /* Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCBBCE81E5AF6A800769112 /* Configure.swift */; };
 		EDCBBCEE1E5AFD2F00769112 /* DoorLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EDCBBCF01E5AFD2F00769112 /* DoorLocalizable.strings */; };
+		EDE5956B1E5C1765005460FA /* String+Door.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE5956A1E5C1765005460FA /* String+Door.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		EDCBBCE81E5AF6A800769112 /* Configure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configure.swift; sourceTree = "<group>"; };
 		EDCBBCEF1E5AFD2F00769112 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/DoorLocalizable.strings; sourceTree = "<group>"; };
 		EDCBBCF11E5AFD3C00769112 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/DoorLocalizable.strings"; sourceTree = "<group>"; };
+		EDE5956A1E5C1765005460FA /* String+Door.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Door.swift"; sourceTree = "<group>"; };
 		FDE7A8DF01A284361DFF4F76 /* Pods-Door.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Door.release.xcconfig"; path = "Pods/Target Support Files/Pods-Door/Pods-Door.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +124,7 @@
 			children = (
 				ED7A62CF1E59D5F200B1E085 /* Door.storyboard */,
 				ED7A62D11E59D60D00B1E085 /* WelcomeViewController.swift */,
+				EDE595691E5C175A005460FA /* Extensions */,
 				EDCBBCE71E5AF6A800769112 /* Configures */,
 				ED39E9F91E5A9248003A0AE4 /* Resources */,
 				ED7A62DD1E59E99A00B1E085 /* Targets */,
@@ -178,6 +181,14 @@
 				EDCBBCE81E5AF6A800769112 /* Configure.swift */,
 			);
 			path = Configures;
+			sourceTree = "<group>";
+		};
+		EDE595691E5C175A005460FA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EDE5956A1E5C1765005460FA /* String+Door.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +322,7 @@
 				ED7A62D81E59D69000B1E085 /* LoginViewController.swift in Sources */,
 				ED7A62DA1E59E20A00B1E085 /* PhoneNumberPickerViewController.swift in Sources */,
 				ED7A62D21E59D60D00B1E085 /* WelcomeViewController.swift in Sources */,
+				EDE5956B1E5C1765005460FA /* String+Door.swift in Sources */,
 				EDCBBCEA1E5AF6A800769112 /* Configure.swift in Sources */,
 				ED7A63041E59ED0300B1E085 /* Target_Door.swift in Sources */,
 				ED7A62BF1E59D47500B1E085 /* ViewController.swift in Sources */,
