@@ -1,0 +1,402 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		837E31CB037338CE851A5071 /* Pods_LegoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE82A695B10E54C5AA927E3F /* Pods_LegoKit.framework */; };
+		ED82E9871E5DF4F9001AB640 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82E9861E5DF4F9001AB640 /* AppDelegate.swift */; };
+		ED82E9891E5DF4F9001AB640 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82E9881E5DF4F9001AB640 /* ViewController.swift */; };
+		ED82E98C1E5DF4F9001AB640 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED82E98A1E5DF4F9001AB640 /* Main.storyboard */; };
+		ED82E98E1E5DF4F9001AB640 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED82E98D1E5DF4F9001AB640 /* Assets.xcassets */; };
+		ED82E9911E5DF4F9001AB640 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED82E98F1E5DF4F9001AB640 /* LaunchScreen.storyboard */; };
+		ED82E99B1E5DF544001AB640 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82E99A1E5DF544001AB640 /* BaseViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		217DC3C5204761D7CFC8F981 /* Pods-LegoKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LegoKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-LegoKit/Pods-LegoKit.release.xcconfig"; sourceTree = "<group>"; };
+		9BA04C300ABFBD7AAC949469 /* Pods-LegoKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LegoKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LegoKit/Pods-LegoKit.debug.xcconfig"; sourceTree = "<group>"; };
+		ED82E9831E5DF4F9001AB640 /* LegoKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LegoKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED82E9861E5DF4F9001AB640 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ED82E9881E5DF4F9001AB640 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ED82E98B1E5DF4F9001AB640 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED82E98D1E5DF4F9001AB640 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED82E9901E5DF4F9001AB640 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ED82E9921E5DF4F9001AB640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED82E99A1E5DF544001AB640 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FE82A695B10E54C5AA927E3F /* Pods_LegoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LegoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED82E9801E5DF4F9001AB640 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				837E31CB037338CE851A5071 /* Pods_LegoKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F67466CC61576D0913F9039 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9BA04C300ABFBD7AAC949469 /* Pods-LegoKit.debug.xcconfig */,
+				217DC3C5204761D7CFC8F981 /* Pods-LegoKit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3879DBB34979D4A8F83F7827 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE82A695B10E54C5AA927E3F /* Pods_LegoKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED82E97A1E5DF4F9001AB640 = {
+			isa = PBXGroup;
+			children = (
+				ED82E9851E5DF4F9001AB640 /* LegoKit */,
+				ED82E9841E5DF4F9001AB640 /* Products */,
+				0F67466CC61576D0913F9039 /* Pods */,
+				3879DBB34979D4A8F83F7827 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ED82E9841E5DF4F9001AB640 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED82E9831E5DF4F9001AB640 /* LegoKit.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED82E9851E5DF4F9001AB640 /* LegoKit */ = {
+			isa = PBXGroup;
+			children = (
+				ED82E9981E5DF523001AB640 /* LegoKit */,
+				ED82E9861E5DF4F9001AB640 /* AppDelegate.swift */,
+				ED82E9881E5DF4F9001AB640 /* ViewController.swift */,
+				ED82E98A1E5DF4F9001AB640 /* Main.storyboard */,
+				ED82E98D1E5DF4F9001AB640 /* Assets.xcassets */,
+				ED82E98F1E5DF4F9001AB640 /* LaunchScreen.storyboard */,
+				ED82E9921E5DF4F9001AB640 /* Info.plist */,
+			);
+			path = LegoKit;
+			sourceTree = "<group>";
+		};
+		ED82E9981E5DF523001AB640 /* LegoKit */ = {
+			isa = PBXGroup;
+			children = (
+				ED82E9991E5DF535001AB640 /* Base */,
+			);
+			path = LegoKit;
+			sourceTree = "<group>";
+		};
+		ED82E9991E5DF535001AB640 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				ED82E99A1E5DF544001AB640 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED82E9821E5DF4F9001AB640 /* LegoKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED82E9951E5DF4F9001AB640 /* Build configuration list for PBXNativeTarget "LegoKit" */;
+			buildPhases = (
+				7ABD64E6180F9EDF5549142B /* [CP] Check Pods Manifest.lock */,
+				ED82E97F1E5DF4F9001AB640 /* Sources */,
+				ED82E9801E5DF4F9001AB640 /* Frameworks */,
+				ED82E9811E5DF4F9001AB640 /* Resources */,
+				398A7AD3326DC0FD4F03423E /* [CP] Embed Pods Frameworks */,
+				9CE9184531A2B2C8047A14AB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LegoKit;
+			productName = LegoKit;
+			productReference = ED82E9831E5DF4F9001AB640 /* LegoKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED82E97B1E5DF4F9001AB640 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Limon.F;
+				TargetAttributes = {
+					ED82E9821E5DF4F9001AB640 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = ED82E97E1E5DF4F9001AB640 /* Build configuration list for PBXProject "LegoKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED82E97A1E5DF4F9001AB640;
+			productRefGroup = ED82E9841E5DF4F9001AB640 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED82E9821E5DF4F9001AB640 /* LegoKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED82E9811E5DF4F9001AB640 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED82E9911E5DF4F9001AB640 /* LaunchScreen.storyboard in Resources */,
+				ED82E98E1E5DF4F9001AB640 /* Assets.xcassets in Resources */,
+				ED82E98C1E5DF4F9001AB640 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		398A7AD3326DC0FD4F03423E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LegoKit/Pods-LegoKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7ABD64E6180F9EDF5549142B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9CE9184531A2B2C8047A14AB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LegoKit/Pods-LegoKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED82E97F1E5DF4F9001AB640 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED82E9891E5DF4F9001AB640 /* ViewController.swift in Sources */,
+				ED82E9871E5DF4F9001AB640 /* AppDelegate.swift in Sources */,
+				ED82E99B1E5DF544001AB640 /* BaseViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ED82E98A1E5DF4F9001AB640 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED82E98B1E5DF4F9001AB640 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ED82E98F1E5DF4F9001AB640 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED82E9901E5DF4F9001AB640 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED82E9931E5DF4F9001AB640 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ED82E9941E5DF4F9001AB640 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED82E9961E5DF4F9001AB640 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BA04C300ABFBD7AAC949469 /* Pods-LegoKit.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LegoKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = top.limon.LegoKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		ED82E9971E5DF4F9001AB640 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 217DC3C5204761D7CFC8F981 /* Pods-LegoKit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LegoKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = top.limon.LegoKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED82E97E1E5DF4F9001AB640 /* Build configuration list for PBXProject "LegoKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED82E9931E5DF4F9001AB640 /* Debug */,
+				ED82E9941E5DF4F9001AB640 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED82E9951E5DF4F9001AB640 /* Build configuration list for PBXNativeTarget "LegoKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED82E9961E5DF4F9001AB640 /* Debug */,
+				ED82E9971E5DF4F9001AB640 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED82E97B1E5DF4F9001AB640 /* Project object */;
+}

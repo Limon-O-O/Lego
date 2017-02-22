@@ -1,0 +1,44 @@
+LegoKit.xcodeproj/xcuserdata/
+LegoKit.xcworkspace/
+Pods/
+*.swp
+Podfile.lock
+.DS_Store
+LegoKit.xcodeproj/project.xcworkspace/xcuserdata/
+
+
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## Build generated
+build/
+DerivedData
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+
+## Other
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+.idea
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+
+Carthage/Build
+
+WHATSNEW.md
+
+fastlane/
