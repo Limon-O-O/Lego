@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import LegoKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
 
     var innateParams: [String: Any] = [:]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Login"
     }
 }

@@ -136,4 +136,10 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "CTMediator"
 
+  s.dependency "Networking"
+  s.dependency "EggKit"
+  s.dependency "LegoKit"
+  
+  s.dependency "MonkeyKing"
+  s.dependency "RxSwift"
 end

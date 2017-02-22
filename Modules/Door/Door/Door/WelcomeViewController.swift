@@ -43,8 +43,6 @@ class WelcomeViewController: UIViewController {
 
     var innateParams: [String: Any] = [:]
 
-    @IBOutlet fileprivate weak var loginButton: UIButton!
-
     @IBOutlet private weak var registerButton: UIButton!
     @IBOutlet private weak var weiboButton: UIButton!
     @IBOutlet private weak var qqButton: UIButton!
@@ -103,16 +101,16 @@ class WelcomeViewController: UIViewController {
 extension WelcomeViewController: SegueHandlerType {
 
     enum SegueIdentifier: String {
-        case showRegisterPickMobile
-        case showLoginByMobile
+        case showPhoneNumberPicker
+        case showLogin
     }
 
     @IBAction private func register(_ sender: UIButton) {
-        performSegue(withIdentifier: .showRegisterPickMobile, sender: nil)
+        performSegue(withIdentifier: .showPhoneNumberPicker, sender: nil)
     }
 
     @IBAction private func login(_ sender: UIButton) {
-        performSegue(withIdentifier: .showLoginByMobile, sender: nil)
+        performSegue(withIdentifier: .showLogin, sender: nil)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -20,6 +20,8 @@
 		ED7A62DA1E59E20A00B1E085 /* PhoneNumberPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7A62D91E59E20A00B1E085 /* PhoneNumberPickerViewController.swift */; };
 		ED7A62DC1E59E84B00B1E085 /* ProfilePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7A62DB1E59E84B00B1E085 /* ProfilePickerViewController.swift */; };
 		ED7A63041E59ED0300B1E085 /* Target_Door.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7A63031E59ED0300B1E085 /* Target_Door.swift */; };
+		ED82E9771E5DF300001AB640 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED82E9761E5DF300001AB640 /* Register.storyboard */; };
+		ED82E9791E5DF33A001AB640 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED82E9781E5DF33A001AB640 /* Login.storyboard */; };
 		EDCBBCEA1E5AF6A800769112 /* Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCBBCE81E5AF6A800769112 /* Configure.swift */; };
 		EDCBBCEE1E5AFD2F00769112 /* DoorLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EDCBBCF01E5AFD2F00769112 /* DoorLocalizable.strings */; };
 		EDE5956B1E5C1765005460FA /* String+Door.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE5956A1E5C1765005460FA /* String+Door.swift */; };
@@ -42,6 +44,8 @@
 		ED7A62D91E59E20A00B1E085 /* PhoneNumberPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberPickerViewController.swift; sourceTree = "<group>"; };
 		ED7A62DB1E59E84B00B1E085 /* ProfilePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePickerViewController.swift; sourceTree = "<group>"; };
 		ED7A63031E59ED0300B1E085 /* Target_Door.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Target_Door.swift; sourceTree = "<group>"; };
+		ED82E9761E5DF300001AB640 /* Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		ED82E9781E5DF33A001AB640 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		EDCBBCE81E5AF6A800769112 /* Configure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configure.swift; sourceTree = "<group>"; };
 		EDCBBCEF1E5AFD2F00769112 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/DoorLocalizable.strings; sourceTree = "<group>"; };
 		EDCBBCF11E5AFD3C00769112 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/DoorLocalizable.strings"; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 		ED7A62D31E59D67D00B1E085 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				ED82E9781E5DF33A001AB640 /* Login.storyboard */,
 				ED7A62D41E59D67D00B1E085 /* Controllers */,
 			);
 			path = Login;
@@ -153,6 +158,7 @@
 		ED7A62D51E59D67D00B1E085 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				ED82E9761E5DF300001AB640 /* Register.storyboard */,
 				ED7A62D61E59D67D00B1E085 /* Controllers */,
 			);
 			path = Register;
@@ -254,8 +260,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED82E9791E5DF33A001AB640 /* Login.storyboard in Resources */,
 				ED7A62C71E59D47500B1E085 /* LaunchScreen.storyboard in Resources */,
 				ED7A62C41E59D47500B1E085 /* Assets.xcassets in Resources */,
+				ED82E9771E5DF300001AB640 /* Register.storyboard in Resources */,
 				ED7A62D01E59D5F200B1E085 /* Door.storyboard in Resources */,
 				EDCBBCEE1E5AFD2F00769112 /* DoorLocalizable.strings in Resources */,
 				ED7A62C21E59D47500B1E085 /* Main.storyboard in Resources */,

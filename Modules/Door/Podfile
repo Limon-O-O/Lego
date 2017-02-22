@@ -8,6 +8,7 @@ target 'Door' do
 
     pod "Networking", :path => "../../Frameworks/Networking"
     pod "EggKit", :path => "../../Frameworks/EggKit"
+    pod "LegoKit", :path => "../../Frameworks/LegoKit"
 
     pod 'MonkeyKing'
 
