@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['__ProjectName__/__ProjectName__/**/*.storyboard', '__ProjectName__/__ProjectName__/**/*.xib', '__ProjectName__/__ProjectName__/*.xcassets']
+  s.resources = ['__ProjectName__/__ProjectName__/**/*.storyboard', '__ProjectName__/__ProjectName__/**/*.xib', '__ProjectName__/__ProjectName__/*.xcassets', '__ProjectName__/__ProjectName__/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 

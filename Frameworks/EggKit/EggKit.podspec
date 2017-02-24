@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['EggKit/EggKit/**/*.storyboard', 'EggKit/EggKit/**/*.xib', 'EggKit/EggKit/*.xcassets']
+  s.resources = ['EggKit/EggKit/**/*.storyboard', 'EggKit/EggKit/**/*.xib', 'EggKit/EggKit/*.xcassets', 'EggKit/EggKit/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 

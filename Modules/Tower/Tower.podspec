@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['Tower/Tower/**/*.storyboard', 'Tower/Tower/**/*.xib', 'Tower/Tower/*.xcassets']
+  s.resources = ['Tower/Tower/**/*.storyboard', 'Tower/Tower/**/*.xib', 'Tower/Tower/*.xcassets', 'Tower/Tower/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 

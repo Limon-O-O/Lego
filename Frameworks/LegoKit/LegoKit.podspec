@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['LegoKit/LegoKit/**/*.storyboard', 'LegoKit/LegoKit/**/*.xib', 'LegoKit/LegoKit/*.xcassets']
+  s.resources = ['LegoKit/LegoKit/**/*.storyboard', 'LegoKit/LegoKit/**/*.xib', 'LegoKit/LegoKit/*.xcassets', 'LegoKit/LegoKit/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
