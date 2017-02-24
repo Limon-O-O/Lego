@@ -142,7 +142,10 @@ copyFiles() {
 }
 
 copyModuleFiles() {
-    targetFilePath="${projectDirectoryPath}/${projectName}/${projectName}/Target_${projectName}.swift"
+
+    mkdir -p "${projectDirectoryPath}/${projectName}/${projectName}/Targets"
+
+    targetFilePath="${projectDirectoryPath}/${projectName}/${projectName}/Targets/Target_${projectName}.swift"
 
     echo "Copy to $targetFilePath"
     cp -f ./templates/module/target/Target_Project.swift       "$targetFilePath"
@@ -157,7 +160,7 @@ copyExtensionFiles() {
     shortProjectName=${projectName##*$extensionPrefix}
 
     extensionFilePath="${projectDirectoryPath}/${projectName}/${projectName}/${projectName}.swift"
-    projectProtocolFilePath="${projectDirectoryPath}/${projectName}/${projectName}/${shortProjectName}Protocol.swift"
+    projectProtocolFilePath="${projectDirectoryPath}/${projectName}/${projectName}/${shortProjectName}.swift"
 
     echo "Copy to $extensionFilePath"
     cp -f ./templates/module/extension/CTMediator+Project.swift                 "$extensionFilePath"

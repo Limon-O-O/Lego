@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "EggKit"
-  s.version      = "1.0.1"
+  s.version      = "1.0.0"
   s.summary      = "EggKit."
 
   # This description is used to generate tags and improve search results.
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/Limon-O-O/Lego.git" }
+  s.source       = { :git => "https://github.com/Limon-O-O/Lego.git", :tag => s.version.to_s }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['EggKit/EggKit/**/*.storyboard', 'EggKit/EggKit/**/*.xib', 'EggKit/EggKit/*.xcassets', 'EggKit/EggKit/*.lproj']
+  s.resources = ['Frameworks/EggKit/EggKit/**/*.storyboard', 'Frameworks/EggKit/EggKit/**/*.xib', 'Frameworks/EggKit/EggKit/*.xcassets', 'Frameworks/EggKit/EggKit/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 

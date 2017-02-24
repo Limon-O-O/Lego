@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['Door/Door/**/*.storyboard', 'Door/Door/**/*.xib', 'Door/Door/*.xcassets', 'Door/Door/*.lproj']
+  s.resources = ['Frameworks/Door/Door/**/*.storyboard', 'Frameworks/Door/Door/**/*.xib', 'Frameworks/Door/Door/*.xcassets', 'Frameworks/Door/Door/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
@@ -134,6 +134,12 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "CTMediator"
+  s.dependency "MonkeyKing"
+  s.dependency "RxSwift"
+  s.dependency "RxCocoa"
+  
+  s.dependency "Networking"
+  s.dependency "EggKit"
+  s.dependency "LegoKit"
 
 end

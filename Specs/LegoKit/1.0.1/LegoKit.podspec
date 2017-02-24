@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/Limon-O-O/Lego.git" }
+  s.source       = { :git => "https://github.com/Limon-O-O/Lego.git", :tag => s.version.to_s }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['LegoKit/LegoKit/**/*.storyboard', 'LegoKit/LegoKit/**/*.xib', 'LegoKit/LegoKit/*.xcassets', 'LegoKit/LegoKit/*.lproj']
+  s.resources = ['Frameworks/LegoKit/LegoKit/**/*.storyboard', 'Frameworks/LegoKit/LegoKit/**/*.xib', 'Frameworks/LegoKit/LegoKit/*.xcassets', 'Frameworks/LegoKit/LegoKit/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
