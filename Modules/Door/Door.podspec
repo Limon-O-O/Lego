@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Door/Door/**/*.swift"
+  s.source_files  = "Modules/Door/Door/**/*.swift"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['Frameworks/Door/Door/**/*.storyboard', 'Frameworks/Door/Door/**/*.xib', 'Frameworks/Door/Door/*.xcassets', 'Frameworks/Door/Door/*.lproj']
+  s.resources = ['Modules/Door/Door/**/*.storyboard', 'Modules/Door/Door/**/*.xib', 'Modules/Door/Door/*.xcassets', 'Modules/Door/Door/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 

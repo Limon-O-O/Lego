@@ -195,6 +195,23 @@ editFiles() {
     sed -i "" "s%__HomePage__%${homePage}%g"      "$specFilePath"
     sed -i "" "s%__HTTPSRepo__%${httpsRepo}%g"    "$specFilePath"
     sed -i "" "s%__Author__%${author}%g"    "$specFilePath"
+
+    keyword="Modules"
+
+    case $projectType in  
+    "Module")  
+        keyword="Modules"
+        ;;
+    "Extension")
+        keyword="Modules"
+        ;;
+    "Framework")
+        keyword="Frameworks"
+        ;;
+    esac
+
+    sed -i "" "s%__ProjectType__%${keyword}%g" "$specFilePath"
+
     echo "Edit finished"
 }
 
