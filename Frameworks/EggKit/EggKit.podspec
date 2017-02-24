@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "EggKit"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "EggKit."
 
   # This description is used to generate tags and improve search results.
@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
   #
 
   # s.license      = "MIT (example)"
-  s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Frameworks/EggKit/EggKit/**/*.swift"
+  s.source_files  = "Frameworks/EggKit/EggKit/EggKit/**/*.swift"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['Frameworks/EggKit/EggKit/**/*.storyboard', 'Frameworks/EggKit/EggKit/**/*.xib', 'Frameworks/EggKit/EggKit/*.xcassets', 'Frameworks/EggKit/EggKit/*.lproj']
+  s.resources = ['Frameworks/EggKit/EggKit/EggKit/**/*.storyboard', 'Frameworks/EggKit/EggKit/EggKit/**/*.xib', 'Frameworks/EggKit/EggKit/EggKit/**/*.xcassets', 'Frameworks/EggKit/EggKit/EggKit/**/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 

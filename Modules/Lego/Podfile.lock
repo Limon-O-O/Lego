@@ -11,7 +11,7 @@ PODS:
     - Networking
     - RxCocoa
     - RxSwift
-  - EggKit (1.0.1)
+  - EggKit (1.0.0)
   - LegoKit (1.0.1)
   - MonkeyKing (1.2.2)
   - Networking (1.0.1)
@@ -38,16 +38,16 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CTMediator: c9a1203561e2232cb9a72822659159a02ae3cf20
-  CTMediator+Door: c8b1712d49ae232f7cd67586f4b32bd2313d218d
-  CTMediator+Tower: dffddc430b772d18e740cadad21d2c45226033bb
-  Door: 32cec79122bddf233b027605c15fb990fbf20b3b
-  EggKit: 7cbf457239d81fdb137f5bfec6133ac49d7ed37b
-  LegoKit: de16642bf3bd06133b9e09859d9ea7bc42cff674
+  CTMediator+Door: 50f53347b41b1d406a680f1ffaa5afd0e5492b0e
+  CTMediator+Tower: f248115d52cc8f01cc45ba9d61f2cc6845bb2805
+  Door: 2742cd1968992656684252626edd4eca6f03d7fe
+  EggKit: 38973992cc5f27031c65a21a917ef0b6830b96a6
+  LegoKit: a35238538e1309306ed46a5cb73e5b49875eb5cf
   MonkeyKing: 443becfc5579a050cd8b7394b3631c8ed567aae3
-  Networking: cca44c38816c738f1e347e16ae756b0ee31b1f2a
+  Networking: 75739d81e372591a993311847d6317b2f83f05c9
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
-  Tower: 270250acc98471924c0f1b0ab00ceb47aff821ec
+  Tower: 382ae7d9f7e249126cdeda531d6f7d1a86774158
 
 PODFILE CHECKSUM: 2ea008b582449e9a0f5df9ea8636eafd65bef5bf
 

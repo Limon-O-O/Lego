@@ -110,7 +110,7 @@ done
 
 updatePodfile
 
-licenseFilePath="${projectDirectoryPath}/FILE_LICENSE"
+licenseFilePath="${projectDirectoryPath}/LICENSE"
 gitignoreFilePath="${projectDirectoryPath}/.gitignore"
 specFilePath="${projectDirectoryPath}/${projectName}.podspec"
 readmeFilePath="${projectDirectoryPath}/README.md"
@@ -122,7 +122,7 @@ updateVersionPath="${projectDirectoryPath}/update_version.sh"
 
 copyFiles() {
     echo "Copy to $licenseFilePath"
-    cp -f ./templates/FILE_LICENSE            "$licenseFilePath"
+    cp -f ./templates/LICENSE            "$licenseFilePath"
     echo "Copy to $gitignoreFilePath"
     cp -f ./templates/gitignore               "$gitignoreFilePath"
     echo "Copy to $specFilePath"

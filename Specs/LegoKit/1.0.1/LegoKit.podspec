@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
   #
 
   # s.license      = "MIT (example)"
-  s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Frameworks/LegoKit/LegoKit/**/*.swift"
+  s.source_files  = "Frameworks/LegoKit/LegoKit/LegoKit/**/*.swift"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['Frameworks/LegoKit/LegoKit/**/*.storyboard', 'Frameworks/LegoKit/LegoKit/**/*.xib', 'Frameworks/LegoKit/LegoKit/*.xcassets', 'Frameworks/LegoKit/LegoKit/*.lproj']
+  s.resources = ['Frameworks/LegoKit/LegoKit/LegoKit/**/*.storyboard', 'Frameworks/LegoKit/LegoKit/LegoKit/**/*.xib', 'Frameworks/LegoKit/LegoKit/LegoKit/**/*.xcassets', 'Frameworks/LegoKit/LegoKit/LegoKit/**/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
@@ -134,6 +134,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "CTMediator"
+  s.dependency "RxSwift"
 
 end

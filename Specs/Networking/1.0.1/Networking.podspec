@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
   #
 
   # s.license      = "MIT (example)"
-  s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Frameworks/Networking/Networking/**/*.swift"
+  s.source_files  = "Frameworks/Networking/Networking/Networking/**/*.swift"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['Frameworks/Networking/Networking/**/*.storyboard', 'Frameworks/Networking/Networking/**/*.xib', 'Frameworks/Networking/Networking/*.xcassets', 'Frameworks/Networking/Networking/*.lproj']
+  s.resources = ['Frameworks/Networking/Networking/Networking/**/*.storyboard', 'Frameworks/Networking/Networking/Networking/**/*.xib', 'Frameworks/Networking/Networking/Networking/**/*.xcassets', 'Frameworks/Networking/Networking/**/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
