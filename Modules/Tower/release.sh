@@ -114,6 +114,7 @@ cp -f "$podspecFilePath" "$specsPath"
 git pull
 git add "${specsPath}"
 git add "${podspecFilePath}"
+git add "./README.md"
 git commit -m "[$podName] Update version $version"
 git push
 

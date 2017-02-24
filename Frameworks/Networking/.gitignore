@@ -2,7 +2,6 @@ Networking.xcodeproj/xcuserdata/
 Networking.xcworkspace/
 Pods/
 *.swp
-Podfile.lock
 .DS_Store
 Networking.xcodeproj/project.xcworkspace/xcuserdata/
 

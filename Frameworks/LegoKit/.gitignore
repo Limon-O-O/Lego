@@ -2,7 +2,6 @@ LegoKit.xcodeproj/xcuserdata/
 LegoKit.xcworkspace/
 Pods/
 *.swp
-Podfile.lock
 .DS_Store
 LegoKit.xcodeproj/project.xcworkspace/xcuserdata/
 

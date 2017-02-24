@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['CTMediator+Tower/CTMediator+Tower/**/*.storyboard', 'CTMediator+Tower/CTMediator+Tower/**/*.xib', 'CTMediator+Tower/CTMediator+Tower/*.xcassets']
+  s.resources = ['CTMediator+Tower/CTMediator+Tower/**/*.storyboard', 'CTMediator+Tower/CTMediator+Tower/**/*.xib', 'CTMediator+Tower/CTMediator+Tower/*.xcassets', 'CTMediator+Tower/CTMediator+Tower/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
@@ -134,6 +134,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "CTMediator"
+  # s.dependency "CTMediator"
 
 end

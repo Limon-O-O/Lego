@@ -2,7 +2,6 @@ EggKit.xcodeproj/xcuserdata/
 EggKit.xcworkspace/
 Pods/
 *.swp
-Podfile.lock
 .DS_Store
 EggKit.xcodeproj/project.xcworkspace/xcuserdata/
 

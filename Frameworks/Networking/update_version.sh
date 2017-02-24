@@ -117,6 +117,7 @@ while read -r thisPlist; do
 	if [[ ${thisBundleShortVersionString} != ${mainBundleShortVersionString} ]]; then
 		echo -e "${BGreen}Updating \"${thisPlist}\" with marketing version ${mainBundleShortVersionString}..."
 		"${plistBuddy}" -c "Set :CFBundleShortVersionString ${mainBundleShortVersionString}" "${thisPlist}"
+		git add "${thisPlist}"
 	fi
 	echo -e "${BGreen}Current \"${thisPlist}\" version is ${mainBundleShortVersionString} (${mainBundleVersion})."
 done <<< "${plist}"
