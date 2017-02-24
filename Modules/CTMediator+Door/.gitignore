@@ -1,10 +1,9 @@
-CTMediator+Door.xcodeproj/xcuserdata/
-CTMediator+Door.xcworkspace/
+Door.xcodeproj/xcuserdata/
+Door.xcworkspace/
 Pods/
 *.swp
-Podfile.lock
 .DS_Store
-CTMediator+Door.xcodeproj/project.xcworkspace/xcuserdata/
+Door.xcodeproj/project.xcworkspace/xcuserdata/
 
 
 # Xcode

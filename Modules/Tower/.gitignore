@@ -1,10 +1,9 @@
-Tower.xcodeproj/xcuserdata/
-Tower.xcworkspace/
+Door.xcodeproj/xcuserdata/
+Door.xcworkspace/
 Pods/
 *.swp
-Podfile.lock
 .DS_Store
-Tower.xcodeproj/project.xcworkspace/xcuserdata/
+Door.xcodeproj/project.xcworkspace/xcuserdata/
 
 
 # Xcode

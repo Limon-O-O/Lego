@@ -2,7 +2,6 @@ Door.xcodeproj/xcuserdata/
 Door.xcworkspace/
 Pods/
 *.swp
-Podfile.lock
 .DS_Store
 Door.xcodeproj/project.xcworkspace/xcuserdata/
 

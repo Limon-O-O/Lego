@@ -2,7 +2,6 @@ __ProjectName__.xcodeproj/xcuserdata/
 __ProjectName__.xcworkspace/
 Pods/
 *.swp
-Podfile.lock
 .DS_Store
 __ProjectName__.xcodeproj/project.xcworkspace/xcuserdata/
 
