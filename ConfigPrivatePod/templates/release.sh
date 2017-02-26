@@ -7,6 +7,7 @@ podName="__ProjectName__"
 homepage="__HomePage__"
 httpsRepo="__HTTPSRepo__"
 podspecFilePath="./__ProjectName__.podspec"
+projectRootDirectory="__ProjectRootDirectory__"
 
 version=""
 oldVersion=""
@@ -110,6 +111,9 @@ mkdir -p $specsPath
 # 增加新的版本到 Specs，不需要 pod repo lint 
 echo "copy $podspecFilePath to $specsPath"
 cp -f "$podspecFilePath" "$specsPath"
+
+# 修改 source file 的路径
+sed -i "" "s%${podName}/${podName}/%${projectRootDirectory}/${podName}/${podName}/${podName}/%g" "${specsPath}/${podName}.podspec"
 
 git pull
 git add "${specsPath}"

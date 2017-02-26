@@ -196,21 +196,21 @@ editFiles() {
     sed -i "" "s%__HTTPSRepo__%${httpsRepo}%g"    "$specFilePath"
     sed -i "" "s%__Author__%${author}%g"    "$specFilePath"
 
-    keyword="Modules"
+    directory="Modules"
 
     case $projectType in  
     "Module")  
-        keyword="Modules"
+        directory="Modules"
         ;;
     "Extension")
-        keyword="Modules"
+        directory="Modules"
         ;;
     "Framework")
-        keyword="Frameworks"
+        directory="Frameworks"
         ;;
     esac
 
-    sed -i "" "s%__ProjectType__%${keyword}%g" "$specFilePath"
+    sed -i "" "s%__ProjectRootDirectory__%${directory}%g" "$releaseFilePath"
 
     echo "Edit finished"
 }
