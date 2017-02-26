@@ -13,13 +13,9 @@ public struct __ProjectName__<Base> {
     }
 }
 
-extension NSObject: __ProjectName__Protocol {}
+public protocol __ProjectName__Protocol {}
 
-public protocol __ProjectName__Protocol {
-    associatedtype Base
-    var __projectName__: Base { get }
-    static var __ProjectName__: Base.Type { get }
-}
+extension NSObject: __ProjectName__Protocol {}
 
 extension __ProjectName__Protocol {
     public var __projectName__: __ProjectName__<Self> {
