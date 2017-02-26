@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Frameworks/Networking/Networking/Networking/**/*.swift"
+  s.source_files  = "Networking/Networking/**/*.swift"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['Frameworks/Networking/Networking/Networking/**/*.storyboard', 'Frameworks/Networking/Networking/Networking/**/*.xib', 'Frameworks/Networking/Networking/Networking/**/*.xcassets', 'Frameworks/Networking/Networking/**/*.lproj']
+  s.resources = ['Networking/Networking/**/*.storyboard', 'Networking/Networking/**/*.xib', 'Networking/Networking/**/*.xcassets', 'Networking/Networking/**/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
@@ -134,6 +134,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "CTMediator"
+  s.dependency "RxSwift"
+  s.dependency "Alamofire"
 
 end

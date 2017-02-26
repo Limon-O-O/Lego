@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Frameworks/EggKit/EggKit/EggKit/**/*.swift"
+  s.source_files  = "EggKit/EggKit/**/*.swift"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['Frameworks/EggKit/EggKit/EggKit/**/*.storyboard', 'Frameworks/EggKit/EggKit/EggKit/**/*.xib', 'Frameworks/EggKit/EggKit/EggKit/**/*.xcassets', 'Frameworks/EggKit/EggKit/EggKit/**/*.lproj']
+  s.resources = ['EggKit/EggKit/**/*.storyboard', 'EggKit/EggKit/**/*.xib', 'EggKit/EggKit/**/*.xcassets', 'EggKit/EggKit/**/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 

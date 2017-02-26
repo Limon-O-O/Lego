@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Modules/CTMediator+Door/CTMediator+Door/CTMediator+Door/**/*.swift"
+  s.source_files  = "CTMediator+Door/CTMediator+Door/**/*.swift"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['Modules/CTMediator+Door/CTMediator+Door/CTMediator+Door/**/*.storyboard', 'Modules/CTMediator+Door/CTMediator+Door/CTMediator+Door/**/*.xib', 'Modules/CTMediator+Door/CTMediator+Door/CTMediator+Door/**/*.xcassets', 'Modules/CTMediator+Door/CTMediator+Door/CTMediator+Door/**/*.lproj']
+  s.resources = ['CTMediator+Door/CTMediator+Door/**/*.storyboard', 'CTMediator+Door/CTMediator+Door/**/*.xib', 'CTMediator+Door/CTMediator+Door/**/*.xcassets', 'CTMediator+Door/CTMediator+Door/**/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 

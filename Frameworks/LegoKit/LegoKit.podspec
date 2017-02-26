@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Frameworks/LegoKit/LegoKit/LegoKit/**/*.swift"
+  s.source_files  = "LegoKit/LegoKit/**/*.swift"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['Frameworks/LegoKit/LegoKit/LegoKit/**/*.storyboard', 'Frameworks/LegoKit/LegoKit/LegoKit/**/*.xib', 'Frameworks/LegoKit/LegoKit/LegoKit/**/*.xcassets', 'Frameworks/LegoKit/LegoKit/LegoKit/**/*.lproj']
+  s.resources = ['LegoKit/LegoKit/**/*.storyboard', 'LegoKit/LegoKit/**/*.xib', 'LegoKit/LegoKit/**/*.xcassets', 'LegoKit/LegoKit/**/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 

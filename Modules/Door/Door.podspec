@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
   #
 
   # s.license      = "MIT (example)"
-  s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Modules/Door/Door/Door/**/*.swift"
+  s.source_files  = "Door/Door/**/*.swift"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['Modules/Door/Door/Door/**/*.storyboard', 'Modules/Door/Door/Door/**/*.xib', 'Modules/Door/Door/Door/**/*.xcassets', 'Modules/Door/Door/Door/**/*.lproj']
+  s.resources = ['Door/Door/**/*.storyboard', 'Door/Door/**/*.xib', 'Door/Door/**/*.xcassets', 'Door/Door/**/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
