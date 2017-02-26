@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['Frameworks/Networking/Networking/Networking/**/*.storyboard', 'Frameworks/Networking/Networking/Networking/**/*.xib', 'Frameworks/Networking/Networking/Networking/**/*.xcassets', 'Frameworks/Networking/Networking/**/*.lproj']
+  s.resources = ['Frameworks/Networking/Networking/Networking/**/*.storyboard', 'Frameworks/Networking/Networking/Networking/**/*.xib', 'Frameworks/Networking/Networking/Networking/**/*.xcassets', 'Frameworks/Networking/Networking/Networking/**/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
@@ -134,6 +134,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "CTMediator"
+  s.dependency "Alamofire"
+  s.dependency "RxSwift"
 
 end
