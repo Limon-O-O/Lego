@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED2B17E51E6319F900DF617D /* UIColor+Egg.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2B17E41E6319F900DF617D /* UIColor+Egg.swift */; };
+		ED2B17EA1E6320C300DF617D /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2B17E91E6320C300DF617D /* Empty.swift */; };
 		EDCBBCCC1E5AF44B00769112 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCBBCCB1E5AF44B00769112 /* AppDelegate.swift */; };
 		EDCBBCCE1E5AF44B00769112 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCBBCCD1E5AF44B00769112 /* ViewController.swift */; };
 		EDCBBCD11E5AF44B00769112 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDCBBCCF1E5AF44B00769112 /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED2B17E41E6319F900DF617D /* UIColor+Egg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Egg.swift"; sourceTree = "<group>"; };
+		ED2B17E91E6320C300DF617D /* Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
 		EDCBBCC81E5AF44B00769112 /* EggKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EggKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDCBBCCB1E5AF44B00769112 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDCBBCCD1E5AF44B00769112 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED2B17E81E6320BA00DF617D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				ED2B17E91E6320C300DF617D /* Empty.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		EDCBBCBF1E5AF44B00769112 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				EDCBBCDE1E5AF47800769112 /* Egg.swift */,
+				ED2B17E81E6320BA00DF617D /* Base */,
 				EDCBBCE41E5AF58E00769112 /* Protocols */,
 				EDCBBCE01E5AF4CE00769112 /* Components */,
 				EDCBBCE11E5AF4CE00769112 /* Extensions */,
@@ -93,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				EDCBBCE21E5AF4D300769112 /* String+Egg.swift */,
+				ED2B17E41E6319F900DF617D /* UIColor+Egg.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -178,9 +192,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDCBBCE31E5AF4D300769112 /* String+Egg.swift in Sources */,
+				ED2B17E51E6319F900DF617D /* UIColor+Egg.swift in Sources */,
 				EDCBBCDF1E5AF47800769112 /* Egg.swift in Sources */,
 				EDCBBCCE1E5AF44B00769112 /* ViewController.swift in Sources */,
 				EDCBBCE61E5AF5A600769112 /* SegueHandlerType.swift in Sources */,
+				ED2B17EA1E6320C300DF617D /* Empty.swift in Sources */,
 				EDCBBCCC1E5AF44B00769112 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

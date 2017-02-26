@@ -15,13 +15,9 @@ public struct Door<Base> {
     }
 }
 
-extension NSObject: DoorProtocol {}
+public protocol DoorProtocol {}
 
-public protocol DoorProtocol {
-    associatedtype Base
-    var door: Base { get }
-    static var door: Base.Type { get }
-}
+extension NSObject: DoorProtocol {}
 
 extension DoorProtocol {
     public var door: Door<Self> {

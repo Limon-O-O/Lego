@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		837E31CB037338CE851A5071 /* Pods_LegoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE82A695B10E54C5AA927E3F /* Pods_LegoKit.framework */; };
+		ED2B17D61E6309B300DF617D /* Lego.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2B17D51E6309B300DF617D /* Lego.swift */; };
+		ED2B17DF1E6318A200DF617D /* Lego.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED2B17DE1E6318A200DF617D /* Lego.xcassets */; };
+		ED2B17E11E6318DC00DF617D /* UIImage+Lego.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2B17E01E6318DC00DF617D /* UIImage+Lego.swift */; };
+		ED2B17E31E63196700DF617D /* UIColor+Lego.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2B17E21E63196700DF617D /* UIColor+Lego.swift */; };
 		ED82E9871E5DF4F9001AB640 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82E9861E5DF4F9001AB640 /* AppDelegate.swift */; };
 		ED82E9891E5DF4F9001AB640 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82E9881E5DF4F9001AB640 /* ViewController.swift */; };
 		ED82E98C1E5DF4F9001AB640 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED82E98A1E5DF4F9001AB640 /* Main.storyboard */; };
@@ -19,6 +23,10 @@
 /* Begin PBXFileReference section */
 		217DC3C5204761D7CFC8F981 /* Pods-LegoKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LegoKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-LegoKit/Pods-LegoKit.release.xcconfig"; sourceTree = "<group>"; };
 		9BA04C300ABFBD7AAC949469 /* Pods-LegoKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LegoKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LegoKit/Pods-LegoKit.debug.xcconfig"; sourceTree = "<group>"; };
+		ED2B17D51E6309B300DF617D /* Lego.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lego.swift; sourceTree = "<group>"; };
+		ED2B17DE1E6318A200DF617D /* Lego.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Lego.xcassets; sourceTree = "<group>"; };
+		ED2B17E01E6318DC00DF617D /* UIImage+Lego.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Lego.swift"; sourceTree = "<group>"; };
+		ED2B17E21E63196700DF617D /* UIColor+Lego.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Lego.swift"; sourceTree = "<group>"; };
 		ED82E9831E5DF4F9001AB640 /* LegoKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LegoKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED82E9861E5DF4F9001AB640 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED82E9881E5DF4F9001AB640 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +67,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		ED2B17DD1E63189800DF617D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ED2B17E01E6318DC00DF617D /* UIImage+Lego.swift */,
+				ED2B17E21E63196700DF617D /* UIColor+Lego.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		ED82E97A1E5DF4F9001AB640 = {
 			isa = PBXGroup;
 			children = (
@@ -94,7 +111,10 @@
 		ED82E9981E5DF523001AB640 /* LegoKit */ = {
 			isa = PBXGroup;
 			children = (
+				ED2B17D51E6309B300DF617D /* Lego.swift */,
+				ED2B17DD1E63189800DF617D /* Extensions */,
 				ED82E9991E5DF535001AB640 /* Base */,
+				ED2B17DE1E6318A200DF617D /* Lego.xcassets */,
 			);
 			path = LegoKit;
 			sourceTree = "<group>";
@@ -169,6 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED2B17DF1E6318A200DF617D /* Lego.xcassets in Resources */,
 				ED82E9911E5DF4F9001AB640 /* LaunchScreen.storyboard in Resources */,
 				ED82E98E1E5DF4F9001AB640 /* Assets.xcassets in Resources */,
 				ED82E98C1E5DF4F9001AB640 /* Main.storyboard in Resources */,
@@ -230,8 +251,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED2B17D61E6309B300DF617D /* Lego.swift in Sources */,
 				ED82E9891E5DF4F9001AB640 /* ViewController.swift in Sources */,
+				ED2B17E31E63196700DF617D /* UIColor+Lego.swift in Sources */,
 				ED82E9871E5DF4F9001AB640 /* AppDelegate.swift in Sources */,
+				ED2B17E11E6318DC00DF617D /* UIImage+Lego.swift in Sources */,
 				ED82E99B1E5DF544001AB640 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

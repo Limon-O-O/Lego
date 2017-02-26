@@ -15,13 +15,9 @@ public struct Egg<Base> {
     }
 }
 
-extension NSObject: EggProtocol {}
+public protocol EggProtocol {}
 
-public protocol EggProtocol {
-    associatedtype Base
-    var egg: Base { get }
-    static var egg: Base.Type { get }
-}
+extension NSObject: EggProtocol {}
 
 extension EggProtocol {
     public var egg: Egg<Self> {

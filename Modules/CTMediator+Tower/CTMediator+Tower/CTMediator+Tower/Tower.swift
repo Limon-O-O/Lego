@@ -15,13 +15,9 @@ public struct Tower<Base> {
     }
 }
 
-extension NSObject: TowerProtocol {}
+public protocol TowerProtocol {}
 
-public protocol TowerProtocol {
-    associatedtype Base
-    var tower: Base { get }
-    static var tower: Base.Type { get }
-}
+extension NSObject: TowerProtocol {}
 
 extension TowerProtocol {
     public var tower: Tower<Self> {

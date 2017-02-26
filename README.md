@@ -1,15 +1,24 @@
-# Lego
+# 一个人的模块化之路
 
-稍微解析下 `specs repo` 的意思：`https://github.com/CocoaPods/Specs.git` 是 CocoaPods 官方的 `specs repo`，平时我们用 `pod trunk push podName.podspec` 来发布新版本，其实就是向此 `repo` 添加一个新版本的 `podName.podspec`。
+## CocoaPods Specs
 
-比如 MonkeyKing 的已添加的版本 [Specs](https://github.com/CocoaPods/Specs/tree/master/Specs/f/6/5/MonkeyKing)
+大家都知道 CocoaPods 可以指定第三方依赖的版本，比如：`pod 'MonkeyKing', '~> 1.2.1'`
+那 CocoaPods 是如何管理所有已经发布了的版本？
+答案就在此 [CocoaPods Specs](https://github.com/CocoaPods/Specs) 仓库。
 
-在此 [Specs](https://github.com/CocoaPods/Specs/tree/master/Specs/f/6/5/MonkeyKing) 里面，列举所有 MonkeyKing 已经 release 的版本。
+Specs 仓库里面存放着所有已经发布了的版本。
 
-[CocoaPods Specs](https://github.com/CocoaPods/Specs) 是线上版，在我们本地，其还是也有这么个 `repo`，执行下面的命令就可以看到，其中 `master` 相对于 CocoaPods 官方的 `repo`
+比如 MonkeyKing 的已发布的版本 [Specs](https://github.com/CocoaPods/Specs/tree/master/Specs/f/6/5/MonkeyKing)，在此 [Specs](https://github.com/CocoaPods/Specs/tree/master/Specs/f/6/5/MonkeyKing) 里面，列举所有 MonkeyKing 已经 released 的版本。
+
+`https://github.com/CocoaPods/Specs.git` 是 CocoaPods 官方的 `Specs` 仓库，平时我们用 `pod trunk push podName.podspec` 来发布新版本，其实就是向此仓库添加一个名为 `podName.podspec` 的文件。
+
+[CocoaPods Specs](https://github.com/CocoaPods/Specs) 是线上版，在我们本地，其实也有这个仓库，执行下面的命令就可以看到，其中 `master` 对应 CocoaPods 官方的 `Specs` 仓库。
 ```
 cd ~/.cocoapods/repos && ls
 ```
+
+而在此教程的 `Lego` 仓库里，有一个文件夹 [Specs](https://github.com/Limon-O-O/Lego/tree/master/Specs)，此文件夹里存放着个人的 `framework` 的 `podspec`，相当于 Private Spec Repo
+> 更多详情请查看官方资料：[Private Pods](https://guides.cocoapods.org/making/private-cocoapods.html)
 
 
 1. 在 `ConfigPrivatePod/config.sh` 文件里，填写 `httpsRepo`, `sshRepo`, `specsRepo`, `homePage`

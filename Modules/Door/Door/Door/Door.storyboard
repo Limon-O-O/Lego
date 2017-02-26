@@ -168,7 +168,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Zgr-nc-u6I">
             <objects>
-                <navigationController storyboardIdentifier="DoorNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="crj-QP-1hN" customClass="NavigationController" customModule="Door" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="DoorNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="crj-QP-1hN" customClass="NavigationController" customModule="LegoKit" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="arZ-QU-4RB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

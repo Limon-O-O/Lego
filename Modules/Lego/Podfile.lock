@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.3.0)
   - CTMediator (0.0.3)
   - CTMediator+Door (1.0.0):
     - CTMediator
@@ -11,10 +12,14 @@ PODS:
     - Networking
     - RxCocoa
     - RxSwift
-  - EggKit (1.0.0)
-  - LegoKit (1.0.1)
+  - EggKit (1.0.1)
+  - LegoKit (1.0.1):
+    - EggKit
+    - RxSwift
   - MonkeyKing (1.2.2)
-  - Networking (1.0.1)
+  - Networking (1.0.1):
+    - Alamofire
+    - RxSwift
   - RxCocoa (3.2.0):
     - RxSwift (~> 3.1)
   - RxSwift (3.2.0)
@@ -24,6 +29,9 @@ DEPENDENCIES:
   - CTMediator+Door (from `../CTMediator+Door`)
   - CTMediator+Tower (from `../CTMediator+Tower`)
   - Door (from `../Door`)
+  - EggKit (from `../../Frameworks/EggKit`)
+  - LegoKit (from `../../Frameworks/LegoKit`)
+  - Networking (from `../../Frameworks/Networking`)
   - Tower (from `../Tower`)
 
 EXTERNAL SOURCES:
@@ -33,22 +41,29 @@ EXTERNAL SOURCES:
     :path: "../CTMediator+Tower"
   Door:
     :path: "../Door"
+  EggKit:
+    :path: "../../Frameworks/EggKit"
+  LegoKit:
+    :path: "../../Frameworks/LegoKit"
+  Networking:
+    :path: "../../Frameworks/Networking"
   Tower:
     :path: "../Tower"
 
 SPEC CHECKSUMS:
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   CTMediator: c9a1203561e2232cb9a72822659159a02ae3cf20
-  CTMediator+Door: 50f53347b41b1d406a680f1ffaa5afd0e5492b0e
-  CTMediator+Tower: f248115d52cc8f01cc45ba9d61f2cc6845bb2805
-  Door: 2742cd1968992656684252626edd4eca6f03d7fe
-  EggKit: 38973992cc5f27031c65a21a917ef0b6830b96a6
-  LegoKit: a35238538e1309306ed46a5cb73e5b49875eb5cf
+  CTMediator+Door: f67130417b8ae99531e6016799853fb2e01b3986
+  CTMediator+Tower: 09f2d464f8c94f132406ad7c8350a342138f0f42
+  Door: b0811b33bfb396e54bc4eda580c71926e9d52173
+  EggKit: 4ad8e40cd8ad4cc6ff8c415546e0544b1542b2d0
+  LegoKit: 55617431b4cb0b53968ffc6fa0f105fff07bfbc4
   MonkeyKing: 443becfc5579a050cd8b7394b3631c8ed567aae3
-  Networking: 75739d81e372591a993311847d6317b2f83f05c9
+  Networking: 80c33fee1291801025a7455e4f7fac49ea1ed3e8
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
-  Tower: 382ae7d9f7e249126cdeda531d6f7d1a86774158
+  Tower: fe78516d51423e8f39d826a1641a3a9e5862970c
 
-PODFILE CHECKSUM: 2ea008b582449e9a0f5df9ea8636eafd65bef5bf
+PODFILE CHECKSUM: 177b0a17d9c5e964f006c2fc4ae2d52fcf8a62a1
 
 COCOAPODS: 1.2.0

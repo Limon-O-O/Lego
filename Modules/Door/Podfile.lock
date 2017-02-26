@@ -1,10 +1,11 @@
 PODS:
   - Alamofire (4.3.0)
-  - EggKit (1.0.0)
-  - LegoKit (1.0.0):
+  - EggKit (1.0.1)
+  - LegoKit (1.0.1):
+    - EggKit
     - RxSwift
   - MonkeyKing (1.2.1)
-  - Networking (1.0.0):
+  - Networking (1.0.1):
     - Alamofire
     - RxSwift
   - RxCocoa (3.2.0):
@@ -29,10 +30,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
-  EggKit: 1a96d340cc0c69341e2daa51e6b80d825b704ab8
-  LegoKit: 8b3bb11a8624bd3a25c11bfefb5fd046e043b91c
+  EggKit: 4ad8e40cd8ad4cc6ff8c415546e0544b1542b2d0
+  LegoKit: 55617431b4cb0b53968ffc6fa0f105fff07bfbc4
   MonkeyKing: f44795a0ed91a785b0e0bd2e4b6145199901528e
-  Networking: 9a5ff8bbe45de6620a18b965e8f8747cbceeb13f
+  Networking: 80c33fee1291801025a7455e4f7fac49ea1ed3e8
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
 

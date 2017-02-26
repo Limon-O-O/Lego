@@ -8,4 +8,6 @@ target 'LegoKit' do
 
     pod 'RxSwift'
 
+    pod "EggKit", :path => "../EggKit"
+
 end

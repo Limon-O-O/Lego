@@ -19,11 +19,7 @@ class SecondViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        let callbackAction: ([String: Any]) -> Void = { info in
-            print("Door callbacked with info: \(info)")
-        }
-
-        guard let welcomeViewController = CTMediator.sharedInstance().door.welcomeViewController(with: UIColor.red, callbackAction: callbackAction) else {
+        guard let welcomeViewController = CTMediator.sharedInstance().door.welcomeViewController() else {
             return
         }
         navigationController?.pushViewController(welcomeViewController, animated: true)

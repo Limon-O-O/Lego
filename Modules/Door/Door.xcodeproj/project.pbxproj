@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EADF89393E618B4A6AFDFCAC /* Pods_Door.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A563E11A0505EC5B604FE7D /* Pods_Door.framework */; };
+		ED2B17ED1E63210300DF617D /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2B17EC1E63210300DF617D /* Empty.swift */; };
+		ED2B17F01E63212700DF617D /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2B17EF1E63212700DF617D /* Storyboard.swift */; };
 		ED39E9FB1E5A9253003A0AE4 /* Door.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED39E9FA1E5A9253003A0AE4 /* Door.xcassets */; };
 		ED7A62BD1E59D47500B1E085 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7A62BC1E59D47500B1E085 /* AppDelegate.swift */; };
 		ED7A62BF1E59D47500B1E085 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7A62BE1E59D47500B1E085 /* ViewController.swift */; };
@@ -30,6 +32,8 @@
 /* Begin PBXFileReference section */
 		19FF648B2CA53A36E2C42E0F /* Pods-Door.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Door.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Door/Pods-Door.debug.xcconfig"; sourceTree = "<group>"; };
 		6A563E11A0505EC5B604FE7D /* Pods_Door.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Door.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED2B17EC1E63210300DF617D /* Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
+		ED2B17EF1E63212700DF617D /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		ED39E9FA1E5A9253003A0AE4 /* Door.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Door.xcassets; sourceTree = "<group>"; };
 		ED7A62B91E59D47500B1E085 /* Door.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Door.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED7A62BC1E59D47500B1E085 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +86,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		ED2B17EB1E6320FC00DF617D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				ED2B17EC1E63210300DF617D /* Empty.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		ED2B17EE1E63212700DF617D /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				ED2B17EF1E63212700DF617D /* Storyboard.swift */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		ED39E9F91E5A9248003A0AE4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +148,8 @@
 			children = (
 				ED7A62CF1E59D5F200B1E085 /* Door.storyboard */,
 				ED7A62D11E59D60D00B1E085 /* WelcomeViewController.swift */,
+				ED2B17EB1E6320FC00DF617D /* Base */,
+				ED2B17EE1E63212700DF617D /* Storyboard */,
 				EDE595691E5C175A005460FA /* Extensions */,
 				EDCBBCE71E5AF6A800769112 /* Configures */,
 				ED39E9F91E5A9248003A0AE4 /* Resources */,
@@ -327,12 +349,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED7A62DC1E59E84B00B1E085 /* ProfilePickerViewController.swift in Sources */,
+				ED2B17F01E63212700DF617D /* Storyboard.swift in Sources */,
 				ED7A62D81E59D69000B1E085 /* LoginViewController.swift in Sources */,
 				ED7A62DA1E59E20A00B1E085 /* PhoneNumberPickerViewController.swift in Sources */,
 				ED7A62D21E59D60D00B1E085 /* WelcomeViewController.swift in Sources */,
 				EDE5956B1E5C1765005460FA /* String+Door.swift in Sources */,
 				EDCBBCEA1E5AF6A800769112 /* Configure.swift in Sources */,
 				ED7A63041E59ED0300B1E085 /* Target_Door.swift in Sources */,
+				ED2B17ED1E63210300DF617D /* Empty.swift in Sources */,
 				ED7A62BF1E59D47500B1E085 /* ViewController.swift in Sources */,
 				ED7A62BD1E59D47500B1E085 /* AppDelegate.swift in Sources */,
 			);
