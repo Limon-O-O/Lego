@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -102,6 +101,7 @@
                     <connections>
                         <segue destination="WfS-ok-C2c" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="Vtl-kN-1LU" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="gOr-X6-zoI" kind="relationship" relationship="viewControllers" id="Twh-Li-b94"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -127,6 +127,33 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
+        <!--Me-->
+        <scene sceneID="NVn-YZ-ZTH">
+            <objects>
+                <navigationController id="gOr-X6-zoI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Me" image="tab_me" selectedImage="tab_me_highlighted" id="p7C-F1-1Ia"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JTP-rO-S99">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qtE-uv-r0c" kind="relationship" relationship="rootViewController" id="8AC-az-4ae"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="acH-uz-XAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2" y="851"/>
+        </scene>
+        <!--MeViewController-->
+        <scene sceneID="uNS-Oe-VmU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Me" bundleIdentifier="org.cocoapods.Me" referencedIdentifier="MeViewController" id="qtE-uv-r0c" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="7ug-2h-SZb"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ccw-1T-TLq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3" y="1322"/>
+        </scene>
         <!--Second-->
         <scene sceneID="lJj-GY-7yh">
             <objects>
@@ -150,5 +177,7 @@
     <resources>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
+        <image name="tab_me" width="24" height="24"/>
+        <image name="tab_me_highlighted" width="24" height="24"/>
     </resources>
 </document>

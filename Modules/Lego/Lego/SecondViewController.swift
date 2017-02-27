@@ -8,7 +8,7 @@
 
 import UIKit
 import Mediator
-import Mediator_Door
+import Mediator_Tower
 
 class SecondViewController: UIViewController {
 
@@ -18,6 +18,15 @@ class SecondViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
+        let callbackAction: ([String: Any]) -> Void = { info in
+            print("Tower callbacked with info: \(info)")
+        }
+
+        guard let towerViewController = Mediator.shared.tower.towerViewController(with: UIColor.red, callbackAction: callbackAction) else {
+            return
+        }
+        navigationController?.pushViewController(towerViewController, animated: true)
     }
 }
 

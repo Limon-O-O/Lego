@@ -23,8 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         Networking.ServiceConfigure.accessToken = Mediator.shared.door.accessToken()
 
-        startDoorStory()
         if !didLogin {
+//            startDoorStory()
         }
 
         return true
