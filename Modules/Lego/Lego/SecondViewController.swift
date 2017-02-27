@@ -18,11 +18,6 @@ class SecondViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
-        guard let welcomeViewController = Mediator.shared.door.welcomeViewController() else {
-            return
-        }
-        navigationController?.pushViewController(welcomeViewController, animated: true)
     }
 }
 

@@ -12,33 +12,6 @@ import RxSwift
 import MonkeyKing
 import Networking
 
-enum LoginPlatform: String {
-    case weChat = "wechat"
-    case phone = "phone"
-    case weibo = "weibo"
-    case qq = "qq"
-}
-
-struct LoginUser {
-    let userID: Int
-    let nickname: String
-}
-
-extension LoginUser: Mappable {
-
-    init?(json: [String: Any]) {
-        guard let userID = json["user_id"] as? Int,
-            let nickname = json["user_nickname"] as? String
-            else { return nil }
-        self.userID = userID
-        self.nickname = nickname
-    }
-
-    static func mapping(json: [String: Any]) -> LoginUser? {
-        return LoginUser(json: json)
-    }
-}
-
 class WelcomeViewController: UIViewController {
 
     var innateParams: [String: Any] = [:]
@@ -101,8 +74,8 @@ class WelcomeViewController: UIViewController {
 extension WelcomeViewController: SegueHandlerType {
 
     enum SegueIdentifier: String {
-        case showPhoneNumberPicker
         case showLogin
+        case showPhoneNumberPicker
     }
 
     @IBAction private func register(_ sender: UIButton) {
@@ -116,7 +89,22 @@ extension WelcomeViewController: SegueHandlerType {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         showStatusBar = true
         setNeedsStatusBarAppearanceUpdate()
+
+        switch segueIdentifier(for: segue) {
+        case .showLogin:
+            let vc = segue.destination as? LoginViewController
+            vc?.innateParams = innateParams
+
+        case .showPhoneNumberPicker:
+            let vc = segue.destination as? PhoneNumberPickerViewController
+            vc?.innateParams = innateParams
+        }
     }
+}
+
+// MARK: - Actions
+
+extension WelcomeViewController {
 
     private func login(platform: LoginPlatform, token: String, openID: String) {
 

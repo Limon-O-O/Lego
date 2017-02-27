@@ -9,31 +9,52 @@
 import UIKit
 
 @objc(Target_Door)
-class Target_Door: NSObject {
+class Target_Door: NSObject {}
+
+// MARK: - Controllers
+
+extension Target_Door {
 
     func Action_WelcomeViewController(params: [String: Any]) -> UIViewController? {
-        let navigationController = Storyboard.door.navigationController(with: "DoorNavigationController") as? UINavigationController
+        let navigationController = Storyboard.door.navigationController(with: "DoorNavigationController") as? DoorNavigationController
+        navigationController?.innateParams = params
         // TODO: 去掉强制拆包
         return navigationController!
     }
 
     func Action_LoginViewController(params: [String: Any]) -> UIViewController {
-        let viewController = LoginViewController()
+        let viewController = Storyboard.door.viewController(of: LoginViewController.self)
         viewController.innateParams = params
         return viewController
     }
 
     func Action_PhoneNumberPickerViewController(params: [String: Any]) -> UIViewController {
-        let viewController = PhoneNumberPickerViewController()
+        let viewController = Storyboard.door.viewController(of: PhoneNumberPickerViewController.self)
         viewController.innateParams = params
         return viewController
     }
 
     func Action_ProfilePickerViewController(params: [String: Any]) -> UIViewController {
-        let viewController = ProfilePickerViewController()
+        let viewController = Storyboard.door.viewController(of: ProfilePickerViewController.self)
         viewController.innateParams = params
         return viewController
     }
-
 }
 
+// MARK: - Properties
+
+extension Target_Door {
+
+    func Action_DidLogin() -> [String: Any] {
+        return ["result": DoorUserDefaults.didLogin]
+    }
+}
+
+// MARK: - Methods
+
+extension Target_Door {
+
+    func Action_ClearUserDefaults() {
+        DoorUserDefaults.clear()
+    }
+}

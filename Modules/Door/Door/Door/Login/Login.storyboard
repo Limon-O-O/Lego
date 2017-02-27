@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -20,8 +20,21 @@
                     <view key="view" contentMode="scaleToFill" id="IkP-zn-JYc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qqd-IC-fRg" userLabel="Login Button">
+                                <rect key="frame" x="168" y="318.5" width="38" height="30"/>
+                                <state key="normal" title="Login"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qqd-IC-fRg" firstAttribute="centerY" secondItem="IkP-zn-JYc" secondAttribute="centerY" id="6Gk-n7-KvG"/>
+                            <constraint firstItem="Qqd-IC-fRg" firstAttribute="centerX" secondItem="IkP-zn-JYc" secondAttribute="centerX" id="iyW-Js-gvk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="Qqd-IC-fRg" id="Ab8-mT-lnl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mw8-Yi-kQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

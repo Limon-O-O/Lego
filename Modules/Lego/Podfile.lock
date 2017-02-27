@@ -29,6 +29,7 @@ DEPENDENCIES:
   - Door (from `../Door`)
   - EggKit (from `../../Frameworks/EggKit`)
   - LegoKit (from `../../Frameworks/LegoKit`)
+  - Mediator (from `https://github.com/Limon-O-O/Mediator.git`, branch `master`)
   - Mediator+Door (from `../Mediator+Door`)
   - Mediator+Tower (from `../Mediator+Tower`)
   - Networking (from `../../Frameworks/Networking`)
@@ -41,6 +42,9 @@ EXTERNAL SOURCES:
     :path: "../../Frameworks/EggKit"
   LegoKit:
     :path: "../../Frameworks/LegoKit"
+  Mediator:
+    :branch: master
+    :git: https://github.com/Limon-O-O/Mediator.git
   Mediator+Door:
     :path: "../Mediator+Door"
   Mediator+Tower:
@@ -50,12 +54,17 @@ EXTERNAL SOURCES:
   Tower:
     :path: "../Tower"
 
+CHECKOUT OPTIONS:
+  Mediator:
+    :commit: c7a9c1db1bd6cab2efe520ad61cd7909d04531c4
+    :git: https://github.com/Limon-O-O/Mediator.git
+
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   Door: b0811b33bfb396e54bc4eda580c71926e9d52173
   EggKit: 4ad8e40cd8ad4cc6ff8c415546e0544b1542b2d0
   LegoKit: 55617431b4cb0b53968ffc6fa0f105fff07bfbc4
-  Mediator: 11865f1d754ed1622fee0e4f72ed7542ce408532
+  Mediator: e404bed0eb2fc984307e46199557e726affc5b1e
   Mediator+Door: d6df37ee69efec9e6663fb12c68b39ebe2ce2364
   Mediator+Tower: 7f282c8e5fbbe682c778335d75e2e74a0d4d60a3
   MonkeyKing: 443becfc5579a050cd8b7394b3631c8ed567aae3
@@ -64,6 +73,6 @@ SPEC CHECKSUMS:
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   Tower: fe78516d51423e8f39d826a1641a3a9e5862970c
 
-PODFILE CHECKSUM: de5b0ba4324d39ae4e1a07fb84e88ec53694036e
+PODFILE CHECKSUM: 9a4be911951d896e47b2cfcb34c8edf560ffd2fe
 
 COCOAPODS: 1.2.0

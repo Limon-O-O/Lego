@@ -16,5 +16,8 @@ class PhoneNumberPickerViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Register"
+
+        DoorUserDefaults.accessToken = "accessToken"
+        DoorUserDefaults.userID = 007
     }
 }

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		EADF89393E618B4A6AFDFCAC /* Pods_Door.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A563E11A0505EC5B604FE7D /* Pods_Door.framework */; };
+		ED1E68611E64292300AE1EAB /* DoorUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1E68601E64292300AE1EAB /* DoorUserDefaults.swift */; };
+		ED1E68671E6433D800AE1EAB /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1E68661E6433D800AE1EAB /* LoginUser.swift */; };
+		ED1E68691E643B0200AE1EAB /* DoorNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1E68681E643B0200AE1EAB /* DoorNavigationController.swift */; };
 		ED2B17ED1E63210300DF617D /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2B17EC1E63210300DF617D /* Empty.swift */; };
 		ED2B17F01E63212700DF617D /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2B17EF1E63212700DF617D /* Storyboard.swift */; };
 		ED39E9FB1E5A9253003A0AE4 /* Door.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED39E9FA1E5A9253003A0AE4 /* Door.xcassets */; };
@@ -32,6 +35,9 @@
 /* Begin PBXFileReference section */
 		19FF648B2CA53A36E2C42E0F /* Pods-Door.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Door.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Door/Pods-Door.debug.xcconfig"; sourceTree = "<group>"; };
 		6A563E11A0505EC5B604FE7D /* Pods_Door.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Door.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED1E68601E64292300AE1EAB /* DoorUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorUserDefaults.swift; sourceTree = "<group>"; };
+		ED1E68661E6433D800AE1EAB /* LoginUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
+		ED1E68681E643B0200AE1EAB /* DoorNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorNavigationController.swift; sourceTree = "<group>"; };
 		ED2B17EC1E63210300DF617D /* Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
 		ED2B17EF1E63212700DF617D /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		ED39E9FA1E5A9253003A0AE4 /* Door.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Door.xcassets; sourceTree = "<group>"; };
@@ -86,10 +92,27 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		ED1E685F1E6428EC00AE1EAB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ED1E68601E64292300AE1EAB /* DoorUserDefaults.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ED1E68651E6433D800AE1EAB /* Modles */ = {
+			isa = PBXGroup;
+			children = (
+				ED1E68661E6433D800AE1EAB /* LoginUser.swift */,
+			);
+			path = Modles;
+			sourceTree = "<group>";
+		};
 		ED2B17EB1E6320FC00DF617D /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				ED2B17EC1E63210300DF617D /* Empty.swift */,
+				ED1E68681E643B0200AE1EAB /* DoorNavigationController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -149,6 +172,8 @@
 				ED7A62CF1E59D5F200B1E085 /* Door.storyboard */,
 				ED7A62D11E59D60D00B1E085 /* WelcomeViewController.swift */,
 				ED2B17EB1E6320FC00DF617D /* Base */,
+				ED1E68651E6433D800AE1EAB /* Modles */,
+				ED1E685F1E6428EC00AE1EAB /* Services */,
 				ED2B17EE1E63212700DF617D /* Storyboard */,
 				EDE595691E5C175A005460FA /* Extensions */,
 				EDCBBCE71E5AF6A800769112 /* Configures */,
@@ -348,14 +373,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED1E68611E64292300AE1EAB /* DoorUserDefaults.swift in Sources */,
 				ED7A62DC1E59E84B00B1E085 /* ProfilePickerViewController.swift in Sources */,
 				ED2B17F01E63212700DF617D /* Storyboard.swift in Sources */,
 				ED7A62D81E59D69000B1E085 /* LoginViewController.swift in Sources */,
 				ED7A62DA1E59E20A00B1E085 /* PhoneNumberPickerViewController.swift in Sources */,
 				ED7A62D21E59D60D00B1E085 /* WelcomeViewController.swift in Sources */,
 				EDE5956B1E5C1765005460FA /* String+Door.swift in Sources */,
+				ED1E68691E643B0200AE1EAB /* DoorNavigationController.swift in Sources */,
 				EDCBBCEA1E5AF6A800769112 /* Configure.swift in Sources */,
 				ED7A63041E59ED0300B1E085 /* Target_Door.swift in Sources */,
+				ED1E68671E6433D800AE1EAB /* LoginUser.swift in Sources */,
 				ED2B17ED1E63210300DF617D /* Empty.swift in Sources */,
 				ED7A62BF1E59D47500B1E085 /* ViewController.swift in Sources */,
 				ED7A62BD1E59D47500B1E085 /* AppDelegate.swift in Sources */,
