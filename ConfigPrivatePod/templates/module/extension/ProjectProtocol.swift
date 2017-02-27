@@ -5,6 +5,7 @@
 //  Created by __Author__ on __Time__.
 
 import Foundation
+import Mediator
 
 public struct __ProjectName__<Base> {
     public let base: Base
@@ -15,7 +16,7 @@ public struct __ProjectName__<Base> {
 
 public protocol __ProjectName__Protocol {}
 
-extension NSObject: __ProjectName__Protocol {}
+extension Mediator: __ProjectName__Protocol {}
 
 extension __ProjectName__Protocol {
     public var __projectName__: __ProjectName__<Self> {
