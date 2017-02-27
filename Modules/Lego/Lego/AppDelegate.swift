@@ -8,6 +8,7 @@
 
 import UIKit
 import Mediator
+import Networking
 import Mediator_Door
 
 @UIApplicationMain
@@ -19,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         let didLogin = Mediator.shared.door.didLogin()
+
+        Networking.ServiceConfigure.accessToken = Mediator.shared.door.accessToken()
 
         startDoorStory()
         if !didLogin {

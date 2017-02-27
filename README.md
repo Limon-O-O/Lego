@@ -2,6 +2,7 @@
 
 ## Lego 目录解析
 ```
+Lego
 ├── ConfigPrivatePod
 ├── Frameworks
 │   ├── EggKit
@@ -20,7 +21,7 @@
 ```
 
 1. `ConfigPrivatePod` 文件夹，存放着配置私有源的脚本
-2. `Frameworks` 文件夹，存放着各种 `framework`
+2. `Frameworks` 文件夹，存放着各种 `framework`，`EggKit` 代表公司各项目通用库，`LegoKit` 代表本项目各模块通用库
 3. `Modules` 文件夹，存放着 `Lego` 项目的全部模块，其中 `Modules/Lego` 就是主模块
 4. `Specs` 文件夹，存放着 `framework` 和 `模块` 的版本的 `podName.podspec`，即常说的 `Private Spec Repo`
 

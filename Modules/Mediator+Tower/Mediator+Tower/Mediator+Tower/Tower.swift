@@ -5,6 +5,7 @@
 //  Created by Limon on 2017-02-27.
 
 import Foundation
+import Mediator
 
 public struct Tower<Base> {
     public let base: Base
@@ -15,7 +16,7 @@ public struct Tower<Base> {
 
 public protocol TowerProtocol {}
 
-extension NSObject: TowerProtocol {}
+extension Mediator: TowerProtocol {}
 
 extension TowerProtocol {
     public var tower: Tower<Self> {

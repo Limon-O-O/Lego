@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Networking
 
 struct DoorUserDefaults {
 
@@ -37,17 +38,13 @@ struct DoorUserDefaults {
 
 extension DoorUserDefaults {
 
-    fileprivate static var _accessToken: String?
     static var accessToken: String? {
         get {
-            if _accessToken == nil {
-                _accessToken = defaults.string(forKey: Keys.accessTokenV1.rawValue)
-            }
-            return _accessToken
+            return defaults.string(forKey: Keys.accessTokenV1.rawValue)
         }
         set {
-            _accessToken = newValue
             defaults.set(newValue, forKey: Keys.accessTokenV1.rawValue)
+            Networking.ServiceConfigure.accessToken = newValue
         }
     }
 

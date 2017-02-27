@@ -25,7 +25,7 @@ class LoginViewController: BaseViewController {
             .throttle(0.3, scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self] in
 
-                DoorUserDefaults.accessToken = "accessToken"
+                DoorUserDefaults.accessToken = "002dS5ZGOoM5BCd78614ac1dJnIUWD"
                 DoorUserDefaults.userID = 007
 
                 let alertController = UIAlertController(title: nil, message: "登录成功", preferredStyle: .alert)

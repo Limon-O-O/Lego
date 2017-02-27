@@ -40,6 +40,16 @@ extension Door where Base: Mediator {
         let result = base.performTarget("Door", action: "DidLogin", params: [:]) as? [String: Any]
         return (result?["result"] as? Bool) ?? false
     }
+
+    public func accessToken() -> String? {
+        let result = base.performTarget("Door", action: "AccessToken", params: [:]) as? [String: Any]
+        return result?["result"] as? String
+    }
+
+    public func userID() -> Int? {
+        let result = base.performTarget("Door", action: "UserID", params: [:]) as? [String: Any]
+        return result?["result"] as? Int
+    }
 }
 
 // MARK: - Methods

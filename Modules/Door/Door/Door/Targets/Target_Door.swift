@@ -48,6 +48,14 @@ extension Target_Door {
     func Action_DidLogin() -> [String: Any] {
         return ["result": DoorUserDefaults.didLogin]
     }
+
+    func Action_AccessToken() -> [String: Any] {
+        return ["result": DoorUserDefaults.accessToken]
+    }
+
+    func Action_UserID() -> [String: Any] {
+        return ["result": DoorUserDefaults.userID]
+    }
 }
 
 // MARK: - Methods

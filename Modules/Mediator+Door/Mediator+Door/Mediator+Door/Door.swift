@@ -5,6 +5,7 @@
 //  Created by Limon on 2017-02-27.
 
 import Foundation
+import Mediator
 
 public struct Door<Base> {
     public let base: Base
@@ -15,7 +16,7 @@ public struct Door<Base> {
 
 public protocol DoorProtocol {}
 
-extension NSObject: DoorProtocol {}
+extension Mediator: DoorProtocol {}
 
 extension DoorProtocol {
     public var door: Door<Self> {
