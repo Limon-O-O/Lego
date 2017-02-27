@@ -201,14 +201,18 @@ editFiles() {
     case $projectType in  
     "Module")  
         directory="Modules"
+        sed -i '' "s#\# pod \'Mediator\'##" "$podfilePath"
         ;;
     "Extension")
         directory="Modules"
         # s.dependency "Mediator"
         sed -i '' "s#\# s.dependency \"Mediator\"#s.dependency \"Mediator\"#" "$specFilePath"
+        # pod 'Mediator'
+        sed -i '' "s#\# pod \'Mediator\'#pod \'Mediator\'#" "$podfilePath"
         ;;
     "Framework")
         directory="Frameworks"
+        sed -i '' "s#\# pod \'Mediator\'##" "$podfilePath"
         ;;
     esac
 
