@@ -97,8 +97,8 @@
 		ED1E685F1E6428EC00AE1EAB /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				ED1E68601E64292300AE1EAB /* DoorUserDefaults.swift */,
 				ED1A34C71E645EE100FFE1CE /* Networking.swift */,
+				ED1E68601E64292300AE1EAB /* DoorUserDefaults.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
