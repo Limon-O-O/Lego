@@ -140,16 +140,3 @@ public struct NetworkingService {
         }
     }
 }
-
-extension NetworkingService {
-
-    public static func login<T: Mappable>(phoneNumber: String, mapper: T.Type) -> Observable<T> {
-        let parameters = ["phone_number": phoneNumber]
-        return result(request: Router.User.login(parameters), mapper: mapper)
-    }
-
-    public static func register<T: Mappable>(phoneNumber: String, mapper: T.Type) -> Observable<T> {
-        let parameters = ["phone_number": phoneNumber]
-        return result(request: Router.User.createUser(parameters), mapper: mapper)
-    }
-}

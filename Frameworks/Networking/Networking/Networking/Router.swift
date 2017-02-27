@@ -37,10 +37,11 @@ public struct Router {
 
 extension URLRequest {
 
-    static func buildRequest(path: String, method: Alamofire.HTTPMethod, needsResolve: Bool = true) -> URLRequest {
+    public static func buildRequest(path: String, method: Alamofire.HTTPMethod, needsResolve: Bool = true) -> URLRequest {
 
         let urlString = Router.v1BaseURLString + path
-        let url = URL(string: urlString.encodingString ?? urlString)!
+        let encodingString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let url = URL(string: encodingString ?? urlString)!
 
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
@@ -52,51 +53,5 @@ extension URLRequest {
         }
 
         return urlRequest
-    }
-}
-
-extension String {
-    var encodingString: String? {
-        return addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-    }
-}
-
-// MARK: - User
-
-extension Router {
-
-    enum User: URLRequestConvertible {
-
-        case login([String: String])
-        case createUser([String: String])
-
-        var method: Alamofire.HTTPMethod {
-            switch self {
-            case .login, .createUser:
-                return .post
-            }
-        }
-
-        var path: String {
-            switch self {
-            case .login:
-                return "/users"
-            case .createUser:
-                return "/users"
-            }
-        }
-
-        public func asURLRequest() throws -> URLRequest {
-
-            var urlRequest = URLRequest.buildRequest(path: path, method: method)
-
-            switch self {
-            case .login(let parameters), .createUser(let parameters):
-                urlRequest = try JSONEncoding.default.encode(urlRequest, with: parameters)
-            }
-
-            return urlRequest
-        }
-        
     }
 }

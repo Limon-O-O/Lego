@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EADF89393E618B4A6AFDFCAC /* Pods_Door.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A563E11A0505EC5B604FE7D /* Pods_Door.framework */; };
+		ED1A34C81E645EE100FFE1CE /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1A34C71E645EE100FFE1CE /* Networking.swift */; };
 		ED1E68611E64292300AE1EAB /* DoorUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1E68601E64292300AE1EAB /* DoorUserDefaults.swift */; };
 		ED1E68671E6433D800AE1EAB /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1E68661E6433D800AE1EAB /* LoginUser.swift */; };
 		ED1E68691E643B0200AE1EAB /* DoorNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1E68681E643B0200AE1EAB /* DoorNavigationController.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		19FF648B2CA53A36E2C42E0F /* Pods-Door.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Door.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Door/Pods-Door.debug.xcconfig"; sourceTree = "<group>"; };
 		6A563E11A0505EC5B604FE7D /* Pods_Door.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Door.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED1A34C71E645EE100FFE1CE /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		ED1E68601E64292300AE1EAB /* DoorUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorUserDefaults.swift; sourceTree = "<group>"; };
 		ED1E68661E6433D800AE1EAB /* LoginUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
 		ED1E68681E643B0200AE1EAB /* DoorNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorNavigationController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				ED1E68601E64292300AE1EAB /* DoorUserDefaults.swift */,
+				ED1A34C71E645EE100FFE1CE /* Networking.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				ED7A62D81E59D69000B1E085 /* LoginViewController.swift in Sources */,
 				ED7A62DA1E59E20A00B1E085 /* PhoneNumberPickerViewController.swift in Sources */,
 				ED7A62D21E59D60D00B1E085 /* WelcomeViewController.swift in Sources */,
+				ED1A34C81E645EE100FFE1CE /* Networking.swift in Sources */,
 				EDE5956B1E5C1765005460FA /* String+Door.swift in Sources */,
 				ED1E68691E643B0200AE1EAB /* DoorNavigationController.swift in Sources */,
 				EDCBBCEA1E5AF6A800769112 /* Configure.swift in Sources */,
