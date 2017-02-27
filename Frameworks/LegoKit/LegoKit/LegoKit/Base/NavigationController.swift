@@ -15,8 +15,8 @@ class NavigationController: UINavigationController {
         super.viewDidLoad()
 
         navigationBar.isTranslucent = false
-        //navigationBar.setBackgroundImage(UIImage(), for: .top, barMetrics: .default) // 去掉下划线
-        navigationBar.shadowImage = UIImage.lego.headline
+
+        setHeadline(with: UIImage.lego.headline)
 
         // 颜色
         navigationBar.barTintColor = UIColor.white
@@ -41,6 +41,12 @@ class NavigationController: UINavigationController {
     override var childViewControllerForStatusBarHidden : UIViewController? {
         return topViewController
     }
+
+    private func setHeadline(with image: UIImage?) {
+        navigationBar.setBackgroundImage(UIImage(), for: .top, barMetrics: .default)
+        navigationBar.shadowImage = image ?? UIImage() // UIImage() 即隐藏 headline
+    }
+
 }
 
 extension NavigationController: UIGestureRecognizerDelegate, UINavigationControllerDelegate {
