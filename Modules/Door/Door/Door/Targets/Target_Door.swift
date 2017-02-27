@@ -49,12 +49,16 @@ extension Target_Door {
         return ["result": DoorUserDefaults.didLogin]
     }
 
-    func Action_AccessToken() -> [String: Any] {
-        return ["result": DoorUserDefaults.accessToken]
+    func Action_AccessToken() -> [String: Any]? {
+        return DoorUserDefaults.accessToken.flatMap { accessToken -> [String: Any] in
+            return ["result": accessToken]
+        }
     }
 
-    func Action_UserID() -> [String: Any] {
-        return ["result": DoorUserDefaults.userID]
+    func Action_UserID() -> [String: Any]? {
+        return DoorUserDefaults.userID.flatMap { accessToken -> [String: Any] in
+            return ["result": accessToken]
+        }
     }
 }
 
