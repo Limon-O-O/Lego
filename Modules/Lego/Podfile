@@ -7,11 +7,11 @@ target 'Lego' do
     use_frameworks!
 
     # Tower
-    pod "CTMediator+Tower", :path => "../CTMediator+Tower"
+    pod "Mediator+Tower", :path => "../Mediator+Tower"
     pod "Tower", :path => "../Tower"
 
     # Door
-    pod "CTMediator+Door", :path => "../CTMediator+Door"
+    pod "Mediator+Door", :path => "../Mediator+Door"
     pod "Door", :path => "../Door"
 
     pod "Networking", :path => "../../Frameworks/Networking"

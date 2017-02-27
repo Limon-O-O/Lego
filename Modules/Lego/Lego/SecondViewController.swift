@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import CTMediator
-import CTMediator_Door
+import Mediator
+import Mediator_Door
 
 class SecondViewController: UIViewController {
 
@@ -19,7 +19,7 @@ class SecondViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        guard let welcomeViewController = CTMediator.sharedInstance().door.welcomeViewController() else {
+        guard let welcomeViewController = Mediator.shared.door.welcomeViewController() else {
             return
         }
         navigationController?.pushViewController(welcomeViewController, animated: true)

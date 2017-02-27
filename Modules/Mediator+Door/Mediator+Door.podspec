@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "__ProjectName__"
+  s.name         = "Mediator+Door"
   s.version      = "1.0.0"
-  s.summary      = "__ProjectName__."
+  s.summary      = "Mediator+Door."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,10 +25,10 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                    this is __ProjectName__
+                    this is Mediator+Door
                    DESC
 
-  s.homepage     = "__HomePage__"
+  s.homepage     = "https://github.com/Limon-O-O/Lego"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -53,7 +53,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "__Author__" => "fengninglong@gmail.com" }
+  s.author             = { "Limon" => "fengninglong@gmail.com" }
   # Or just: s.author    = "CasaTaloyum"
   # s.authors            = { "CasaTaloyum" => "casatwy@msn.com" }
   # s.social_media_url   = "http://twitter.com/CasaTaloyum"
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "__HTTPSRepo__" }
+  s.source       = { :git => "https://github.com/Limon-O-O/Lego.git" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "__ProjectName__/__ProjectName__/**/*.swift"
+  s.source_files  = "Mediator+Door/Mediator+Door/**/*.swift"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['__ProjectName__/__ProjectName__/**/*.storyboard', '__ProjectName__/__ProjectName__/**/*.xib', '__ProjectName__/__ProjectName__/**/*.xcassets', '__ProjectName__/__ProjectName__/**/*.lproj']
+  s.resources = ['Mediator+Door/Mediator+Door/**/*.storyboard', 'Mediator+Door/Mediator+Door/**/*.xib', 'Mediator+Door/Mediator+Door/**/*.xcassets', 'Mediator+Door/Mediator+Door/**/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
@@ -134,6 +134,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "Mediator"
+  s.dependency "Mediator"
 
 end

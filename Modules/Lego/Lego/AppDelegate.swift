@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import CTMediator
-import CTMediator_Door
+import Mediator
+import Mediator_Door
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
 
     func startDoorStory() {
-        guard let welcomeViewController = CTMediator.sharedInstance().door.welcomeViewController() else {
+        guard let welcomeViewController = Mediator.shared.door.welcomeViewController() else {
             return
         }
         window?.rootViewController = welcomeViewController

@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import CTMediator
-import CTMediator_Tower
+import Mediator
+import Mediator_Tower
 
 class FirstViewController: UIViewController {
 
@@ -23,7 +23,7 @@ class FirstViewController: UIViewController {
             print("Tower callbacked with info: \(info)")
         }
 
-        guard let towerViewController = CTMediator.sharedInstance().tower.towerViewController(with: UIColor.red, callbackAction: callbackAction) else {
+        guard let towerViewController = Mediator.shared.tower.towerViewController(with: UIColor.red, callbackAction: callbackAction) else {
             return
         }
         navigationController?.pushViewController(towerViewController, animated: true)

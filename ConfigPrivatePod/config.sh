@@ -15,7 +15,7 @@ frameworkName=""
 confirmed="n"
 profilePath="./templates/Podfile"
 currentDate=`date +%Y-%m-%d`
-extensionPrefix="CTMediator+"
+extensionPrefix="Mediator+"
 
 getProjectName() {
     read -p "Enter Project Name: " projectName
@@ -163,7 +163,7 @@ copyExtensionFiles() {
     projectProtocolFilePath="${projectDirectoryPath}/${projectName}/${projectName}/${shortProjectName}.swift"
 
     echo "Copy to $extensionFilePath"
-    cp -f ./templates/module/extension/CTMediator+Project.swift                 "$extensionFilePath"
+    cp -f ./templates/module/extension/Mediator+Project.swift                 "$extensionFilePath"
     echo "Copy to $projectProtocolFilePath"
     cp -f ./templates/module/extension/ProjectProtocol.swift       "$projectProtocolFilePath"
 
@@ -204,6 +204,8 @@ editFiles() {
         ;;
     "Extension")
         directory="Modules"
+        # s.dependency "Mediator"
+        sed -i '' "s#\# s.dependency \"Mediator\"#s.dependency \"Mediator\"#" "$specFilePath"
         ;;
     "Framework")
         directory="Frameworks"

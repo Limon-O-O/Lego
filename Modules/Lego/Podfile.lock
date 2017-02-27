@@ -1,10 +1,5 @@
 PODS:
   - Alamofire (4.3.0)
-  - CTMediator (0.0.3)
-  - CTMediator+Door (1.0.0):
-    - CTMediator
-  - CTMediator+Tower (1.0.0):
-    - CTMediator
   - Door (1.0.0):
     - EggKit
     - LegoKit
@@ -16,6 +11,11 @@ PODS:
   - LegoKit (1.0.1):
     - EggKit
     - RxSwift
+  - Mediator (0.0.1)
+  - Mediator+Door (1.0.0):
+    - Mediator
+  - Mediator+Tower (1.0.0):
+    - Mediator
   - MonkeyKing (1.2.2)
   - Networking (1.0.1):
     - Alamofire
@@ -26,25 +26,25 @@ PODS:
   - Tower (1.0.0)
 
 DEPENDENCIES:
-  - CTMediator+Door (from `../CTMediator+Door`)
-  - CTMediator+Tower (from `../CTMediator+Tower`)
   - Door (from `../Door`)
   - EggKit (from `../../Frameworks/EggKit`)
   - LegoKit (from `../../Frameworks/LegoKit`)
+  - Mediator+Door (from `../Mediator+Door`)
+  - Mediator+Tower (from `../Mediator+Tower`)
   - Networking (from `../../Frameworks/Networking`)
   - Tower (from `../Tower`)
 
 EXTERNAL SOURCES:
-  CTMediator+Door:
-    :path: "../CTMediator+Door"
-  CTMediator+Tower:
-    :path: "../CTMediator+Tower"
   Door:
     :path: "../Door"
   EggKit:
     :path: "../../Frameworks/EggKit"
   LegoKit:
     :path: "../../Frameworks/LegoKit"
+  Mediator+Door:
+    :path: "../Mediator+Door"
+  Mediator+Tower:
+    :path: "../Mediator+Tower"
   Networking:
     :path: "../../Frameworks/Networking"
   Tower:
@@ -52,18 +52,18 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
-  CTMediator: c9a1203561e2232cb9a72822659159a02ae3cf20
-  CTMediator+Door: f67130417b8ae99531e6016799853fb2e01b3986
-  CTMediator+Tower: 09f2d464f8c94f132406ad7c8350a342138f0f42
   Door: b0811b33bfb396e54bc4eda580c71926e9d52173
   EggKit: 4ad8e40cd8ad4cc6ff8c415546e0544b1542b2d0
   LegoKit: 55617431b4cb0b53968ffc6fa0f105fff07bfbc4
+  Mediator: 11865f1d754ed1622fee0e4f72ed7542ce408532
+  Mediator+Door: d6df37ee69efec9e6663fb12c68b39ebe2ce2364
+  Mediator+Tower: 7f282c8e5fbbe682c778335d75e2e74a0d4d60a3
   MonkeyKing: 443becfc5579a050cd8b7394b3631c8ed567aae3
   Networking: 80c33fee1291801025a7455e4f7fac49ea1ed3e8
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   Tower: fe78516d51423e8f39d826a1641a3a9e5862970c
 
-PODFILE CHECKSUM: 177b0a17d9c5e964f006c2fc4ae2d52fcf8a62a1
+PODFILE CHECKSUM: de5b0ba4324d39ae4e1a07fb84e88ec53694036e
 
 COCOAPODS: 1.2.0
