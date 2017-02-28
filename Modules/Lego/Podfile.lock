@@ -11,13 +11,13 @@ PODS:
   - LegoKit (1.0.1):
     - EggKit
     - RxSwift
-  - Me (1.0.0):
+  - Me (1.0.1):
     - EggKit
     - LegoKit
   - Mediator (0.0.1)
   - Mediator+Door (1.0.0):
     - Mediator
-  - Mediator+Me (1.0.0):
+  - Mediator+Me (1.0.1):
     - Mediator
   - Mediator+Tower (1.0.0):
     - Mediator
@@ -34,10 +34,10 @@ DEPENDENCIES:
   - Door (from `../Door`)
   - EggKit (from `../../Frameworks/EggKit`)
   - LegoKit (from `../../Frameworks/LegoKit`)
-  - Me (from `../Me`)
+  - Me
   - Mediator (from `https://github.com/Limon-O-O/Mediator.git`, branch `master`)
   - Mediator+Door (from `../Mediator+Door`)
-  - Mediator+Me (from `../Mediator+Me`)
+  - Mediator+Me
   - Mediator+Tower (from `../Mediator+Tower`)
   - Networking (from `../../Frameworks/Networking`)
   - Tower (from `../Tower`)
@@ -49,15 +49,11 @@ EXTERNAL SOURCES:
     :path: "../../Frameworks/EggKit"
   LegoKit:
     :path: "../../Frameworks/LegoKit"
-  Me:
-    :path: "../Me"
   Mediator:
     :branch: master
     :git: https://github.com/Limon-O-O/Mediator.git
   Mediator+Door:
     :path: "../Mediator+Door"
-  Mediator+Me:
-    :path: "../Mediator+Me"
   Mediator+Tower:
     :path: "../Mediator+Tower"
   Networking:
@@ -75,10 +71,10 @@ SPEC CHECKSUMS:
   Door: b0811b33bfb396e54bc4eda580c71926e9d52173
   EggKit: 4ad8e40cd8ad4cc6ff8c415546e0544b1542b2d0
   LegoKit: 55617431b4cb0b53968ffc6fa0f105fff07bfbc4
-  Me: 2927d8cd654fa541d94e1caa1a8fca0352d2bcf9
+  Me: 7268d637deb936aa14e9a19035793462d85e919a
   Mediator: e404bed0eb2fc984307e46199557e726affc5b1e
   Mediator+Door: d6df37ee69efec9e6663fb12c68b39ebe2ce2364
-  Mediator+Me: 26db762cae4b6f7dba858c4921f96d8ac7209cc1
+  Mediator+Me: 5c21c263ded02eea97eaef4d280c8a021d00cd07
   Mediator+Tower: 7f282c8e5fbbe682c778335d75e2e74a0d4d60a3
   MonkeyKing: 443becfc5579a050cd8b7394b3631c8ed567aae3
   Networking: 80c33fee1291801025a7455e4f7fac49ea1ed3e8
@@ -86,6 +82,6 @@ SPEC CHECKSUMS:
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   Tower: fe78516d51423e8f39d826a1641a3a9e5862970c
 
-PODFILE CHECKSUM: 35b6a925bcdfd4df15e6345b45fe35d553903f7b
+PODFILE CHECKSUM: 09ebe92de2cc077d5839a82dfde01669014c548a
 
 COCOAPODS: 1.2.0

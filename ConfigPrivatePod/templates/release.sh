@@ -44,7 +44,7 @@ getPodInfo() {
 }
 
 getVersion() {
-    read -p "Enter Version: " version
+    read -p "Enter New Version: " version
 
     if test -z "$version"; then
         getVersion
@@ -93,6 +93,9 @@ getInfomation() {
 getPodInfo
 
 echo -e "\n"
+
+echo "Current Version: ${oldVersion}"
+
 while [ "$confirmed" != "y" -a "$confirmed" != "Y" ]
 do
     if [ "$confirmed" == "n" -o "$confirmed" == "N" ]; then
@@ -102,6 +105,8 @@ do
 done
 
 updateVersion
+
+echo -e "\n--------------------------------------------------------------------------------\n"
 
 # Specs 目录相当于 CocoaPods 的 source，详见：https://github.com/CocoaPods/Specs
 specsPath="../../Specs/${podName}/${version}"
@@ -123,5 +128,5 @@ git commit -m "[$podName] Update version $version"
 git push
 
 say "finished"
-echo "finished"
+echo -e "\n${Default}🚀  Finished and Remember to ${BGreen}'pod repo update [NAME]' 💯 ${Default}\n"
 
