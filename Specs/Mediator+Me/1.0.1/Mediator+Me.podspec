@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Mediator+Me/Mediator+Me/**/*.swift"
+  s.source_files  = "Modules/Mediator+Me/Mediator+Me/Mediator+Me/**/*.swift"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['Mediator+Me/Mediator+Me/**/*.storyboard', 'Mediator+Me/Mediator+Me/**/*.xib', 'Mediator+Me/Mediator+Me/**/*.xcassets', 'Mediator+Me/Mediator+Me/**/*.lproj']
+  s.resources = ['Modules/Mediator+Me/Mediator+Me/Mediator+Me/**/*.storyboard', 'Modules/Mediator+Me/Mediator+Me/Mediator+Me/**/*.xib', 'Modules/Mediator+Me/Mediator+Me/Mediator+Me/**/*.xcassets', 'Modules/Mediator+Me/Mediator+Me/Mediator+Me/**/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
