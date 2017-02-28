@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Xe0-Yc-sFt">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,6 +24,24 @@
                     <navigationItem key="navigationItem" id="wfg-w8-hAX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XRA-Bm-z7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1759.2" y="173.16341829085459"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BAr-Xr-Ptc">
+            <objects>
+                <navigationController storyboardIdentifier="MeNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Xe0-Yc-sFt" customClass="NavigationController" customModule="LegoKit" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sih-x8-50h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Wnw-fY-MW2" kind="relationship" relationship="rootViewController" id="Od8-zE-tNR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oDA-Zj-Sdu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="820" y="173.16341829085459"/>
         </scene>

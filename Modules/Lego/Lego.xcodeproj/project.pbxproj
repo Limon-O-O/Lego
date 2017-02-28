@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		65BED975509F884E02094E06 /* Pods_Lego.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848DD49BA2095DCAC1C0248C /* Pods_Lego.framework */; };
-		ED0E6BA11E58A721008D518A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0E6BA01E58A721008D518A /* AppDelegate.swift */; };
 		ED0E6BA31E58A721008D518A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0E6BA21E58A721008D518A /* FirstViewController.swift */; };
 		ED0E6BA51E58A721008D518A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0E6BA41E58A721008D518A /* SecondViewController.swift */; };
 		ED0E6BA81E58A721008D518A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED0E6BA61E58A721008D518A /* Main.storyboard */; };
 		ED0E6BAA1E58A721008D518A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED0E6BA91E58A721008D518A /* Assets.xcassets */; };
 		ED0E6BAD1E58A721008D518A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED0E6BAB1E58A721008D518A /* LaunchScreen.storyboard */; };
+		EDEF3A541E654DD1006C9F4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF3A531E654DD1006C9F4E /* AppDelegate.swift */; };
+		EDEF3A571E654E0D006C9F4E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF3A561E654E0D006C9F4E /* TabBarController.swift */; };
+		EDEF3A5A1E654F7A006C9F4E /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF3A591E654F7A006C9F4E /* Refreshable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +23,15 @@
 		848DD49BA2095DCAC1C0248C /* Pods_Lego.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lego.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A35D376204D8C03A322EF47E /* Pods-Lego.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lego.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lego/Pods-Lego.release.xcconfig"; sourceTree = "<group>"; };
 		ED0E6B9D1E58A721008D518A /* Lego.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lego.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED0E6BA01E58A721008D518A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED0E6BA21E58A721008D518A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		ED0E6BA41E58A721008D518A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		ED0E6BA71E58A721008D518A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED0E6BA91E58A721008D518A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED0E6BAC1E58A721008D518A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED0E6BAE1E58A721008D518A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDEF3A531E654DD1006C9F4E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EDEF3A561E654E0D006C9F4E /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		EDEF3A591E654F7A006C9F4E /* Refreshable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +84,9 @@
 		ED0E6B9F1E58A721008D518A /* Lego */ = {
 			isa = PBXGroup;
 			children = (
-				ED0E6BA01E58A721008D518A /* AppDelegate.swift */,
+				EDEF3A581E654F6D006C9F4E /* Protocols */,
+				EDEF3A551E654E02006C9F4E /* Root */,
+				EDEF3A521E654DC3006C9F4E /* App */,
 				ED0E6BA21E58A721008D518A /* FirstViewController.swift */,
 				ED0E6BA41E58A721008D518A /* SecondViewController.swift */,
 				ED0E6BA61E58A721008D518A /* Main.storyboard */,
@@ -89,6 +95,30 @@
 				ED0E6BAE1E58A721008D518A /* Info.plist */,
 			);
 			path = Lego;
+			sourceTree = "<group>";
+		};
+		EDEF3A521E654DC3006C9F4E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EDEF3A531E654DD1006C9F4E /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EDEF3A551E654E02006C9F4E /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				EDEF3A561E654E0D006C9F4E /* TabBarController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		EDEF3A581E654F6D006C9F4E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EDEF3A591E654F7A006C9F4E /* Refreshable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,8 +244,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDEF3A5A1E654F7A006C9F4E /* Refreshable.swift in Sources */,
+				EDEF3A541E654DD1006C9F4E /* AppDelegate.swift in Sources */,
+				EDEF3A571E654E0D006C9F4E /* TabBarController.swift in Sources */,
 				ED0E6BA51E58A721008D518A /* SecondViewController.swift in Sources */,
-				ED0E6BA11E58A721008D518A /* AppDelegate.swift in Sources */,
 				ED0E6BA31E58A721008D518A /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

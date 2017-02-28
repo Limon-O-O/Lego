@@ -14,5 +14,9 @@ extension Lego where Base: UIColor {
     public static var tint: UIColor {
         return UIColor(hexString: "#4E4E4E")!
     }
+
+    public static var blue: UIColor {
+        return UIColor(hexString: "#40a8f6")!
+    }
 }
 
