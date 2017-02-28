@@ -17,7 +17,7 @@ platform :ios, '9.0'
 
 target <Your Target Name> do
 	use_frameworks!
-    pod 'Me', '~> 1.0.0'
+    pod 'Me', '~> 1.0.1'
 end
 ```
 

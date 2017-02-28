@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Me/Me/**/*.swift"
+  s.source_files  = "Modules/Me/Me/Me/**/*.swift"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['Me/Me/**/*.storyboard', 'Me/Me/**/*.xib', 'Me/Me/**/*.xcassets', 'Me/Me/**/*.lproj']
+  s.resources = ['Modules/Me/Me/Me/**/*.storyboard', 'Modules/Me/Me/Me/**/*.xib', 'Modules/Me/Me/Me/**/*.xcassets', 'Modules/Me/Me/Me/**/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
