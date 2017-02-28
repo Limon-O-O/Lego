@@ -8,9 +8,14 @@
 3. 发布私有库不使用 `pod repo push`，不进行验证，即使库编译不通过，也可以 release 新版本
 4. Swift 的一些实践心得
 
+本文分为三部分：
+一、[目录解析](https://github.com/Limon-O-O/Lego#lego-目录解析)
+二、[实战](https://github.com/Limon-O-O/Lego#实战)
+三、实践心得(https://github.com/Limon-O-O/Lego#实践心得)
+
 <br />
 
-## Lego 目录解析
+## 一、Lego 目录解析
 ```
 Lego
 ├── ConfigPrivatePod
@@ -112,7 +117,7 @@ cd ~/.cocoapods/repos && ls
 
 <br />
 
-## 实战
+## 二、实战
 
 
 ### 实战前夕
@@ -138,16 +143,12 @@ Lego
 
 <br />
 
-### 新建 Pod库
+### 新建主模块和 Door 模块
 
-<br />
-
-##### 新建 Main Project --- Lego
+##### 主模块 --- Lego
 使用 Xcode 创建一个名为 `Lego` 的工程，放在 `Lego/Modules` 下，此工程就是我们的主模块。
 
-<br />
-
-##### 新建 Door 模块
+##### Door 模块
 
 若想新建一个 Door 模块，需要两个 `Pod库`，
 1. Door业务Pod
@@ -193,7 +194,7 @@ Enter Project Type Number: 2
 
 配置完 `Door` 工程后，在 `Modules/Door/Door` 下，会多了一个也同样名为 `Door` 的文件夹，以后所有需要打包出去给别人用的都在此文件夹下，因为在 `Door.podspec` 文件内定义的源文件就指指定了此文件夹。
 
-4. 打开 `Door.xcodeproj`，把 `Modules/Door/Door/Door` 此文件夹工程里面。 `Mediator+Door` 工程同理。
+打开 `Door.xcodeproj`，把 `Modules/Door/Door/Door` 此文件夹工程里面。 `Mediator+Door` 工程同理。
 
 `Door` 工程的目录简如下：
 
@@ -221,9 +222,9 @@ Mediator+Door
 
 <br />
 
-### 在主模块使用模块Door
+### 在主模块使用 Door 模块
 
-##### 在主模块引入模块Door
+##### 在主模块引入 Door 模块
 
 `Modules/Lego/Podfile`:
 
@@ -246,6 +247,9 @@ end
 
 ```
 
+<br />
+
+## 三、实践心得
 
 
 
