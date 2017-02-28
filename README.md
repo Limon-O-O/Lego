@@ -9,9 +9,12 @@
 4. Swift 的一些实践心得
 
 本文分为三部分：
+
 一、[目录解析](https://github.com/Limon-O-O/Lego#lego-目录解析)
+
 二、[实战](https://github.com/Limon-O-O/Lego#实战)
-三、实践心得(https://github.com/Limon-O-O/Lego#实践心得)
+
+三、[实践心得](https://github.com/Limon-O-O/Lego#实践心得)
 
 <br />
 
