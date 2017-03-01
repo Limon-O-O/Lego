@@ -20,6 +20,10 @@ target 'Lego' do
     pod "Mediator+Me"#, :path => "../Mediator+Me"
     pod "Me"#, :path => "../Me"
 
+    # Door
+    pod "Mediator+Profile", :path => "../Mediator+Profile"
+    pod "Profile", :path => "../Profile"
+
     pod "Networking", :path => "../../Frameworks/Networking"
     pod "EggKit", :path => "../../Frameworks/EggKit"
     pod "LegoKit", :path => "../../Frameworks/LegoKit"

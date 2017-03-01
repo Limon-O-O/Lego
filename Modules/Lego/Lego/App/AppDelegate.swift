@@ -19,12 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        let didLogin = Mediator.shared.door.didLogin()
-
         Networking.ServiceConfigure.accessToken = Mediator.shared.door.accessToken()
 
-        if !didLogin {
-//            startDoorStory()
+        if !LegoUserDefaults.didLogin {
+            // startDoorStory()
         }
 
         return true

@@ -15,17 +15,8 @@ struct DoorUserDefaults {
 
     private init() {}
 
-    fileprivate enum Keys: String {
-        case userID
-        case accessTokenV1
-    }
-
     static func synchronize() {
         defaults.synchronize()
-    }
-
-    static var didLogin: Bool {
-        return accessToken != nil && userID != nil
     }
 
     static func clear() {
@@ -37,6 +28,18 @@ struct DoorUserDefaults {
 }
 
 extension DoorUserDefaults {
+
+    fileprivate enum Keys: String {
+        case userID
+        case accessTokenV1
+    }
+}
+
+extension DoorUserDefaults {
+
+    static var didLogin: Bool {
+        return accessToken != nil && userID != nil
+    }
 
     fileprivate static var _accessToken: String?
     static var accessToken: String? {

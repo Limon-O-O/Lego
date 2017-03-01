@@ -19,12 +19,15 @@ PODS:
     - Mediator
   - Mediator+Me (1.0.1):
     - Mediator
+  - Mediator+Profile (1.0.0):
+    - Mediator
   - Mediator+Tower (1.0.0):
     - Mediator
   - MonkeyKing (1.2.2)
   - Networking (1.0.1):
     - Alamofire
     - RxSwift
+  - Profile (1.0.0)
   - RxCocoa (3.2.0):
     - RxSwift (~> 3.1)
   - RxSwift (3.2.0)
@@ -38,8 +41,10 @@ DEPENDENCIES:
   - Mediator (from `https://github.com/Limon-O-O/Mediator.git`, branch `master`)
   - Mediator+Door (from `../Mediator+Door`)
   - Mediator+Me
+  - Mediator+Profile (from `../Mediator+Profile`)
   - Mediator+Tower (from `../Mediator+Tower`)
   - Networking (from `../../Frameworks/Networking`)
+  - Profile (from `../Profile`)
   - Tower (from `../Tower`)
 
 EXTERNAL SOURCES:
@@ -54,10 +59,14 @@ EXTERNAL SOURCES:
     :git: https://github.com/Limon-O-O/Mediator.git
   Mediator+Door:
     :path: "../Mediator+Door"
+  Mediator+Profile:
+    :path: "../Mediator+Profile"
   Mediator+Tower:
     :path: "../Mediator+Tower"
   Networking:
     :path: "../../Frameworks/Networking"
+  Profile:
+    :path: "../Profile"
   Tower:
     :path: "../Tower"
 
@@ -75,13 +84,15 @@ SPEC CHECKSUMS:
   Mediator: e404bed0eb2fc984307e46199557e726affc5b1e
   Mediator+Door: d6df37ee69efec9e6663fb12c68b39ebe2ce2364
   Mediator+Me: 5c21c263ded02eea97eaef4d280c8a021d00cd07
+  Mediator+Profile: 7bc5b935069dc07e7f2c50aa83b1dd2dbb110b84
   Mediator+Tower: 7f282c8e5fbbe682c778335d75e2e74a0d4d60a3
   MonkeyKing: 443becfc5579a050cd8b7394b3631c8ed567aae3
   Networking: 80c33fee1291801025a7455e4f7fac49ea1ed3e8
+  Profile: 2bdb720c9d782c6d3776f9f7e61827f20655e3ab
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   Tower: fe78516d51423e8f39d826a1641a3a9e5862970c
 
-PODFILE CHECKSUM: 09ebe92de2cc077d5839a82dfde01669014c548a
+PODFILE CHECKSUM: 71fdb208872cef8a74f5749213812fcb27b57c6c
 
 COCOAPODS: 1.2.0

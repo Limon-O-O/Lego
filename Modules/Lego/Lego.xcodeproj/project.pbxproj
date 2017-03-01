@@ -16,6 +16,9 @@
 		EDEF3A541E654DD1006C9F4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF3A531E654DD1006C9F4E /* AppDelegate.swift */; };
 		EDEF3A571E654E0D006C9F4E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF3A561E654E0D006C9F4E /* TabBarController.swift */; };
 		EDEF3A5A1E654F7A006C9F4E /* Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF3A591E654F7A006C9F4E /* Refreshable.swift */; };
+		EDEF3AA41E66AF94006C9F4E /* Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF3AA31E66AF94006C9F4E /* Configure.swift */; };
+		EDEF3AA81E66B03B006C9F4E /* LegoUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF3AA61E66B03B006C9F4E /* LegoUserDefaults.swift */; };
+		EDEF3AA91E66B03B006C9F4E /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF3AA71E66B03B006C9F4E /* Networking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		EDEF3A531E654DD1006C9F4E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDEF3A561E654E0D006C9F4E /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		EDEF3A591E654F7A006C9F4E /* Refreshable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Refreshable.swift; sourceTree = "<group>"; };
+		EDEF3AA31E66AF94006C9F4E /* Configure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configure.swift; sourceTree = "<group>"; };
+		EDEF3AA61E66B03B006C9F4E /* LegoUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegoUserDefaults.swift; sourceTree = "<group>"; };
+		EDEF3AA71E66B03B006C9F4E /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,8 @@
 		ED0E6B9F1E58A721008D518A /* Lego */ = {
 			isa = PBXGroup;
 			children = (
+				EDEF3AA51E66B03B006C9F4E /* Services */,
+				EDEF3AA21E66AF94006C9F4E /* Configures */,
 				EDEF3A581E654F6D006C9F4E /* Protocols */,
 				EDEF3A551E654E02006C9F4E /* Root */,
 				EDEF3A521E654DC3006C9F4E /* App */,
@@ -119,6 +127,23 @@
 				EDEF3A591E654F7A006C9F4E /* Refreshable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EDEF3AA21E66AF94006C9F4E /* Configures */ = {
+			isa = PBXGroup;
+			children = (
+				EDEF3AA31E66AF94006C9F4E /* Configure.swift */,
+			);
+			path = Configures;
+			sourceTree = "<group>";
+		};
+		EDEF3AA51E66B03B006C9F4E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EDEF3AA71E66B03B006C9F4E /* Networking.swift */,
+				EDEF3AA61E66B03B006C9F4E /* LegoUserDefaults.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,7 +270,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDEF3A5A1E654F7A006C9F4E /* Refreshable.swift in Sources */,
+				EDEF3AA81E66B03B006C9F4E /* LegoUserDefaults.swift in Sources */,
 				EDEF3A541E654DD1006C9F4E /* AppDelegate.swift in Sources */,
+				EDEF3AA91E66B03B006C9F4E /* Networking.swift in Sources */,
+				EDEF3AA41E66AF94006C9F4E /* Configure.swift in Sources */,
 				EDEF3A571E654E0D006C9F4E /* TabBarController.swift in Sources */,
 				ED0E6BA51E58A721008D518A /* SecondViewController.swift in Sources */,
 				ED0E6BA31E58A721008D518A /* FirstViewController.swift in Sources */,

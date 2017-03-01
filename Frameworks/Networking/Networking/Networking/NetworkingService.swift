@@ -139,4 +139,48 @@ public struct NetworkingService {
             }
         }
     }
+
+    public static func send(request: URLRequestConvertible) -> Observable<Bool> {
+
+        return Observable.create { (observer) -> Disposable in
+
+            let request = securityManager.request(request).response { json, error in
+
+                if let error = error {
+                    observer.onError(error)
+                    return
+                }
+
+                guard isSuccess(json) else {
+                    observer.onError(responseError(json))
+                    return
+                }
+
+                observer.onNext(true)
+                observer.onCompleted()
+            }
+
+            return Disposables.create {
+                request.cancel()
+            }
+        }
+    }
+
+    fileprivate static func isSuccess(_ json: Any?) -> Bool {
+
+        guard let json = json as? [String: Any], let msg = json["error_msg"] as? String, msg == "ok", let code = json["error_code"] as? Int, code == 0 else {
+            return false
+        }
+
+        return true
+    }
+
+    fileprivate static func responseError(_ json: Any?) -> NetworkingError {
+
+        guard let json = json as? [String: Any], let msg = json["error_msg"] as? String, msg != "ok", let code = json["error_code"] as? Int, code != 0 else {
+            return NetworkingError.default
+        }
+
+        return NetworkingError(code: code, failureReason: msg)
+    }
 }
