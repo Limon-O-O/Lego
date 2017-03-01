@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         Networking.ServiceConfigure.accessToken = Mediator.shared.door.accessToken()
 
+        Mediator.shared.door.clearUserDefaults()
+
         if !LegoUserDefaults.didLogin {
             // startDoorStory()
         }

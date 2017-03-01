@@ -34,14 +34,11 @@ class FirstViewController: UIViewController {
             .subscribe(onNext: { [weak self] _ in
 
                 let action = {
-                    let vc = Mediator.shared.profile.profileViewController { info in
-                    }
-                    self?.navigationController?.pushViewController(vc!, animated: true)
+                    guard let vc = Mediator.shared.profile.profileViewController() else { return }
+                    self?.navigationController?.pushViewController(vc, animated: true)
                 }
 
-                let didLogin = { return false }() // LegoUserDefaults.didLogin
-
-                if didLogin {
+                if LegoUserDefaults.didLogin {
                     action()
                 } else {
                     let callbackAction: ([String: Any]) -> Void = { [weak self] info in

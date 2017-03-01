@@ -13,9 +13,8 @@ import Mediator
 
 extension Profile where Base: Mediator {
 
-    public func profileViewController(callbackAction: @escaping (([String: Any]) -> Void)) -> UIViewController? {
-        let deliverParams: [String: Any] = ["callbackAction": callbackAction]
-        return base.performTarget("Profile", action: "ProfileViewController", params: deliverParams) as? UIViewController
+    public func profileViewController() -> UIViewController? {
+        return base.performTarget("Profile", action: "ProfileViewController", params: [:]) as? UIViewController
     }
 
     public func fetchProfileViewController(successHandler: @escaping ((UIViewController) -> Void), failHandler: @escaping (([String: Any]) -> Void)) {
