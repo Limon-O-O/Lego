@@ -8,6 +8,8 @@
 
 import UIKit
 import LegoKit
+import Mediator
+import Mediator_Door
 
 final class TabBarController: UITabBarController {
 
@@ -84,15 +86,27 @@ extension TabBarController: UITabBarControllerDelegate {
 
         if tab != selectedTab {
             selectedTab = tab
-            return
-        }
 
-        if let vc = nvc.topViewController as? Refreshable {
-            if vc.isAtTop {
-                vc.refresh()
-            } else {
-                vc.scrollsToTopIfNeeded(otherwise: nil)
+            if tab == .me && !Mediator.shared.door.didLogin() {
+                // 没登录，present Door
+                let callbackAction: ([String: Any]) -> Void = { [weak viewController] info in
+                    guard let _ = info["userID"] as? Int else { return }
+                    viewController?.dismiss(animated: true, completion: nil)
+                }
+                guard let door = Mediator.shared.door.welcomeViewController(false, callbackAction) else { return }
+                viewController.present(door, animated: true, completion: nil)
+            }
+
+        } else {
+
+            if let vc = nvc.topViewController as? Refreshable {
+                if vc.isAtTop {
+                    vc.refresh()
+                } else {
+                    vc.scrollsToTopIfNeeded(otherwise: nil)
+                }
             }
         }
+
     }
 }

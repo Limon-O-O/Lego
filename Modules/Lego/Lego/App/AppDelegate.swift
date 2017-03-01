@@ -57,10 +57,9 @@ extension AppDelegate {
             print("Door callbacked with info: \(info)")
         }
 
-        guard let welcomeViewController = Mediator.shared.door.welcomeViewController(callbackAction) else {
-            return
-        }
-        window?.rootViewController = welcomeViewController
+        let welcomeViewController = Mediator.shared.door.welcomeViewController { info in callbackAction(info) }
+        guard let controller = welcomeViewController else { return }
+        window?.rootViewController = controller
     }
 
     func startMainStory() {

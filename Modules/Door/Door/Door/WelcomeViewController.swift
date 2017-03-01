@@ -28,11 +28,14 @@ class WelcomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Welcome"
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: true)
+        let navigationBarHidden = (innateParams["navigationBarHidden"] as? Bool) ?? true
+        showStatusBar = !navigationBarHidden
+        navigationController?.setNavigationBarHidden(navigationBarHidden, animated: true)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -44,8 +47,6 @@ class WelcomeViewController: UIViewController {
         wechatButton.setTitle("button.wechat_login".egg.localized, for: .normal)
         phoneButton.setTitle("button.phone_login".egg.localized, for: .normal)
         registerButton.setTitle("button.register_by_phone".egg.localized, for: .normal)
-
-        showStatusBar = false
 
         UIView.animate(withDuration: 0.2) {
             self.setNeedsStatusBarAppearanceUpdate()
