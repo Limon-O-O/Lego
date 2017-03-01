@@ -114,54 +114,181 @@ public struct NetworkingService {
         return sessionManager
     }()
 
-    public static func result<T: Mappable>(request: URLRequestConvertible, mapper: T.Type, key: String = "result") -> Observable<T> {
+    /// 确保所有的网络相关操作都在异步线程执行
+    fileprivate static func async() -> Observable<Bool> {
+        return Observable.just(true).observeOn(SerialDispatchQueueScheduler(qos: .default))
+    }
 
-        return Observable.create { observer -> Disposable in
+    public static func results<T: Mappable>(request: URLRequestConvertible, mapper: T.Type, key: String = "results") -> Observable<[T]> {
 
-            let request = securityManager.request(request).response { json, error in
+        return async().flatMap { _ in
 
-                if let error = error {
-                    observer.onError(error)
-                    return
+            return Observable.create { observer -> Disposable in
+
+                let request = securityManager.request(request).response { json, error in
+
+                    if let error = error {
+                        observer.onError(error)
+                        return
+                    }
+
+                    guard let json = json as? [String: Any], let results = json[key] as? [[String: Any]] else {
+                        observer.onError(NetworkingError.jsonSerializationFailed)
+                        return
+                    }
+
+                    observer.onNext(results.flatMap { mapper.mapping(json: $0) })
+                    observer.onCompleted()
                 }
 
-                guard let json = json as? [String: Any], let resultJSON = json[key] as? [String: Any], let result = mapper.mapping(json: resultJSON) else {
-                    observer.onError(NetworkingError.jsonSerializationFailed)
-                    return
+                return Disposables.create {
+                    request.cancel()
                 }
-
-                observer.onNext(result)
-                observer.onCompleted()
             }
-            
-            return Disposables.create {
-                request.cancel()
+        }
+    }
+
+    public static func result<T: Mappable>(request: URLRequestConvertible, mapper: T.Type, key: String) -> Observable<T> {
+
+        return async().flatMap { _ in
+
+            return Observable.create { observer -> Disposable in
+
+                let request = securityManager.request(request).response { json, error in
+
+                    if let error = error {
+                        observer.onError(error)
+                        return
+                    }
+
+                    guard let json = json as? [String: Any], let resultJSON = json[key] as? [String: Any], let result = mapper.mapping(json: resultJSON) else {
+                        observer.onError(NetworkingError.jsonSerializationFailed)
+                        return
+                    }
+
+                    observer.onNext(result)
+                    observer.onCompleted()
+                }
+
+                return Disposables.create {
+                    request.cancel()
+                }
+            }
+        }
+    }
+
+    public static func result<T: Mappable>(request: URLRequestConvertible, mapper: T.Type) -> Observable<T> {
+
+        return async().flatMap { _ in
+
+            return Observable.create { observer -> Disposable in
+
+                let request = securityManager.request(request).response { json, error in
+
+                    if let error = error {
+                        observer.onError(error)
+                        return
+                    }
+
+                    guard let json = json as? [String: Any], let result = mapper.mapping(json: json) else {
+                        observer.onError(NetworkingError.jsonSerializationFailed)
+                        return
+                    }
+
+                    observer.onNext(result)
+                    observer.onCompleted()
+                }
+
+                return Disposables.create {
+                    request.cancel()
+                }
+            }
+        }
+    }
+
+    public static func results<T>(request: URLRequestConvertible, key: String = "results") -> Observable<[T]> {
+
+        return async().flatMap { _ in
+
+            return Observable.create { observer -> Disposable in
+
+                let request = securityManager.request(request).response { json, error in
+
+                    if let error = error {
+                        observer.onError(error)
+                        return
+                    }
+
+                    guard let json = json as? [String: Any], let results = json[key] as? [T] else {
+                        observer.onError(NetworkingError.jsonSerializationFailed)
+                        return
+                    }
+
+                    observer.onNext(results)
+                    observer.onCompleted()
+                }
+
+                return Disposables.create {
+                    request.cancel()
+                }
             }
         }
     }
 
     public static func send(request: URLRequestConvertible) -> Observable<Bool> {
 
-        return Observable.create { (observer) -> Disposable in
+        return async().flatMap { _ in
 
-            let request = securityManager.request(request).response { json, error in
+            return Observable.create { (observer) -> Disposable in
 
-                if let error = error {
-                    observer.onError(error)
-                    return
+                let request = securityManager.request(request).response { json, error in
+
+                    if let error = error {
+                        observer.onError(error)
+                        return
+                    }
+
+                    guard isSuccess(json) else {
+                        observer.onError(responseError(json))
+                        return
+                    }
+
+                    observer.onNext(true)
+                    observer.onCompleted()
                 }
 
-                guard isSuccess(json) else {
-                    observer.onError(responseError(json))
-                    return
+                return Disposables.create {
+                    request.cancel()
                 }
-
-                observer.onNext(true)
-                observer.onCompleted()
             }
+        }
+    }
 
-            return Disposables.create {
-                request.cancel()
+    public static func send<T>(request: URLRequestConvertible, key: String) -> Observable<T> {
+
+        return async().flatMap { _ in
+
+            return Observable.create { (observer) -> Disposable in
+
+                let request = securityManager.request(request).response { json, error in
+
+                    if let error = error {
+                        observer.onError(error)
+                        return
+                    }
+                    
+                    guard let json = json as? [String: Any], let result = json[key] as? T else {
+                        observer.onError(NetworkingError.jsonSerializationFailed)
+                        return
+                    }
+                    
+                    observer.onNext(result)
+                    observer.onCompleted()
+                }
+                
+                return Disposables.create {
+                    request.cancel()
+                }
             }
         }
     }

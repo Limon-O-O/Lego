@@ -90,11 +90,11 @@
 		ED0E6B9F1E58A721008D518A /* Lego */ = {
 			isa = PBXGroup;
 			children = (
+				EDEF3A521E654DC3006C9F4E /* App */,
+				EDEF3A551E654E02006C9F4E /* Root */,
 				EDEF3AA51E66B03B006C9F4E /* Services */,
 				EDEF3AA21E66AF94006C9F4E /* Configures */,
 				EDEF3A581E654F6D006C9F4E /* Protocols */,
-				EDEF3A551E654E02006C9F4E /* Root */,
-				EDEF3A521E654DC3006C9F4E /* App */,
 				ED0E6BA21E58A721008D518A /* FirstViewController.swift */,
 				ED0E6BA41E58A721008D518A /* SecondViewController.swift */,
 				ED0E6BA61E58A721008D518A /* Main.storyboard */,
