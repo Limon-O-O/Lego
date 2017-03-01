@@ -1,7 +1,9 @@
 # 一个仓库的模块化之路
-正如标题，本文讲解的是如何在一个仓库进行模块化，当然，如果你想拆分一个模块对应一个仓库，也行，改改就是了。
+本文讲解的是如何在一个仓库进行模块化，当然，如果你想拆分一个模块对应一个仓库，也行，改改就是了。
 
-本文主要记录：
+建议先仔细阅读 Mr.Casa 的[《在现有工程中实施基于CTMediator的组件化方案》](http://casatwy.com/modulization_in_action.html)，本文魔改于此。
+
+本文要点：
 
 1. Swift 项目怎样使用 Mediator 进行模块化
 2. 使用 CocoaPods 管理模块
@@ -235,7 +237,7 @@ Lego
 `Modules/Lego/Podfile`:
 
 ```
-source 'https://github.com/Limon-O-O/Lego.git'
+source 'https://github.com/Limon-O-O/Lego.git' # 这是 Specs 仓库的地址，在本文中，和项目的仓库地址一致
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 
@@ -272,7 +274,7 @@ end
 
 ## 三、实践心得
 
-1. Networking，分模块。各个模块的 API，分别写到相对应的模块，没有一个 `集约型` 的文件。
+1. `Networking`，分模块。各个模块的 API，分别写到相对应的模块，没有一个 `集约型` 的文件。
 
 2. `UserDefaults` 分模块，也稍微避免 `UserDefaults.standard` 存储大量数据之后，导致读写慢
 
@@ -302,11 +304,22 @@ end
 
 	如果返回 `Bool`，崩溃信息：`unrecognized selector sent to instance`，若想更深入探讨，可运行 [God项目](https://github.com/Limon-O-O/Mediator) 进行测试
 	
+4. 使用 `Mediator` 进行模块化，避免不了`Hard Code`，特别是在模块之间的通讯时，建议 `Hard Code` 尽量写在 `Extension` 内，比如 `Mediator+Door.swift` 的 `deliverParams` 的 `navigationBarHidden`, `callbackAction`
+    
+    ```
+    extension Door where Base: Mediator {
 
-4. 使用 `Storyboard Reference` 连接其它模块的 `Storyboard`，注意 `Bundle` 的填写
+        public func welcomeViewController(_ navigationBarHidden: Bool = true, _ callbackAction: @escaping (([String: Any]) -> Void)) -> UIViewController? {
+            let deliverParams: [String: Any] = ["navigationBarHidden": navigationBarHidden, "callbackAction": callbackAction]
+            return base.performTarget("Door", action: "WelcomeViewController", params: deliverParams) as? UIViewController
+        }
+    }
+    ```
+
+5. 使用 `Storyboard Reference` 连接其它模块的 `Storyboard`，注意 `Bundle` 的填写
 	
 	<img src="https://ww4.sinaimg.cn/large/006tNbRwly1fd7jvecf8cj30e805mq3g.jpg" width="420">
 	
-5. 使用 `Protocol` + `Extension` 更好地区分作用域，`Mediator.shared.door.accessToken()`，其中的 `door` 是不是挺好看的 🌝，而不是 `Mediator.shared.door_accessToken()`
+6. 使用 `Protocol` + `Extension` 更好地区分作用域，`Mediator.shared.door.accessToken()`，其中的 `door` 是不是挺好看的 🌝，而不是 `Mediator.shared.door_accessToken()`
 
 
