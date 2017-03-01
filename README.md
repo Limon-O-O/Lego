@@ -125,9 +125,11 @@ cd ~/.cocoapods/repos && ls
 
 ### 实战前夕
 
-1. 新建一个仓库，就先名为 `Lego`，页面先不急着关，打开 `Terminal`，把刚刚新建的仓库 `clone` 到本地
+1. 新建一个仓库，就先名为 `Lego`，页面先不急着关，打开 `Terminal`
 
-2. 进入刚刚 `clone` 下来的文件夹，把 [ConfigPrivatePod](https://github.com/Limon-O-O/Lego/tree/master/ConfigPrivatePod) 文件夹放进去
+2. `pod repo add [私有Pod源仓库名字] [私有Pod源的repo地址]`，添加私有源到本地
+
+2. 把刚刚新建的仓库 `clone` 到本地，把 [ConfigPrivatePod](https://github.com/Limon-O-O/Lego/tree/master/ConfigPrivatePod) 文件夹放进去
 
 3. 在 `./ConfigPrivatePod/config.sh` 文件里，填写 `httpsRepo`, `sshRepo`, `specsRepo`, `homePage`, `author`, `email`，[具体参考](https://github.com/Limon-O-O/Lego/blob/master/ConfigPrivatePod/config.sh#L3)
 
@@ -165,62 +167,63 @@ Lego
 2. 再创建一个名为 `Mediator+Door` 的工程，同样放在 `Lego/Modules` 下，此工程主要为了方便其它模块调用 Door业务，本质就是通过 `Mediator` 利用`运行时`，找到在 `Door` 内相对应的方法。
 3. 在 `ConfigPrivatePod` 下，执行 `./config.sh`，脚本会问你要一些信息。
 
-配置 `Door` 工程：
+	配置 `Door` 工程：
 
-```
-Enter Project Name: Door
+	```
+	Enter Project Name: Door
 
-================================================
- 1 :  Module
- 2 :  Extension
- 3 :  Framework
-================================================
+	================================================
+	 1 :  Module
+ 	2 :  Extension
+ 	3 :  Framework
+	================================================
 
-Enter Project Type Number: 1
-```
+	Enter Project Type Number: 1
+	```
 
-配置 `Mediator+Door` 工程：
+	配置 `Mediator+Door` 工程：
 
-```
-Enter Project Name: Door // 注：Project Name 也是 Door
+	```
+	Enter Project Name: Door // 注：Project Name 也是 Door
 
-================================================
- 1 :  Module
- 2 :  Extension
- 3 :  Framework
-================================================
+	================================================
+ 	1 :  Module
+ 	2 :  Extension
+ 	3 :  Framework
+	================================================
 
-Enter Project Type Number: 2
-```
+	Enter Project Type Number: 2
+	```
 
-> 若配置模块工程，`Project Type Number` 输入 `1`，若配置 `模块Extension` 工程，输入 `2`，若配置普通的 `framework` 输入 `3`
+	> 若配置模块工程，`Project Type Number` 输入 `1`，若配置 `模块Extension` 工程，输入 `2`，若配置普通的 `framework` 输入 `3`
 
-配置完 `Door` 工程后，在 `Modules/Door/Door` 下，会多了一个也同样名为 `Door` 的文件夹，以后所有需要打包出去给别人用的都在此文件夹下，因为在 `Door.podspec` 文件内定义的源文件就指指定了此文件夹。
+	配置完 `Door` 工程后，在 `Modules/Door/Door` 下，会多了一个也同样名为 `Door` 的文件夹，以后所有需要打包出去给别人用的都在此文件夹下，因为在 `Door.podspec` 文件内定义的源文件就指指定了此文件夹。
 
-打开 `Door.xcodeproj`，把 `Modules/Door/Door/Door` 此文件夹工程里面。 `Mediator+Door` 工程同理。
+4. 打开 `Door.xcodeproj`，把 `Modules/Door/Door/Door` 此文件夹工程里面。 `Mediator+Door` 工程同理。
 
-`Door` 工程的目录简如下：
+	`Door` 工程的目录简如下：
 
-```
-Door
-├── Door
-│   └── Door
-│       ├── WelcomeViewController.swift
-│       └── Targets
-│           ├── Target_Door.swift
-├── Door.xcodeproj
-```
+	```
+	Door
+	├── Door
+	│   └── Door
+	│       ├── WelcomeViewController.swift
+	│       └── Targets
+	│           ├── Target_Door.swift
+	├── Door.xcodeproj
+	```
 
-`Mediator+Door` 工程的目录简如下：
+	`Mediator+Door` 工程的目录简如下：
 
-```
-Mediator+Door
-├── Mediator+Door
-│   └── Mediator+Door
-│       ├── Door.swift
-│       ├── Mediator+Door.swift
-├── Mediator+Door.xcodeproj
-```
+	```
+	Mediator+Door
+	├── Mediator+Door
+	│   └── Mediator+Door
+	│       ├── Door.swift
+	│       ├── Mediator+Door.swift
+	├── Mediator+Door.xcodeproj
+	```
+
 到此，`Door模块` 基本配置完成，可以前往 `主模块Lego` 引入它了。
 
 <br />
@@ -250,10 +253,60 @@ end
 
 ```
 
+### 发布 Door 模块
+
+在 `Modules/Door` 下，敲命令 `./release.sh`，脚本会问你需要发布的版本号，仅需要输入一个版本号，其它的脚本都帮你做好了。
+
+发布成功之后，还需要更新 `Private Spec`，命令：`pod repo update [Name]`，这个 `[Name]` 就是 `私有Pod源的名字`，在上面我们用命令 `pod repo add [私有Pod源仓库名字] [私有Pod源的repo地址]` 添加了的。也可以 `cd ~/.cocoapods/repos && ls` 查看
+
+`release.sh` 主要作用有：
+
+1. 更新 `Door.podspec`
+2. 更新 `README.md`
+3. 更新 `Info.plist` 的版本号
+4. 复制一份 `Door.podspec` 到 `Specs` 文件夹
+5. `git push` 相关变动到远程仓库
+
+
 <br />
 
 ## 三、实践心得
 
+1. Networking，分模块。各个模块的 API，分别写到相对应的模块，没有一个 `集约型` 的文件。
 
+2. `UserDefaults` 分模块，也稍微避免 `UserDefaults.standard` 存储大量数据之后，导致读写慢
+
+	```
+	UserDefaults(suiteName: "top.limon.door")
+	UserDefaults(suiteName: "top.limon.lego")
+	```
+	
+	如果模块之间需要传递 `UserDefaults` 的值，通过 `Mediator` 调度，不直接公开 `UserDefaults`。
+	
+3. 通过 `Mediator` 传递的 `Data` 必须是 `NSObject`，不然崩溃
+
+	```
+	extension Target_Door {
+
+		func Action_DidLogin() -> [String: Any] {
+			return ["result": DoorUserDefaults.didLogin]
+		}
+
+		func Action_DidLogin() -> Bool { // Bool 不是 NSObject，崩溃
+			return true
+		}
+	}
+	```
+	
+	然并卵，`[String: Any]` 理论上是 `AnyObject`，但却不崩溃，难道自动转出了 `NSDictionary` ？
+
+	如果返回 `Bool`，崩溃信息：`unrecognized selector sent to instance`，若想更深入探讨，可运行 [God项目](https://github.com/Limon-O-O/Mediator) 进行测试
+	
+
+4. 使用 `Storyboard Reference` 连接其它模块的 `Storyboard`，注意 `Bundle` 的填写
+	
+	<img src="https://ww4.sinaimg.cn/large/006tNbRwly1fd7jvecf8cj30e805mq3g.jpg" width="420">
+	
+5. 使用 `Protocol` + `Extension` 更好地区分作用域，`Mediator.shared.door.accessToken()`，其中的 `door` 是不是挺好看的 🌝，而不是 `Mediator.shared.door_accessToken()`
 
 
