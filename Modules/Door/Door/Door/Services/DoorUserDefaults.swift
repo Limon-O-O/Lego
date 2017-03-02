@@ -20,9 +20,13 @@ struct DoorUserDefaults {
     }
 
     static func clear() {
+
+        accessToken = nil
+
         for key in defaults.dictionaryRepresentation().keys {
             defaults.removeObject(forKey: key)
         }
+
         defaults.synchronize()
     }
 }
@@ -58,7 +62,8 @@ extension DoorUserDefaults {
 
     static var userID: Int? {
         get {
-            return defaults.integer(forKey: Keys.userID.rawValue)
+            let id = defaults.integer(forKey: Keys.userID.rawValue)
+            return id == 0 ? nil : id
         }
         set {
             defaults.set(newValue, forKey: Keys.userID.rawValue)
