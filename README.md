@@ -300,7 +300,7 @@ end
 	}
 	```
 	
-	然并卵，`[String: Any]` 理论上是 `AnyObject`，但却不崩溃，难道自动转出了 `NSDictionary` ？
+	然并卵，`[String: Any]` 理论上是 `AnyObject`，但却不崩溃，难道自动转成了 `NSDictionary` ？
 
 	如果返回 `Bool`，崩溃信息：`unrecognized selector sent to instance`，若想更深入探讨，可运行 [God项目](https://github.com/Limon-O-O/Mediator) 进行测试
 	
