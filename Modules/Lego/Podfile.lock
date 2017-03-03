@@ -14,7 +14,7 @@ PODS:
   - Me (1.0.1):
     - EggKit
     - LegoKit
-  - Mediator (0.0.1)
+  - Mediator (0.0.4)
   - Mediator+Door (1.0.0):
     - Mediator
   - Mediator+Me (1.0.1):
@@ -72,7 +72,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Mediator:
-    :commit: c7a9c1db1bd6cab2efe520ad61cd7909d04531c4
+    :commit: 87dd35dcaafd304f0f52fe645af47f62df01bddc
     :git: https://github.com/Limon-O-O/Mediator.git
 
 SPEC CHECKSUMS:
@@ -81,7 +81,7 @@ SPEC CHECKSUMS:
   EggKit: 4ad8e40cd8ad4cc6ff8c415546e0544b1542b2d0
   LegoKit: 55617431b4cb0b53968ffc6fa0f105fff07bfbc4
   Me: 7268d637deb936aa14e9a19035793462d85e919a
-  Mediator: e404bed0eb2fc984307e46199557e726affc5b1e
+  Mediator: 8af03cb1f7f8a086db007740f90abd5636eafd6a
   Mediator+Door: d6df37ee69efec9e6663fb12c68b39ebe2ce2364
   Mediator+Me: 5c21c263ded02eea97eaef4d280c8a021d00cd07
   Mediator+Profile: 7bc5b935069dc07e7f2c50aa83b1dd2dbb110b84

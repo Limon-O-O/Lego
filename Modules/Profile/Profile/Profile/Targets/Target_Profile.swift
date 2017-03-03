@@ -38,14 +38,3 @@ extension Target_Profile {
 extension Target_Profile {
 
 }
-
-// MARK: - Before Action
-
-extension Target_Profile {
-
-    func BeforeAction_ShouldLogin(params: [String: Any]) -> [String: Any] {
-
-        print("BeforeAction \(params)")
-        return ["result": true]
-    }
-}

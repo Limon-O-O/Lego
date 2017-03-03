@@ -18,6 +18,7 @@ class FirstViewController: UIViewController {
 
     @IBOutlet private weak var loginButton: UIButton!
     @IBOutlet private weak var profileButton: UIButton!
+    @IBOutlet private weak var testRemoteURLButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,23 @@ class FirstViewController: UIViewController {
             .throttle(0.3, scheduler: MainScheduler.instance)
             .subscribe(onNext: { _ in
                 (UIApplication.shared.delegate as? AppDelegate)?.startDoorStory()
+            })
+            .addDisposableTo(disposeBag)
+
+        testRemoteURLButton.rx.tap
+            .throttle(0.3, scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] _ in
+
+                let filePath = Bundle.main.path(forResource: "URLRouteMap", ofType: "plist")!
+                let routeMapConfigure = URLRouteMapConfigure(scheme: "Lego", user: "Limon", password: "123456", routeMapFilePath: filePath)
+                Mediator.shared.urlRouteMapConfigure = routeMapConfigure
+
+                /// scheme://[user]:[password]@[target]/[action]?[params]
+                let testString = "Lego://Limon:123456@Target-Door/actionC?id=1234&page=2&name=egg"
+                let test = Mediator.shared.performAction(with: URL(string: testString)!) as? UIViewController
+                
+                self?.navigationController?.pushViewController(test!, animated: true)
+
             })
             .addDisposableTo(disposeBag)
 

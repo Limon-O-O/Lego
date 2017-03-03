@@ -28,12 +28,18 @@
                                 <rect key="frame" x="165" y="388.5" width="44" height="30"/>
                                 <state key="normal" title="Profile"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kat-7i-pmE">
+                                <rect key="frame" x="126" y="568" width="123" height="30"/>
+                                <state key="normal" title="Test_Remote_URL"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hDI-r1-4C7" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="6j1-iu-kgJ"/>
                             <constraint firstItem="hDI-r1-4C7" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="Gf8-vI-HVp"/>
                             <constraint firstItem="lWk-Gr-ica" firstAttribute="top" secondItem="hDI-r1-4C7" secondAttribute="bottom" constant="40" id="Vbp-5k-bXP"/>
+                            <constraint firstItem="kat-7i-pmE" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="d4L-25-mkW"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="kat-7i-pmE" secondAttribute="bottom" constant="20" id="kUB-lZ-DY5"/>
                             <constraint firstItem="lWk-Gr-ica" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="qHn-Pv-Ggr"/>
                         </constraints>
                     </view>
@@ -41,6 +47,7 @@
                     <connections>
                         <outlet property="loginButton" destination="hDI-r1-4C7" id="EEs-8o-RvO"/>
                         <outlet property="profileButton" destination="lWk-Gr-ica" id="TbT-eX-SuQ"/>
+                        <outlet property="testRemoteURLButton" destination="kat-7i-pmE" id="4Y6-hi-TLT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>

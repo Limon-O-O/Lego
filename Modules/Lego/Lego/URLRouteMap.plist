@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Target-Door</key>
+	<dict>
+		<key>name</key>
+		<string>Door</string>
+		<key>allVerifySkip</key>
+		<false/>
+		<key>actions</key>
+		<dict>
+			<key>actionA</key>
+			<dict>
+				<key>mapValue</key>
+				<string>WelcomeViewController</string>
+				<key>verifySkip</key>
+				<false/>
+			</dict>
+			<key>actionB</key>
+			<dict>
+				<key>mapValue</key>
+				<string>DidLogin</string>
+				<key>verifySkip</key>
+				<true/>
+			</dict>
+			<key>actionC</key>
+			<dict>
+				<key>mapValue</key>
+				<string>LoginViewController</string>
+				<key>verifySkip</key>
+				<false/>
+			</dict>
+		</dict>
+	</dict>
+	<key>Target-Profile</key>
+	<dict>
+		<key>name</key>
+		<string>Profile</string>
+		<key>allVerifySkip</key>
+		<false/>
+		<key>actions</key>
+		<dict>
+			<key>actionA</key>
+			<dict>
+				<key>mapValue</key>
+				<string>ProfileViewController</string>
+				<key>verifySkip</key>
+				<false/>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>
