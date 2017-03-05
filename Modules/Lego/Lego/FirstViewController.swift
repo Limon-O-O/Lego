@@ -51,24 +51,12 @@ class FirstViewController: UIViewController {
             .throttle(0.3, scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self] _ in
 
-                let action = {
-                    guard let vc = Mediator.shared.profile.profileViewController() else { return }
-                    self?.navigationController?.pushViewController(vc, animated: true)
+                // 是否需要登录和是否已将登录，不在此判断
+                // 在 `Target-Action` 写规则，是否需要登录（Before Action）
+                // 在 Mediator 的 Coolie Protocol 内实现切换到登录模块，并且登录模块判断是否已登录
+                Mediator.shared.profile.fetchProfileViewController { profileViewController in
+                    self?.navigationController?.pushViewController(profileViewController, animated: true)
                 }
-
-                if LegoUserDefaults.didLogin {
-                    action()
-                } else {
-                    let callbackAction: ([String: Any]) -> Void = { [weak self] info in
-                        guard let _ = info["userID"] as? Int else { return }
-                        self?.dismiss(animated: true, completion: nil)
-                        action()
-                    }
-                    let welcomeViewController = Mediator.shared.door.welcomeViewController { info in callbackAction(info) }
-                    guard let controller = welcomeViewController else { return }
-                    self?.present(controller, animated: true, completion: nil)
-                }
-
             })
             .addDisposableTo(disposeBag)
     }

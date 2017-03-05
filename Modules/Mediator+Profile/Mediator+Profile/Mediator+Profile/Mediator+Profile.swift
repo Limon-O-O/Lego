@@ -8,7 +8,6 @@ import UIKit
 import Mediator
 
 
-
 // MARK: - Controllers
 
 extension Profile where Base: Mediator {
@@ -17,8 +16,8 @@ extension Profile where Base: Mediator {
         return base.performTarget("Profile", action: "ProfileViewController", params: [:]) as? UIViewController
     }
 
-    public func fetchProfileViewController(successHandler: @escaping ((UIViewController) -> Void), failHandler: @escaping (([String: Any]) -> Void)) {
-        let deliverParams: [String: Any] = ["successHandler": successHandler, "failHandler": failHandler]
+    public func fetchProfileViewController(successHandler: @escaping ((UIViewController) -> Void)) {
+        let deliverParams: [String: Any] = ["successHandler": successHandler]
         base.performTarget("Profile", action: "FetchProfileViewController", params: deliverParams)
     }
 

@@ -18,8 +18,28 @@ extension Target_Door {
     func Action_WelcomeViewController(params: [String: Any]) -> UIViewController? {
         let navigationController = Storyboard.door.navigationController(with: "DoorNavigationController") as? DoorNavigationController
         navigationController?.innateParams = params
-        // TODO: 去掉强制拆包
-        return navigationController!
+        return navigationController
+    }
+
+    func Action_PresentWelcomeViewController(params: [String: Any]) {
+
+        if DoorUserDefaults.didLogin { // 已将登录了，不需要再 present Door
+            (params["callbackAction"] as? ([String: Any]) -> Void)?(["result": true])
+        } else {
+
+            guard let navigationController = Storyboard.door.navigationController(with: "DoorNavigationController") as? DoorNavigationController else  { return }
+
+            let action: ([String: Any]) -> Void = { [weak navigationController] info in
+                navigationController?.dismiss(animated: true, completion: nil)
+                (params["callbackAction"] as? ([String: Any]) -> Void)?(info)
+            }
+
+            var paramsBuffer = params
+            paramsBuffer["callbackAction"] = action
+            navigationController.innateParams = paramsBuffer
+
+            UIApplication.shared.keyWindow?.rootViewController?.present(navigationController, animated: true, completion: nil)
+        }
     }
 
     func Action_LoginViewController(params: [String: Any]) -> UIViewController {

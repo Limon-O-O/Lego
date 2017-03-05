@@ -16,6 +16,11 @@ extension Door where Base: Mediator {
         return base.performTarget("Door", action: "WelcomeViewController", params: deliverParams) as? UIViewController
     }
 
+    public func presentWelcomeViewController(callbackAction: @escaping (([String: Any]) -> Void)) {
+        let deliverParams: [String: Any] = ["navigationBarHidden": false, "callbackAction": callbackAction]
+        base.performTarget("Door", action: "PresentWelcomeViewController", params: deliverParams)
+    }
+
     public func loginViewController(callbackAction: @escaping (([String: Any]) -> Void)) -> UIViewController? {
         let deliverParams: [String: Any] = ["callbackAction": callbackAction]
         return base.performTarget("Door", action: "LoginViewController", params: deliverParams) as? UIViewController

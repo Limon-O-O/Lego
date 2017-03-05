@@ -43,6 +43,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: Coolie {
 
+    func mediatorRequestPermission(with successHandler: @escaping () -> Void) {
+
+        Mediator.shared.door.presentWelcomeViewController { _ in
+            // 登录成功
+            successHandler()
+        }
+    }
+
     func mediatorCannotParse(_ url: URL) {
         print("Mediator can not parse url: \(url)")
     }
