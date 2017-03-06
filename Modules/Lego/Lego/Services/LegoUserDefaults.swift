@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import Mediator
-import Mediator_Door
 
 struct LegoUserDefaults {
 
@@ -36,10 +34,6 @@ extension LegoUserDefaults {
 }
 
 extension LegoUserDefaults {
-
-    static var didLogin: Bool {
-        return Mediator.shared.door.didLogin()
-    }
 
     static var didSayHi: Bool {
         get {

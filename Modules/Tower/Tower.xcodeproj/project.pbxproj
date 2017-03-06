@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B39FE8CB709F765A08D6E7F /* Pods_Tower.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F39E7565EAFCD70390691AE /* Pods_Tower.framework */; };
 		EDA4D7CD1E587CCB00C72EE3 /* TowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA4D7CC1E587CCB00C72EE3 /* TowerViewController.swift */; };
 		EDA4D7D01E58995200C72EE3 /* Target_Tower.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA4D7CF1E58995200C72EE3 /* Target_Tower.swift */; };
+		EDA5C5F61E6D3DFF000CF7BE /* Tower.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA5C5F51E6D3DFF000CF7BE /* Tower.storyboard */; };
+		EDA5C6381E6D4A2C000CF7BE /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA5C6371E6D4A2C000CF7BE /* Storyboard.swift */; };
+		EDA5C63B1E6D4A51000CF7BE /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA5C63A1E6D4A51000CF7BE /* Empty.swift */; };
 		EDB4F71C1E586B6A007EC7F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4F71B1E586B6A007EC7F3 /* AppDelegate.swift */; };
 		EDB4F71E1E586B6A007EC7F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB4F71D1E586B6A007EC7F3 /* ViewController.swift */; };
 		EDB4F7211E586B6A007EC7F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB4F71F1E586B6A007EC7F3 /* Main.storyboard */; };
@@ -17,8 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BE3F466BD8202A7267A701A /* Pods-Tower.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tower.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tower/Pods-Tower.release.xcconfig"; sourceTree = "<group>"; };
+		9F39E7565EAFCD70390691AE /* Pods_Tower.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tower.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF534D2B2296CB905D4D86B7 /* Pods-Tower.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tower.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tower/Pods-Tower.debug.xcconfig"; sourceTree = "<group>"; };
 		EDA4D7CC1E587CCB00C72EE3 /* TowerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TowerViewController.swift; sourceTree = "<group>"; };
 		EDA4D7CF1E58995200C72EE3 /* Target_Tower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Target_Tower.swift; sourceTree = "<group>"; };
+		EDA5C5F51E6D3DFF000CF7BE /* Tower.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tower.storyboard; sourceTree = "<group>"; };
+		EDA5C6371E6D4A2C000CF7BE /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		EDA5C63A1E6D4A51000CF7BE /* Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
 		EDB4F7181E586B6A007EC7F3 /* Tower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB4F71B1E586B6A007EC7F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDB4F71D1E586B6A007EC7F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,16 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B39FE8CB709F765A08D6E7F /* Pods_Tower.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB288DA7906EE8DF89BD36C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F39E7565EAFCD70390691AE /* Pods_Tower.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB84BB4720CA68CF014174B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF534D2B2296CB905D4D86B7 /* Pods-Tower.debug.xcconfig */,
+				1BE3F466BD8202A7267A701A /* Pods-Tower.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EDA4D7CB1E587CB900C72EE3 /* Tower */ = {
 			isa = PBXGroup;
 			children = (
+				EDA5C5F51E6D3DFF000CF7BE /* Tower.storyboard */,
 				EDA4D7CC1E587CCB00C72EE3 /* TowerViewController.swift */,
+				EDA5C6391E6D4A47000CF7BE /* Base */,
+				EDA5C6361E6D4A2C000CF7BE /* Storyboard */,
 				EDA4D7CE1E58993F00C72EE3 /* Targets */,
 			);
 			path = Tower;
@@ -56,11 +87,29 @@
 			path = Targets;
 			sourceTree = "<group>";
 		};
+		EDA5C6361E6D4A2C000CF7BE /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EDA5C6371E6D4A2C000CF7BE /* Storyboard.swift */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		EDA5C6391E6D4A47000CF7BE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EDA5C63A1E6D4A51000CF7BE /* Empty.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		EDB4F70F1E586B6A007EC7F3 = {
 			isa = PBXGroup;
 			children = (
 				EDB4F71A1E586B6A007EC7F3 /* Tower */,
 				EDB4F7191E586B6A007EC7F3 /* Products */,
+				BB84BB4720CA68CF014174B7 /* Pods */,
+				AB288DA7906EE8DF89BD36C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,9 +142,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDB4F72A1E586B6A007EC7F3 /* Build configuration list for PBXNativeTarget "Tower" */;
 			buildPhases = (
+				2C88B2CCEE902FEDB41137DD /* [CP] Check Pods Manifest.lock */,
 				EDB4F7141E586B6A007EC7F3 /* Sources */,
 				EDB4F7151E586B6A007EC7F3 /* Frameworks */,
 				EDB4F7161E586B6A007EC7F3 /* Resources */,
+				EF1B4A32F3889AA32DC57A46 /* [CP] Embed Pods Frameworks */,
+				AA30E49F71FA558F38E7B7A4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,6 +197,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDA5C5F61E6D3DFF000CF7BE /* Tower.storyboard in Resources */,
 				EDB4F7261E586B6A007EC7F3 /* LaunchScreen.storyboard in Resources */,
 				EDB4F7231E586B6A007EC7F3 /* Assets.xcassets in Resources */,
 				EDB4F7211E586B6A007EC7F3 /* Main.storyboard in Resources */,
@@ -153,15 +206,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2C88B2CCEE902FEDB41137DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AA30E49F71FA558F38E7B7A4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tower/Pods-Tower-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF1B4A32F3889AA32DC57A46 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tower/Pods-Tower-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EDB4F7141E586B6A007EC7F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EDA4D7D01E58995200C72EE3 /* Target_Tower.swift in Sources */,
+				EDA5C6381E6D4A2C000CF7BE /* Storyboard.swift in Sources */,
 				EDB4F71E1E586B6A007EC7F3 /* ViewController.swift in Sources */,
 				EDB4F71C1E586B6A007EC7F3 /* AppDelegate.swift in Sources */,
 				EDA4D7CD1E587CCB00C72EE3 /* TowerViewController.swift in Sources */,
+				EDA5C63B1E6D4A51000CF7BE /* Empty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,7 +330,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -270,7 +373,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -280,6 +383,7 @@
 		};
 		EDB4F72B1E586B6A007EC7F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF534D2B2296CB905D4D86B7 /* Pods-Tower.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tower/Info.plist;
@@ -292,6 +396,7 @@
 		};
 		EDB4F72C1E586B6A007EC7F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BE3F466BD8202A7267A701A /* Pods-Tower.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tower/Info.plist;

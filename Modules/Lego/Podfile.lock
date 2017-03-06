@@ -2,12 +2,14 @@ PODS:
   - Alamofire (4.3.0)
   - Door (1.0.0):
     - EggKit
+    - LegoContext
     - LegoKit
     - MonkeyKing
     - Networking
     - RxCocoa
     - RxSwift
   - EggKit (1.0.1)
+  - LegoContext (1.0.0)
   - LegoKit (1.0.1):
     - EggKit
     - RxSwift
@@ -31,11 +33,14 @@ PODS:
   - RxCocoa (3.2.0):
     - RxSwift (~> 3.1)
   - RxSwift (3.2.0)
-  - Tower (1.0.0)
+  - Tower (1.0.0):
+    - LegoContext
+    - Mediator+Door
 
 DEPENDENCIES:
   - Door (from `../Door`)
   - EggKit (from `../../Frameworks/EggKit`)
+  - LegoContext (from `../../Frameworks/LegoContext`)
   - LegoKit (from `../../Frameworks/LegoKit`)
   - Me
   - Mediator (from `https://github.com/Limon-O-O/Mediator.git`, branch `master`)
@@ -52,6 +57,8 @@ EXTERNAL SOURCES:
     :path: "../Door"
   EggKit:
     :path: "../../Frameworks/EggKit"
+  LegoContext:
+    :path: "../../Frameworks/LegoContext"
   LegoKit:
     :path: "../../Frameworks/LegoKit"
   Mediator:
@@ -77,8 +84,9 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
-  Door: b0811b33bfb396e54bc4eda580c71926e9d52173
+  Door: b48042a33e028a56198bb0461e725b0e28772c63
   EggKit: 4ad8e40cd8ad4cc6ff8c415546e0544b1542b2d0
+  LegoContext: 950749dc632b9a6a9d380f2e726262803974e6e4
   LegoKit: 55617431b4cb0b53968ffc6fa0f105fff07bfbc4
   Me: 7268d637deb936aa14e9a19035793462d85e919a
   Mediator: 8af03cb1f7f8a086db007740f90abd5636eafd6a
@@ -91,8 +99,8 @@ SPEC CHECKSUMS:
   Profile: 2bdb720c9d782c6d3776f9f7e61827f20655e3ab
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
-  Tower: fe78516d51423e8f39d826a1641a3a9e5862970c
+  Tower: 7027f4e210ddad4bf26417d6901eff4391f87b78
 
-PODFILE CHECKSUM: 71fdb208872cef8a74f5749213812fcb27b57c6c
+PODFILE CHECKSUM: dae614d6cbb3336798208e731359178f4d095b1c
 
 COCOAPODS: 1.2.0

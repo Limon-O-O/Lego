@@ -10,6 +10,7 @@ import UIKit
 import Mediator
 import Networking
 import Mediator_Door
+import LegoContext
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,12 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        Networking.ServiceConfigure.accessToken = Mediator.shared.door.accessToken()
-        Networking.ServiceConfigure.Environment.stringValue = Environment.value.rawValue
-
         Mediator.shared.door.clearUserDefaults()
 
-        if !LegoUserDefaults.didLogin {
+        LegoContext.accessToken = Mediator.shared.door.accessToken()
+        LegoContext.userID = Mediator.shared.door.userID()
+
+        Networking.ServiceConfigure.accessToken = LegoContext.accessToken
+        Networking.ServiceConfigure.Environment.stringValue = LegoContext.Environment.value.rawValue
+
+        if !LegoContext.didLogin {
             // startDoorStory()
         }
 

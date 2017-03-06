@@ -8,6 +8,7 @@
 
 import Foundation
 import Networking
+import LegoContext
 
 struct DoorUserDefaults {
 
@@ -56,6 +57,7 @@ extension DoorUserDefaults {
         set {
             _accessToken = newValue
             defaults.set(newValue, forKey: Keys.accessTokenV1.rawValue)
+            LegoContext.accessToken = newValue
             Networking.ServiceConfigure.accessToken = newValue
         }
     }
@@ -66,6 +68,7 @@ extension DoorUserDefaults {
             return id == 0 ? nil : id
         }
         set {
+            LegoContext.userID = newValue
             defaults.set(newValue, forKey: Keys.userID.rawValue)
         }
     }

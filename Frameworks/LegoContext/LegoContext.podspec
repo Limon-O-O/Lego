@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "Tower"
+  s.name         = "LegoContext"
   s.version      = "1.0.0"
-  s.summary      = "Tower."
+  s.summary      = "LegoContext."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                    this is Tower
+                    this is LegoContext
                    DESC
 
   s.homepage     = "https://github.com/Limon-O-O/Lego"
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Tower/Tower/**/*.swift"
+  s.source_files  = "LegoContext/LegoContext/**/*.swift"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['Tower/Tower/**/*.storyboard', 'Tower/Tower/**/*.xib', 'Tower/Tower/**/*.xcassets', 'Tower/Tower/**/*.lproj']
+  s.resources = ['LegoContext/LegoContext/**/*.storyboard', 'LegoContext/LegoContext/**/*.xib', 'LegoContext/LegoContext/**/*.xcassets', 'LegoContext/LegoContext/**/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
@@ -134,7 +134,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "LegoContext"
-  s.dependency "Mediator+Door"
+  # s.dependency "Mediator"
 
 end

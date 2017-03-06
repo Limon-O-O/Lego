@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Q7Y-Bw-Umt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tower View Controller-->
+        <scene sceneID="7FW-BJ-s1Q">
+            <objects>
+                <viewController storyboardIdentifier="TowerViewController" id="Q7Y-Bw-Umt" customClass="TowerViewController" customModule="Tower" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CQJ-Uq-2uc"/>
+                        <viewControllerLayoutGuide type="bottom" id="9xJ-7k-yTG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Aha-gF-mor">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fX3-MX-PYJ" userLabel="Nice Button">
+                                <rect key="frame" x="172" y="318.5" width="31" height="30"/>
+                                <state key="normal" title="点赞"/>
+                                <connections>
+                                    <action selector="niceButtonAction:" destination="Q7Y-Bw-Umt" eventType="touchUpInside" id="re8-GH-tQR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fX3-MX-PYJ" firstAttribute="centerY" secondItem="Aha-gF-mor" secondAttribute="centerY" id="5Ke-nF-T9T"/>
+                            <constraint firstItem="fX3-MX-PYJ" firstAttribute="centerX" secondItem="Aha-gF-mor" secondAttribute="centerX" id="CME-ik-3hU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QJj-pJ-arJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="215" y="89"/>
+        </scene>
+    </scenes>
+</document>

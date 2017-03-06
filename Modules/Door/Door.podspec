@@ -141,5 +141,6 @@ Pod::Spec.new do |s|
   s.dependency "Networking"
   s.dependency "EggKit"
   s.dependency "LegoKit"
+  s.dependency "LegoContext"
 
 end

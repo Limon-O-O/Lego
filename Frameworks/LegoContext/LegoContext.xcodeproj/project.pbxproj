@@ -1,0 +1,317 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EDA5C6221E6D42F0000CF7BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA5C6211E6D42F0000CF7BE /* AppDelegate.swift */; };
+		EDA5C6241E6D42F0000CF7BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA5C6231E6D42F0000CF7BE /* ViewController.swift */; };
+		EDA5C6271E6D42F0000CF7BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA5C6251E6D42F0000CF7BE /* Main.storyboard */; };
+		EDA5C6291E6D42F0000CF7BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA5C6281E6D42F0000CF7BE /* Assets.xcassets */; };
+		EDA5C62C1E6D42F0000CF7BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA5C62A1E6D42F0000CF7BE /* LaunchScreen.storyboard */; };
+		EDA5C6351E6D4369000CF7BE /* LegoContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA5C6341E6D4369000CF7BE /* LegoContext.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EDA5C61E1E6D42F0000CF7BE /* LegoContext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LegoContext.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDA5C6211E6D42F0000CF7BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EDA5C6231E6D42F0000CF7BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EDA5C6261E6D42F0000CF7BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EDA5C6281E6D42F0000CF7BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDA5C62B1E6D42F0000CF7BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EDA5C62D1E6D42F0000CF7BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDA5C6341E6D4369000CF7BE /* LegoContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegoContext.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDA5C61B1E6D42F0000CF7BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EDA5C6151E6D42F0000CF7BE = {
+			isa = PBXGroup;
+			children = (
+				EDA5C6201E6D42F0000CF7BE /* LegoContext */,
+				EDA5C61F1E6D42F0000CF7BE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDA5C61F1E6D42F0000CF7BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDA5C61E1E6D42F0000CF7BE /* LegoContext.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDA5C6201E6D42F0000CF7BE /* LegoContext */ = {
+			isa = PBXGroup;
+			children = (
+				EDA5C6331E6D430D000CF7BE /* LegoContext */,
+				EDA5C6211E6D42F0000CF7BE /* AppDelegate.swift */,
+				EDA5C6231E6D42F0000CF7BE /* ViewController.swift */,
+				EDA5C6251E6D42F0000CF7BE /* Main.storyboard */,
+				EDA5C6281E6D42F0000CF7BE /* Assets.xcassets */,
+				EDA5C62A1E6D42F0000CF7BE /* LaunchScreen.storyboard */,
+				EDA5C62D1E6D42F0000CF7BE /* Info.plist */,
+			);
+			path = LegoContext;
+			sourceTree = "<group>";
+		};
+		EDA5C6331E6D430D000CF7BE /* LegoContext */ = {
+			isa = PBXGroup;
+			children = (
+				EDA5C6341E6D4369000CF7BE /* LegoContext.swift */,
+			);
+			path = LegoContext;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDA5C61D1E6D42F0000CF7BE /* LegoContext */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDA5C6301E6D42F0000CF7BE /* Build configuration list for PBXNativeTarget "LegoContext" */;
+			buildPhases = (
+				EDA5C61A1E6D42F0000CF7BE /* Sources */,
+				EDA5C61B1E6D42F0000CF7BE /* Frameworks */,
+				EDA5C61C1E6D42F0000CF7BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LegoContext;
+			productName = LegoContext;
+			productReference = EDA5C61E1E6D42F0000CF7BE /* LegoContext.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDA5C6161E6D42F0000CF7BE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Limon.F;
+				TargetAttributes = {
+					EDA5C61D1E6D42F0000CF7BE = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EDA5C6191E6D42F0000CF7BE /* Build configuration list for PBXProject "LegoContext" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDA5C6151E6D42F0000CF7BE;
+			productRefGroup = EDA5C61F1E6D42F0000CF7BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDA5C61D1E6D42F0000CF7BE /* LegoContext */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDA5C61C1E6D42F0000CF7BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDA5C62C1E6D42F0000CF7BE /* LaunchScreen.storyboard in Resources */,
+				EDA5C6291E6D42F0000CF7BE /* Assets.xcassets in Resources */,
+				EDA5C6271E6D42F0000CF7BE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDA5C61A1E6D42F0000CF7BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDA5C6241E6D42F0000CF7BE /* ViewController.swift in Sources */,
+				EDA5C6351E6D4369000CF7BE /* LegoContext.swift in Sources */,
+				EDA5C6221E6D42F0000CF7BE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EDA5C6251E6D42F0000CF7BE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDA5C6261E6D42F0000CF7BE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EDA5C62A1E6D42F0000CF7BE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EDA5C62B1E6D42F0000CF7BE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EDA5C62E1E6D42F0000CF7BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EDA5C62F1E6D42F0000CF7BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EDA5C6311E6D42F0000CF7BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LegoContext/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = top.limon.LegoContext;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EDA5C6321E6D42F0000CF7BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LegoContext/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = top.limon.LegoContext;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDA5C6191E6D42F0000CF7BE /* Build configuration list for PBXProject "LegoContext" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDA5C62E1E6D42F0000CF7BE /* Debug */,
+				EDA5C62F1E6D42F0000CF7BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDA5C6301E6D42F0000CF7BE /* Build configuration list for PBXNativeTarget "LegoContext" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDA5C6311E6D42F0000CF7BE /* Debug */,
+				EDA5C6321E6D42F0000CF7BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDA5C6161E6D42F0000CF7BE /* Project object */;
+}

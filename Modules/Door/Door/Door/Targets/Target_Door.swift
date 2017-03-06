@@ -65,10 +65,6 @@ extension Target_Door {
 
 extension Target_Door {
 
-    func Action_DidLogin() -> [String: Any] {
-        return ["result": DoorUserDefaults.didLogin]
-    }
-
     func Action_AccessToken() -> [String: Any]? {
         return DoorUserDefaults.accessToken.flatMap { accessToken -> [String: Any] in
             return ["result": accessToken]

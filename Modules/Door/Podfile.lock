@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.3.0)
   - EggKit (1.0.1)
+  - LegoContext (1.0.0)
   - LegoKit (1.0.1):
     - EggKit
     - RxSwift
@@ -14,6 +15,7 @@ PODS:
 
 DEPENDENCIES:
   - EggKit (from `../../Frameworks/EggKit`)
+  - LegoContext (from `../../Frameworks/LegoContext`)
   - LegoKit (from `../../Frameworks/LegoKit`)
   - MonkeyKing
   - Networking (from `../../Frameworks/Networking`)
@@ -23,6 +25,8 @@ DEPENDENCIES:
 EXTERNAL SOURCES:
   EggKit:
     :path: "../../Frameworks/EggKit"
+  LegoContext:
+    :path: "../../Frameworks/LegoContext"
   LegoKit:
     :path: "../../Frameworks/LegoKit"
   Networking:
@@ -31,12 +35,13 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   EggKit: 4ad8e40cd8ad4cc6ff8c415546e0544b1542b2d0
+  LegoContext: 950749dc632b9a6a9d380f2e726262803974e6e4
   LegoKit: 55617431b4cb0b53968ffc6fa0f105fff07bfbc4
   MonkeyKing: f44795a0ed91a785b0e0bd2e4b6145199901528e
   Networking: 80c33fee1291801025a7455e4f7fac49ea1ed3e8
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
 
-PODFILE CHECKSUM: c90b0ece11a28b30199cb26e7f3032bde16a29c7
+PODFILE CHECKSUM: cae76eb3296e8a1266ff383a3231291886b2de8f
 
 COCOAPODS: 1.2.0

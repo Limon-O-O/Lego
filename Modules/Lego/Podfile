@@ -8,6 +8,9 @@ target 'Lego' do
 
     pod 'Mediator', :git => 'https://github.com/Limon-O-O/Mediator.git', :branch => "master"
 
+    # LegoContext
+    pod "LegoContext", :path => "../../Frameworks/LegoContext"
+
     # Tower
     pod "Mediator+Tower", :path => "../Mediator+Tower"
     pod "Tower", :path => "../Tower"

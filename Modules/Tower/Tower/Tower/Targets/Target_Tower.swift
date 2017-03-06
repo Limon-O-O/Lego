@@ -12,9 +12,9 @@ import UIKit
 class Target_Tower: NSObject {
 
     func Action_TowerViewController(params: [String: Any]) -> UIViewController {
-        let towerViewController = TowerViewController()
-        towerViewController.innateParams = params
-        return towerViewController
+        let viewController = Storyboard.tower.viewController(of: TowerViewController.self)
+        viewController.innateParams = params
+        return viewController
     }
 
 }
