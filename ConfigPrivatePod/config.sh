@@ -75,7 +75,7 @@ updatePodfile() {
         fi
     done < $profilePath
 
-    newLine="source '$specsRepo'"
+    newLine="source '$sshRepo'"
 
     if test -z "$oldSpecsRepoLine"; then
         echo -e "${newLine}\n$(cat $profilePath)" > "$profilePath"
