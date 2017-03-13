@@ -1,6 +1,6 @@
 //
-//  Mediator+__ProjectName__.swift
-//  Mediator+__ProjectName__
+//  Mediator___ProjectName__.swift
+//  Mediator___ProjectName__
 //
 //  Created by __Author__ on __Time__.
 
