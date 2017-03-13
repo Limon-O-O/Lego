@@ -131,7 +131,7 @@ copyExtensionFiles() {
     projectProtocolFilePath="${projectDirectoryPath}/Pod/${shortProjectName}.swift"
 
     echo "Copy to $extensionFilePath"
-    cp -f ./templates/module/extension/Mediator+Project.swift                 "$extensionFilePath"
+    cp -f ./templates/module/extension/Mediator_Project.swift                 "$extensionFilePath"
     echo "Copy to $projectProtocolFilePath"
     cp -f ./templates/module/extension/ProjectProtocol.swift       "$projectProtocolFilePath"
 
