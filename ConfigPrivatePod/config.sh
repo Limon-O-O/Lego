@@ -208,6 +208,9 @@ editFiles
 
 cd "${projectDirectoryPath}" && ./configure
 
+# 删除 CocoaPods 自动生成的 git
+rm -rf .git
+
 # [ $projectType != "Framework" ] && echo aaa || echo bbb
 # echo "cleaning..."
 # cd "${projectDirectoryPath}"
