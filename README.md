@@ -7,8 +7,9 @@
 
 1. Swift 项目怎样使用 Mediator 进行模块化
 2. 使用 CocoaPods 管理模块
-3. 发布私有库不使用 `pod repo push`，不进行验证，即使库编译不通过，也可以 release 新版本
-4. Swift 的一些实践心得
+3. 一键创建模块（包括 Xcode 工程），一键发布 `Pod库`
+4. 发布私有库不使用 `pod repo push`，不进行验证，即使库编译不通过，也可以 release 新版本
+5. Swift 的一些实践心得
 
 本文分为三部分：
 
@@ -40,7 +41,7 @@ Lego
             └── Networking.podspec
 ```
 
-1. `ConfigPrivatePod` 文件夹，存放着配置私有源的脚本
+1. `ConfigPrivatePod` 文件夹，存放着配置私有模块的脚本
 2. `Frameworks` 文件夹，存放着各种 `framework`，`EggKit` 代表公司各项目通用库，`LegoKit` 代表本项目各模块通用库
 3. `Modules` 文件夹，存放着 `Lego` 项目的全部模块，其中 `Modules/Lego` 就是主模块
 4. `Specs` 文件夹，存放着 `framework` 和 `模块` 的版本的 `podName.podspec`，即常说的 `Private Spec Repo`
@@ -70,9 +71,10 @@ ConfigPrivatePod
 
 `config.sh` 新创建 `Pod库` 时使用，作用： 
 
-1. 为 `Pod库` 配置基本文件，如 `pod.podspec`
-2. 配置 `release.sh` 脚步，需要为 `Pod库` 发布新版本时，直接敲命令 `./release.sh` 即可
-3. 为模块配置与 `Mediator` 关联的文件，如：`Target_Project.swift`, `ProjectProtocol.swift`, `Mediator+Project.swift`
+1. 创建 Xcode 工程（注：原理和 `pod lib create NAME` 一致）
+2. 为 `Pod库` 配置基本文件，如 `pod.podspec`
+3. 配置 `release.sh` 脚步，需要为 `Pod库` 发布新版本时，直接敲命令 `./release.sh` 即可
+4. 为模块配置与 `Mediator` 关联的文件，如：`Target_Project.swift`, `ProjectProtocol.swift`, `Mediator+Project.swift`
 
 > 当然，在这里填写这4个默认参数的前提是，想把全部模块都放在同一个 `仓库` 里面，如果打算一个模块一个 `仓库`，请参考 Mr.Casa 的[《在现有工程中实施基于CTMediator的组件化方案》](http://casatwy.com/modulization_in_action.html)
 
@@ -322,4 +324,13 @@ end
 	
 6. 使用 `Protocol` + `Extension` 更好地区分作用域，`Mediator.shared.door.accessToken()`，其中的 `door` 是不是挺好看的 🌝，而不是 `Mediator.shared.door_accessToken()`
 
+7. 关于脚本创建 Xcode 工程，使用的是 `CocoaPods` 的 [pod-template](https://github.com/CocoaPods/pod-template)，另外也可以使用 [Xcodeproj](https://github.com/CocoaPods/Xcodeproj) 或 [liftoff](https://github.com/thoughtbot/liftoff)
+	
+	> 注：平时用 `pod lib create NAME` 创建 `pod`，就是拉取 [pod-template](https://github.com/CocoaPods/pod-template) 来创建 Xcode 工程
+	
+	```
+	pod lib create TestPod 
+	Cloning `https://github.com/CocoaPods/pod-template.git` into `TestPod`.
+	Configuring TestPod template.
+	```
 
