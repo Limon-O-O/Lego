@@ -118,9 +118,8 @@ echo "copy $podspecFilePath to $specsPath"
 cp -f "$podspecFilePath" "$specsPath"
 
 # 修改 source file 的路径
-sed -i "" "s%${podName}/${podName}/%${projectRootDirectory}/${podName}/${podName}/${podName}/%g" "${specsPath}/${podName}.podspec"
+sed -i "" "s%${podName}/%${projectRootDirectory}/${podName}/${podName}/%g" "${specsPath}/${podName}.podspec"
 
-git pull
 git add "${specsPath}"
 git add "${podspecFilePath}"
 git add "./README.md"
