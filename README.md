@@ -53,6 +53,7 @@ Lego
 ```
 ConfigPrivatePod
 ├── config.sh
+└── pod-template
 └── templates
     ├── Podfile
     ├── module
@@ -67,7 +68,7 @@ ConfigPrivatePod
     └── version_compare.sh
 ```
 
-`ConfigPrivatePod` 文件夹内含快速配置私有源的脚本。
+`ConfigPrivatePod` 文件夹内含快速配置私有模块的脚本
 
 `config.sh` 新创建 `Pod库` 时使用，作用： 
 
@@ -75,8 +76,6 @@ ConfigPrivatePod
 2. 为 `Pod库` 配置基本文件，如 `pod.podspec`
 3. 配置 `release.sh` 脚步，需要为 `Pod库` 发布新版本时，直接敲命令 `./release.sh` 即可
 4. 为模块配置与 `Mediator` 关联的文件，如：`Target_Project.swift`, `ProjectProtocol.swift`, `Mediator+Project.swift`
-
-> 当然，在这里填写这4个默认参数的前提是，想把全部模块都放在同一个 `仓库` 里面，如果打算一个模块一个 `仓库`，请参考 Mr.Casa 的[《在现有工程中实施基于CTMediator的组件化方案》](http://casatwy.com/modulization_in_action.html)
 
 <br />
 
@@ -137,6 +136,8 @@ cd ~/.cocoapods/repos && ls
 
 3. 在 `./ConfigPrivatePod/config.sh` 文件里，填写 `httpsRepo`, `sshRepo`, `specsRepo`, `homePage`, `author`, `email`，[具体参考](https://github.com/Limon-O-O/Lego/blob/master/ConfigPrivatePod/config.sh#L3)
 
+    > 当然，在这里填写这4个默认参数的前提是，想把全部模块都放在同一个 `仓库` 里面，如果打算一个模块一个 `仓库`，请参考 Mr.Casa 的[《在现有工程中实施基于CTMediator的组件化方案》](http://casatwy.com/modulization_in_action.html) 
+
 4. 新建三个文件夹 `Frameworks` `Modules` `Specs`，最终的结构如下：
 
 ```
@@ -144,6 +145,7 @@ Lego
 ├── ConfigPrivatePod
 │   ├── config.sh
 │   └── templates
+│   └── pod-template
 │       ......
 ├── Frameworks
 ├── Modules
