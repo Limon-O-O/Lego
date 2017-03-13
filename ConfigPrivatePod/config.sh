@@ -2,7 +2,7 @@
 
 httpsRepo="https://github.com/Limon-O-O/Lego.git"
 sshRepo="git@github.com:Limon-O-O/Lego.git"
-specsRepo="https://github.com/Limon-O-O/Lego.git"
+specsRepo="git@github.com:Limon-O-O/Lego.git"
 homePage="https://github.com/Limon-O-O/Lego"
 author="Limon"
 
@@ -15,7 +15,7 @@ frameworkName=""
 confirmed="n"
 profilePath="./templates/Podfile"
 currentDate=`date +%Y-%m-%d`
-extensionPrefix="Mediator+"
+extensionPrefix="Mediator_"
 
 getProjectName() {
     read -p "Enter Project Name: " projectName
@@ -64,26 +64,6 @@ getProjectType() {
     fi
 }
 
-updatePodfile() {
-
-    oldSpecsRepoLine=""
-
-    while read line; do
-        if [[ $line == *"source"*".git"* ]] && ! [[ $line == *"github.com/CocoaPods/Specs.git"* ]]; then
-            oldSpecsRepoLine=$line
-            break
-        fi
-    done < $profilePath
-
-    newLine="source '$sshRepo'"
-
-    if test -z "$oldSpecsRepoLine"; then
-        echo -e "${newLine}\n$(cat $profilePath)" > "$profilePath"
-    else
-        sed -i '' "s#${oldSpecsRepoLine}#${newLine}#" "$profilePath" # replace old specs repo with new one
-    fi
-}
-
 getInfomation() {
 
     getProjectName
@@ -108,12 +88,10 @@ do
     read -p "Confirm? (y/n):" confirmed
 done
 
-updatePodfile
-
 licenseFilePath="${projectDirectoryPath}/LICENSE"
 gitignoreFilePath="${projectDirectoryPath}/.gitignore"
-specFilePath="${projectDirectoryPath}/${projectName}.podspec"
-readmeFilePath="${projectDirectoryPath}/README.md"
+specFilePath="${projectDirectoryPath}/NAME.podspec"
+readmeFilePath="${projectDirectoryPath}/POD_README.md"
 uploadFilePath="${projectDirectoryPath}/upload.sh"
 releaseFilePath="${projectDirectoryPath}/release.sh"
 compareFilePath="${projectDirectoryPath}/version_compare.sh"
@@ -121,31 +99,21 @@ podfilePath="${projectDirectoryPath}/Podfile"
 updateVersionPath="${projectDirectoryPath}/update_version.sh"
 
 copyFiles() {
-    echo "Copy to $licenseFilePath"
-    cp -f ./templates/LICENSE            "$licenseFilePath"
-    echo "Copy to $gitignoreFilePath"
-    cp -f ./templates/gitignore               "$gitignoreFilePath"
-    echo "Copy to $specFilePath"
-    cp -f ./templates/pod.podspec             "$specFilePath"
-    echo "Copy to $readmeFilePath"
-    cp -f ./templates/README.md               "$readmeFilePath"
     echo "Copy to $uploadFilePath"
     cp -f ./templates/upload.sh               "$uploadFilePath"
     echo "Copy to $releaseFilePath"
     cp -f ./templates/release.sh              "$releaseFilePath"
     echo "Copy to $compareFilePath"
     cp -f ./templates/version_compare.sh      "$compareFilePath"
-    echo "Copy to $podfilePath"
-    cp -f ./templates/Podfile                 "$podfilePath"
     echo "Copy to $updateVersionPath"
     cp -f ./templates/update_version.sh       "$updateVersionPath"
 }
 
 copyModuleFiles() {
 
-    mkdir -p "${projectDirectoryPath}/${projectName}/${projectName}/Targets"
+    mkdir -p "${projectDirectoryPath}/Pod/Targets"
 
-    targetFilePath="${projectDirectoryPath}/${projectName}/${projectName}/Targets/Target_${projectName}.swift"
+    targetFilePath="${projectDirectoryPath}/Pod/Targets/Target_${projectName}.swift"
 
     echo "Copy to $targetFilePath"
     cp -f ./templates/module/target/Target_Project.swift       "$targetFilePath"
@@ -159,8 +127,8 @@ copyExtensionFiles() {
 
     shortProjectName=${projectName##*$extensionPrefix}
 
-    extensionFilePath="${projectDirectoryPath}/${projectName}/${projectName}/${projectName}.swift"
-    projectProtocolFilePath="${projectDirectoryPath}/${projectName}/${projectName}/${shortProjectName}.swift"
+    extensionFilePath="${projectDirectoryPath}/Pod/${projectName}.swift"
+    projectProtocolFilePath="${projectDirectoryPath}/Pod/${shortProjectName}.swift"
 
     echo "Copy to $extensionFilePath"
     cp -f ./templates/module/extension/Mediator+Project.swift                 "$extensionFilePath"
@@ -182,9 +150,6 @@ editFiles() {
     sed -i "" "s%__ProjectName__%${projectName}%g" "$gitignoreFilePath"
     sed -i "" "s%__ProjectName__%${projectName}%g" "$uploadFilePath"
 
-    sed -i "" "s%__ProjectName__%${projectName}%g" "$podfilePath"
-
-    sed -i "" "s%__ProjectName__%${projectName}%g" "$readmeFilePath"
     sed -i "" "s%__SpecsRepo__%${specsRepo}%g" "$readmeFilePath"
 
     sed -i "" "s%__ProjectName__%${projectName}%g" "$releaseFilePath"
@@ -197,22 +162,16 @@ editFiles() {
     sed -i "" "s%__Author__%${author}%g"    "$specFilePath"
 
     directory="Modules"
-
     case $projectType in  
     "Module")  
         directory="Modules"
-        sed -i '' "s#\# pod \'Mediator\'##" "$podfilePath"
         ;;
     "Extension")
         directory="Modules"
-        # s.dependency "Mediator"
         sed -i '' "s#\# s.dependency \"Mediator\"#s.dependency \"Mediator\"#" "$specFilePath"
-        # pod 'Mediator'
-        sed -i '' "s#\# pod \'Mediator\'#pod \'Mediator\'#" "$podfilePath"
         ;;
     "Framework")
         directory="Frameworks"
-        sed -i '' "s#\# pod \'Mediator\'##" "$podfilePath"
         ;;
     esac
 
@@ -221,23 +180,33 @@ editFiles() {
     echo "Edit finished"
 }
 
-mkdir -p "${projectDirectoryPath}/${projectName}/${projectName}"
+mkdir -p "${projectDirectoryPath}"
+echo "Copy pod-template to $projectDirectoryPath"
+cp -rf ./pod-template/.      "$projectDirectoryPath"
 
 case $projectType in  
-    "Module")  
-        copyFiles
-        copyModuleFiles
-        ;;
-    "Extension")
-        copyFiles
-        copyExtensionFiles
-        ;;
-    "Framework")
-        copyFiles
-        ;;
+"Module")  
+    copyFiles
+    copyModuleFiles
+    ;;
+"Extension")
+    copyFiles
+    copyExtensionFiles
+    ;;
+"Framework")
+    copyFiles
+    ;;
 esac
 
+# 修改 pod-template
+sed -i "" "s%__ProjectName__%${projectName}%g" $projectDirectoryPath/configure
+sed -i "" "s%__SpecsRepo__%${specsRepo}%g" $projectDirectoryPath/templates/swift/Example/Podfile
+
+sed -i "" "s%__ProjectName__%${projectName}%g" $projectDirectoryPath/NAME.podspec
+
 editFiles
+
+cd "${projectDirectoryPath}" && ./configure
 
 # [ $projectType != "Framework" ] && echo aaa || echo bbb
 # echo "cleaning..."
