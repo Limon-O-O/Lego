@@ -79,25 +79,6 @@ getInfomation() {
     echo -e "================================================\n"
 }
 
-echo -e "\n"
-while [ "$confirmed" != "y" -a "$confirmed" != "Y" ]
-do
-    if [ "$confirmed" == "n" -o "$confirmed" == "N" ]; then
-        getInfomation
-    fi
-    read -p "Confirm? (y/n):" confirmed
-done
-
-licenseFilePath="${projectDirectoryPath}/LICENSE"
-gitignoreFilePath="${projectDirectoryPath}/.gitignore"
-specFilePath="${projectDirectoryPath}/NAME.podspec"
-readmeFilePath="${projectDirectoryPath}/POD_README.md"
-uploadFilePath="${projectDirectoryPath}/upload.sh"
-releaseFilePath="${projectDirectoryPath}/release.sh"
-compareFilePath="${projectDirectoryPath}/version_compare.sh"
-podfilePath="${projectDirectoryPath}/Podfile"
-updateVersionPath="${projectDirectoryPath}/update_version.sh"
-
 copyFiles() {
     echo "Copy to $uploadFilePath"
     cp -f ./templates/upload.sh               "$uploadFilePath"
@@ -160,18 +141,26 @@ editFiles() {
     sed -i "" "s%__HomePage__%${homePage}%g"      "$specFilePath"
     sed -i "" "s%__HTTPSRepo__%${httpsRepo}%g"    "$specFilePath"
     sed -i "" "s%__Author__%${author}%g"    "$specFilePath"
+    sed -i "" "s%__ProjectName__%${projectName}%g" "$specFilePath"
+
+    # 修改 pod-template
+    sed -i "" "s%__SpecsRepo__%${specsRepo}%g" $podfilePath    
 
     directory="Modules"
     case $projectType in  
     "Module")  
         directory="Modules"
+        sed -i '' "s#\# pod \'Mediator\'##" "$podfilePath"
         ;;
     "Extension")
         directory="Modules"
         sed -i '' "s#\# s.dependency \"Mediator\"#s.dependency \"Mediator\"#" "$specFilePath"
+        # pod 'Mediator'
+        sed -i '' "s#\# pod \'Mediator\'#pod \'Mediator\'#" "$podfilePath"
         ;;
     "Framework")
         directory="Frameworks"
+        sed -i '' "s#\# pod \'Mediator\'##" "$podfilePath"
         ;;
     esac
 
@@ -179,6 +168,25 @@ editFiles() {
 
     echo "Edit finished"
 }
+
+echo -e "\n"
+while [ "$confirmed" != "y" -a "$confirmed" != "Y" ]
+do
+    if [ "$confirmed" == "n" -o "$confirmed" == "N" ]; then
+        getInfomation
+    fi
+    read -p "Confirm? (y/n):" confirmed
+done
+
+licenseFilePath="${projectDirectoryPath}/LICENSE"
+gitignoreFilePath="${projectDirectoryPath}/.gitignore"
+specFilePath="${projectDirectoryPath}/NAME.podspec"
+readmeFilePath="${projectDirectoryPath}/POD_README.md"
+uploadFilePath="${projectDirectoryPath}/upload.sh"
+releaseFilePath="${projectDirectoryPath}/release.sh"
+compareFilePath="${projectDirectoryPath}/version_compare.sh"
+podfilePath="${projectDirectoryPath}/templates/swift/Example/Podfile"
+updateVersionPath="${projectDirectoryPath}/update_version.sh"
 
 mkdir -p "${projectDirectoryPath}"
 echo "Copy pod-template to $projectDirectoryPath"
@@ -198,30 +206,19 @@ case $projectType in
     ;;
 esac
 
-# 修改 pod-template
-sed -i "" "s%__ProjectName__%${projectName}%g" $projectDirectoryPath/configure
-sed -i "" "s%__SpecsRepo__%${specsRepo}%g" $projectDirectoryPath/templates/swift/Example/Podfile
-
-sed -i "" "s%__ProjectName__%${projectName}%g" $projectDirectoryPath/NAME.podspec
-
 editFiles
 
-cd "${projectDirectoryPath}" && ./configure
+cd "${projectDirectoryPath}" && ./configure $projectName
 
 # 删除 CocoaPods 自动生成的 git
 rm -rf .git
 
-# [ $projectType != "Framework" ] && echo aaa || echo bbb
-# echo "cleaning..."
-# cd "${projectDirectoryPath}"
-# git init
-# git remote add origin $sshRepo  &> /dev/null
-# git rm -rf --cached ./Pods/     &> /dev/null
-# git rm --cached Podfile.lock    &> /dev/null
-# git rm --cached .DS_Store       &> /dev/null
-# git rm -rf --cached $projectName.xcworkspace/           &> /dev/null
-# git rm -rf --cached $projectName.xcodeproj/xcuserdata/`whoami`.xcuserdatad/xcschemes/$projectName.xcscheme &> /dev/null
-# git rm -rf --cached $projectName.xcodeproj/project.xcworkspace/xcuserdata/ &> /dev/null
-# echo "clean finished"
+cd "./Example"
+
+# 使用 Xcodeproj 向新工程添加相关文件夹及文件
+./xcodeproj $projectName $projectType $shortProjectName
+
+rm -f ./xcodeproj
+
 say "Finished"
 echo "Finished"
