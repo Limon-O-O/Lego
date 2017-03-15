@@ -12,19 +12,19 @@ target 'Lego' do
     pod "LegoContext", :path => "../../Frameworks/LegoContext"
 
     # Tower
-    pod "Mediator+Tower", :path => "../Mediator+Tower"
+    pod "Mediator_Tower", :path => "../Mediator_Tower"
     pod "Tower", :path => "../Tower"
 
     # Door
-    pod "Mediator+Door", :path => "../Mediator+Door"
+    pod "Mediator_Door", :path => "../Mediator_Door"
     pod "Door", :path => "../Door"
 
     # Me
-    pod "Mediator+Me"#, :path => "../Mediator+Me"
-    pod "Me"#, :path => "../Me"
+    pod "Mediator_Me"
+    pod "Me"
 
     # Door
-    pod "Mediator+Profile", :path => "../Mediator+Profile"
+    pod "Mediator_Profile", :path => "../Mediator_Profile"
     pod "Profile", :path => "../Profile"
 
     pod "Networking", :path => "../../Frameworks/Networking"

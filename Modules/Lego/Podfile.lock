@@ -9,7 +9,7 @@ PODS:
     - RxCocoa
     - RxSwift
   - EggKit (1.0.1)
-  - LegoContext (1.0.0)
+  - LegoContext (1.0.1)
   - LegoKit (1.0.1):
     - EggKit
     - RxSwift
@@ -17,13 +17,13 @@ PODS:
     - EggKit
     - LegoKit
   - Mediator (0.0.4)
-  - Mediator+Door (1.0.0):
+  - Mediator_Door (0.0.1):
     - Mediator
-  - Mediator+Me (1.0.1):
+  - Mediator_Me (0.0.4):
     - Mediator
-  - Mediator+Profile (1.0.0):
+  - Mediator_Profile (0.0.1):
     - Mediator
-  - Mediator+Tower (1.0.0):
+  - Mediator_Tower (0.0.1):
     - Mediator
   - MonkeyKing (1.2.2)
   - Networking (1.0.1):
@@ -35,7 +35,7 @@ PODS:
   - RxSwift (3.2.0)
   - Tower (1.0.0):
     - LegoContext
-    - Mediator+Door
+    - Mediator_Door
 
 DEPENDENCIES:
   - Door (from `../Door`)
@@ -44,10 +44,10 @@ DEPENDENCIES:
   - LegoKit (from `../../Frameworks/LegoKit`)
   - Me
   - Mediator (from `https://github.com/Limon-O-O/Mediator.git`, branch `master`)
-  - Mediator+Door (from `../Mediator+Door`)
-  - Mediator+Me
-  - Mediator+Profile (from `../Mediator+Profile`)
-  - Mediator+Tower (from `../Mediator+Tower`)
+  - Mediator_Door (from `../Mediator_Door`)
+  - Mediator_Me
+  - Mediator_Profile (from `../Mediator_Profile`)
+  - Mediator_Tower (from `../Mediator_Tower`)
   - Networking (from `../../Frameworks/Networking`)
   - Profile (from `../Profile`)
   - Tower (from `../Tower`)
@@ -64,12 +64,12 @@ EXTERNAL SOURCES:
   Mediator:
     :branch: master
     :git: https://github.com/Limon-O-O/Mediator.git
-  Mediator+Door:
-    :path: "../Mediator+Door"
-  Mediator+Profile:
-    :path: "../Mediator+Profile"
-  Mediator+Tower:
-    :path: "../Mediator+Tower"
+  Mediator_Door:
+    :path: "../Mediator_Door"
+  Mediator_Profile:
+    :path: "../Mediator_Profile"
+  Mediator_Tower:
+    :path: "../Mediator_Tower"
   Networking:
     :path: "../../Frameworks/Networking"
   Profile:
@@ -86,21 +86,21 @@ SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   Door: b48042a33e028a56198bb0461e725b0e28772c63
   EggKit: 4ad8e40cd8ad4cc6ff8c415546e0544b1542b2d0
-  LegoContext: 950749dc632b9a6a9d380f2e726262803974e6e4
+  LegoContext: eb4f3645642400d506edb1ea69ed68194e88e269
   LegoKit: 55617431b4cb0b53968ffc6fa0f105fff07bfbc4
   Me: 7268d637deb936aa14e9a19035793462d85e919a
   Mediator: 8af03cb1f7f8a086db007740f90abd5636eafd6a
-  Mediator+Door: d6df37ee69efec9e6663fb12c68b39ebe2ce2364
-  Mediator+Me: 5c21c263ded02eea97eaef4d280c8a021d00cd07
-  Mediator+Profile: 7bc5b935069dc07e7f2c50aa83b1dd2dbb110b84
-  Mediator+Tower: 7f282c8e5fbbe682c778335d75e2e74a0d4d60a3
+  Mediator_Door: 5eb6db12e7196641aa0e94cbec8fc4d81974ada9
+  Mediator_Me: 87b5e9dfe4f27e095e279a82d8c13857b215d011
+  Mediator_Profile: e260ae347a76fe526b73ed8ed09991d96004b22b
+  Mediator_Tower: 492e4ab56ec5686890b2113813915051c5cf06b0
   MonkeyKing: 443becfc5579a050cd8b7394b3631c8ed567aae3
   Networking: 80c33fee1291801025a7455e4f7fac49ea1ed3e8
   Profile: 2bdb720c9d782c6d3776f9f7e61827f20655e3ab
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
-  Tower: 7027f4e210ddad4bf26417d6901eff4391f87b78
+  Tower: f80f250691ebb3f10af2eb9957e9ca52f1825157
 
-PODFILE CHECKSUM: dae614d6cbb3336798208e731359178f4d095b1c
+PODFILE CHECKSUM: 325b023ab0087edc3079af35fe11dafca87569da
 
 COCOAPODS: 1.2.0

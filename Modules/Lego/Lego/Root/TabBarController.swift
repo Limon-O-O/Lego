@@ -10,6 +10,7 @@ import UIKit
 import LegoKit
 import Mediator
 import Mediator_Door
+import LegoContext
 
 final class TabBarController: UITabBarController {
 
@@ -87,7 +88,7 @@ extension TabBarController: UITabBarControllerDelegate {
         if tab != selectedTab {
             selectedTab = tab
 
-            if tab == .me && !Mediator.shared.door.didLogin() {
+            if tab == .me && !LegoContext.didLogin {
                 // 没登录，present Door
                 let callbackAction: ([String: Any]) -> Void = { [weak viewController] info in
                     guard let _ = info["userID"] as? Int else { return }

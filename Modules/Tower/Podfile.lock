@@ -1,24 +1,24 @@
 PODS:
-  - LegoContext (1.0.0)
+  - LegoContext (1.0.1)
   - Mediator (0.0.4)
-  - Mediator+Door (1.0.0):
+  - Mediator_Door (0.0.1):
     - Mediator
 
 DEPENDENCIES:
   - LegoContext (from `../../Frameworks/LegoContext`)
-  - Mediator+Door (from `../Mediator+Door`)
+  - Mediator_Door (from `../Mediator_Door`)
 
 EXTERNAL SOURCES:
   LegoContext:
     :path: "../../Frameworks/LegoContext"
-  Mediator+Door:
-    :path: "../Mediator+Door"
+  Mediator_Door:
+    :path: "../Mediator_Door"
 
 SPEC CHECKSUMS:
-  LegoContext: 950749dc632b9a6a9d380f2e726262803974e6e4
+  LegoContext: eb4f3645642400d506edb1ea69ed68194e88e269
   Mediator: 48093a0d5d818cda22bb134da9ba452897f04049
-  Mediator+Door: d6df37ee69efec9e6663fb12c68b39ebe2ce2364
+  Mediator_Door: 5eb6db12e7196641aa0e94cbec8fc4d81974ada9
 
-PODFILE CHECKSUM: 5c50e1f45452c1daca9c8682b16e366ecace9d0f
+PODFILE CHECKSUM: 98a3610b9319552a7df9be32d2fed0a092e6f67f
 
 COCOAPODS: 1.2.0

@@ -6,7 +6,7 @@ target 'Tower' do
   # Uncomment this line if you're using Swift or would like to use dynamic frameworks
     use_frameworks!
 
-    pod "Mediator+Door", :path => "../Mediator+Door"
+    pod "Mediator_Door", :path => "../Mediator_Door"
     pod "LegoContext", :path => "../../Frameworks/LegoContext"
 
 end

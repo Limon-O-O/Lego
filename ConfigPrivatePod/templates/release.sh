@@ -61,6 +61,16 @@ updateVersion() {
 
     # update README.md file
     while read line; do
+        if [[ $line == *"Has not yet been released version. 🙈"* ]]; then
+            newLine="The Latest Version: ${version}"
+            sed -i '' "s#$line#$newLine#" "./README.md"
+        else
+            if [[ $line == *"The Latest Version: "* ]]; then
+            newLine=${line/$oldVersion/$version}
+            sed -i '' "s#$line#$newLine#" "./README.md"
+            fi
+        fi
+
         if [[ $line == *"pod"*"${oldVersion}"* ]]; then
             newLine=${line/$oldVersion/$version}
             sed -i '' "s#$line#$newLine#" "./README.md"
@@ -72,7 +82,7 @@ updateVersion() {
     done < "./README.md"
 
     # update Xcode project
-    ./update_version.sh --version=$version --target=$podName
+    # ./update_version.sh --version=$version --target=$podName
 }
 
 getInfomation() {

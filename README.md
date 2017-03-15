@@ -30,7 +30,7 @@ Lego
 │   ├── LegoKit
 │   └── Networking
 ├── Modules
-│   ├── CTMediator+Door
+│   ├── Mediator_Door
 │   ├── Door
 │   ├── Lego
 └── Specs
@@ -58,7 +58,7 @@ ConfigPrivatePod
     ├── Podfile
     ├── module
     │   ├── extension
-    │   │   ├── Mediator+Project.swift
+    │   │   ├── Mediator_Project.swift
     │   │   └── ProjectProtocol.swift
     │   └── target
     │       └── Target_Project.swift
@@ -75,7 +75,7 @@ ConfigPrivatePod
 1. 创建 Xcode 工程（注：原理和 `pod lib create NAME` 一致）
 2. 为 `Pod库` 配置基本文件，如 `pod.podspec`
 3. 配置 `release.sh` 脚步，需要为 `Pod库` 发布新版本时，直接敲命令 `./release.sh` 即可
-4. 为模块配置与 `Mediator` 关联的文件，如：`Target_Project.swift`, `ProjectProtocol.swift`, `Mediator+Project.swift`
+4. 为模块配置与 `Mediator` 关联的文件，如：`Target_Project.swift`, `ProjectProtocol.swift`, `Mediator_Project.swift`
 
 <br />
 
@@ -163,14 +163,14 @@ Lego
 
 若想新建一个 Door 模块，需要两个 `Pod库`，
 1. Door业务Pod
-2. 方便其它模块调用 Door业务 的 Mediator+Door 的 Pod。
+2. 方便其它模块调用 Door业务 的 Mediator_Door 的 Pod。
 
-> 这里多解释一句：Mediator+Door Pod 本质上只是一个方便方法，它对 Door Pod 不存在任何依赖
+> 这里多解释一句：Mediator_Door Pod 本质上只是一个方便方法，它对 Door Pod 不存在任何依赖
 
 开始创建：
 
 1. 同创建主模块一样，创建一个名为 `Door` 的工程，放在 `Lego/Modules` 下，此模块主打`注册登录`。
-2. 再创建一个名为 `Mediator+Door` 的工程，同样放在 `Lego/Modules` 下，此工程主要为了方便其它模块调用 Door业务，本质就是通过 `Mediator` 利用`运行时`，找到在 `Door` 内相对应的方法。
+2. 再创建一个名为 `Mediator_Door` 的工程，同样放在 `Lego/Modules` 下，此工程主要为了方便其它模块调用 Door业务，本质就是通过 `Mediator` 利用`运行时`，找到在 `Door` 内相对应的方法。
 3. 在 `ConfigPrivatePod` 下，执行 `./config.sh`，脚本会问你要一些信息。
 
 	配置 `Door` 工程：
@@ -179,7 +179,7 @@ Lego
 	Enter Project Name: Door
 
 	================================================
-	 1 :  Module
+	1 :  Module
  	2 :  Extension
  	3 :  Framework
 	================================================
@@ -187,7 +187,7 @@ Lego
 	Enter Project Type Number: 1
 	```
 
-	配置 `Mediator+Door` 工程：
+	配置 `Mediator_Door` 工程：
 
 	```
 	Enter Project Name: Door // 注：Project Name 也是 Door
@@ -205,7 +205,7 @@ Lego
 
 	配置完 `Door` 工程后，在 `Modules/Door/Door` 下，会多了一个也同样名为 `Door` 的文件夹，以后所有需要打包出去给别人用的都在此文件夹下，因为在 `Door.podspec` 文件内定义的源文件就指指定了此文件夹。
 
-4. 打开 `Door.xcodeproj`，把 `Modules/Door/Door/Door` 此文件夹工程里面。 `Mediator+Door` 工程同理。
+4. 打开 `Door.xcodeproj`，把 `Modules/Door/Door/Door` 此文件夹工程里面。 `Mediator_Door` 工程同理。
 
 	`Door` 工程的目录简如下：
 
@@ -219,15 +219,15 @@ Lego
 	├── Door.xcodeproj
 	```
 
-	`Mediator+Door` 工程的目录简如下：
+	`Mediator_Door` 工程的目录简如下：
 
 	```
-	Mediator+Door
-	├── Mediator+Door
-	│   └── Mediator+Door
+	Mediator_Door
+	├── Mediator_Door
+	│   └── Mediator_Door
 	│       ├── Door.swift
-	│       ├── Mediator+Door.swift
-	├── Mediator+Door.xcodeproj
+	│       ├── Mediator_Door.swift
+	├── Mediator_Door.xcodeproj
 	```
 
 到此，`Door模块` 基本配置完成，可以前往 `主模块Lego` 引入它了。
@@ -249,11 +249,11 @@ target 'Lego' do
     use_frameworks!
 
     # Door，在开发初期，先用相对路径，因为现在 CocoaPods 支持跨工程修改，便于开发
-    pod "Mediator+Door", :path => "../Mediator+Door"
+    pod "Mediator_Door", :path => "../Mediator_Door"
     pod "Door", :path => "../Door"
     
     # Me，若模块已经开发得差不多了，并 released 了，可从 Private Spec 拉取
-    pod "Mediator+Me"
+    pod "Mediator_Me"
     pod "Me", '~> 1.0.1'
 end
 
@@ -273,6 +273,8 @@ end
 4. 复制一份 `Door.podspec` 到 `Specs` 文件夹
 5. `git push` 相关变动到远程仓库
 
+> `pod install` 时遇到 `Unable to find a specification for [PodName]`，就是没执行 `'pod repo update [NAME]'`
+ 
 
 <br />
 
@@ -308,7 +310,7 @@ end
 
 	如果返回 `Bool`，崩溃信息：`unrecognized selector sent to instance`，若想更深入探讨，可运行 [God项目](https://github.com/Limon-O-O/Mediator) 进行测试
 	
-4. 使用 `Mediator` 进行模块化，避免不了`Hard Code`，特别是在模块之间的通讯时，建议 `Hard Code` 尽量写在 `Extension` 内，比如 `Mediator+Door.swift` 的 `deliverParams` 的 `navigationBarHidden`, `callbackAction`
+4. 使用 `Mediator` 进行模块化，避免不了`Hard Code`，特别是在模块之间的通讯时，建议 `Hard Code` 尽量写在 `Extension` 内，比如 `Mediator_Door.swift` 的 `deliverParams` 的 `navigationBarHidden`, `callbackAction`
     
     ```
     extension Door where Base: Mediator {
