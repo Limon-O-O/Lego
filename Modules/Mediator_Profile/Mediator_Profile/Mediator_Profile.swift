@@ -19,7 +19,7 @@ extension Profile where Base: Mediator {
         let deliverParams: [String: Any] = ["successHandler": successHandler]
         base.performTarget("Profile", action: "FetchProfileViewController", params: deliverParams)
     }
-    
+
 }
 
 // MARK: - Properties

@@ -130,11 +130,11 @@ cp -f "$podspecFilePath" "$specsPath"
 # 修改 source file 的路径
 sed -i "" "s%${podName}/%${projectRootDirectory}/${podName}/${podName}/%g" "${specsPath}/${podName}.podspec"
 
-# git add "${specsPath}"
-# git add "${podspecFilePath}"
-# git add "./README.md"
-# git commit -m "[$podName] Update version $version"
-# git push
+git add "${specsPath}"
+git add "${podspecFilePath}"
+git add "./README.md"
+git commit -m "[$podName] Update version $version"
+git push
 
 say "finished"
 echo -e "\n${Default}🚀  Finished and Remember to ${BGreen}'pod repo update [NAME]' 💯 ${Default}\n"

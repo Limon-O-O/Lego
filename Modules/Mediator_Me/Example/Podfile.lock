@@ -5,8 +5,6 @@ PODS:
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
   - Mediator (0.0.4)
-  - Mediator_Me (0.0.1):
-    - Mediator
   - Nimble (5.1.1)
   - Nimble-Snapshots (4.4.0):
     - Nimble-Snapshots/Core (= 4.4.0)
@@ -18,23 +16,18 @@ PODS:
 
 DEPENDENCIES:
   - FBSnapshotTestCase
-  - Mediator_Me (from `../`)
+  - Mediator
   - Nimble (~> 5.1.1)
   - Nimble-Snapshots
   - Quick (~> 1.0.0)
 
-EXTERNAL SOURCES:
-  Mediator_Me:
-    :path: "../"
-
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   Mediator: 48093a0d5d818cda22bb134da9ba452897f04049
-  Mediator_Me: c198f81be35d5abe872fb80dfcd14581e7fc9846
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   Nimble-Snapshots: e743439f26c2fa99d8f7e0d7c01c99bcb40aa6f2
   Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
 
-PODFILE CHECKSUM: 8b21f7dbf3ec7620649cf9f23be2dc5bdd2aea48
+PODFILE CHECKSUM: 156e08d2e5d223e674362e0cbea94afc5471c90c
 
 COCOAPODS: 1.2.0

@@ -6,7 +6,7 @@ target 'Mediator_Door_Example' do
     # Uncomment this line if you're using Swift or would like to use dynamic frameworks
     use_frameworks!
 
-    pod 'Mediator_Door', :path => '../'
+    pod 'Mediator'
 
     target 'Mediator_Door_Tests' do
     	inherit! :search_paths
