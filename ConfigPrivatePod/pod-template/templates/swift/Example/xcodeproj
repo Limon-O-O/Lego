@@ -1,0 +1,38 @@
+#!/usr/bin/env ruby
+
+require 'xcodeproj'
+
+# 从命令行中接收参数（全局变量：ARGV)
+projectName, projectType, shortProjectName = ARGV
+
+# 打开创建的 Project.xcodeproj 文件
+project=Xcodeproj::Project.open("./#{projectName}.xcodeproj")
+
+# mainGroup=project.main_group['Example']
+# 创建一个分组
+mainGroup=project.main_group.new_group("#{projectName}","./../#{projectName}")
+
+references=Array.new
+
+case projectType
+when 'Module'
+	targetsGroup=mainGroup.new_group("Targets","./../#{projectName}/Targets")
+  	# 给新分组添加文件引用
+	reference=targetsGroup.new_reference("./../Targets/Target_#{projectName}.swift")
+	references=[reference]
+
+when 'Extension'
+  	reference1=mainGroup.new_reference("./#{projectName}.swift")
+	reference2=mainGroup.new_reference("./#{shortProjectName}.swift")
+	references=[reference1, reference2]
+end
+
+project.targets.each do |target|
+	if target.name == '#{projectName}_Example' then
+		# target添加相关的文件引用
+		target.add_file_references(references)
+    end
+end
+
+# 保存
+project.save
