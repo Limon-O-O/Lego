@@ -1,6 +1,6 @@
 # Mediator_Me
 
-Has not yet been released version.
+The Latest Version: 0.0.4
 
 ## Example
 
