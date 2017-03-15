@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Mediator_Me"
-  s.version      = "0.0.4"
+  s.version      = "0.0.2"
   s.summary      = "Mediator_Me."
 
   # This description is used to generate tags and improve search results.
