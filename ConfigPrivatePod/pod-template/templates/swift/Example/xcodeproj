@@ -16,9 +16,9 @@ references=Array.new
 
 case projectType
 when 'Module'
-	targetsGroup=mainGroup.new_group("Targets","./../#{projectName}/Targets")
+	targetsGroup=mainGroup.new_group("Targets","../#{projectName}/Targets")
   	# 给新分组添加文件引用
-	reference=targetsGroup.new_reference("./../Targets/Target_#{projectName}.swift")
+	reference=targetsGroup.new_reference("../Targets/Target_#{projectName}.swift")
 	references=[reference]
 
 when 'Extension'
