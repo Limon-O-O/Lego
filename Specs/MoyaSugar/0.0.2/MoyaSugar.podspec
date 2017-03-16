@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "MoyaSugar/**/*.swift"
+  s.source_files  = "Frameworks/MoyaSugar/MoyaSugar/**/*.swift"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['MoyaSugar/**/*.storyboard', 'MoyaSugar/**/*.xib', 'MoyaSugar/**/*.xcassets', 'MoyaSugar/**/*.lproj']
+  s.resources = ['Frameworks/MoyaSugar/MoyaSugar/**/*.storyboard', 'Frameworks/MoyaSugar/MoyaSugar/**/*.xib', 'Frameworks/MoyaSugar/MoyaSugar/**/*.xcassets', 'Frameworks/MoyaSugar/MoyaSugar/**/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
