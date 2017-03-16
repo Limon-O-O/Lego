@@ -10,7 +10,7 @@ project=Xcodeproj::Project.open("./#{projectName}.xcodeproj")
 
 # mainGroup=project.main_group['Example']
 # 创建一个分组
-mainGroup=project.main_group.new_group("#{projectName}","./../#{projectName}")
+mainGroup=project.main_group.new_group("#{projectName}","../#{projectName}")
 
 references=Array.new
 
