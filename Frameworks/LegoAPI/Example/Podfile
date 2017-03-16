@@ -9,6 +9,7 @@ target 'LegoAPI_Example' do
     pod "LegoProvider", :path => "../../LegoProvider"
 
     pod 'LegoContext'
+    pod 'Moya/RxSwift'
     pod 'MoyaSugar'
 
     target 'LegoAPI_Tests' do

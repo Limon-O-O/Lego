@@ -1,4 +1,4 @@
-source 'https://github.com/Limon-O-O/Lego.git'
+source 'git@github.com:Limon-O-O/Lego.git'
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 

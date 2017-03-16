@@ -13,6 +13,9 @@ PODS:
   - Moya/Core (8.0.2):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
+  - Moya/RxSwift (8.0.2):
+    - Moya/Core
+    - RxSwift (~> 3.0)
   - MoyaSugar (0.0.2):
     - Moya
   - Nimble (5.1.1)
@@ -24,11 +27,13 @@ PODS:
     - Quick
   - Quick (1.0.0)
   - Result (3.2.0)
+  - RxSwift (3.3.1)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
   - LegoContext
   - LegoProvider (from `../../LegoProvider`)
+  - Moya/RxSwift
   - MoyaSugar
   - Nimble (~> 5.1.1)
   - Nimble-Snapshots
@@ -49,7 +54,8 @@ SPEC CHECKSUMS:
   Nimble-Snapshots: e743439f26c2fa99d8f7e0d7c01c99bcb40aa6f2
   Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
   Result: 5a6705171c0613cc5fbf6ec55ff520cc62a8e81d
+  RxSwift: 8fc9f2de6275a9101d518444e00bf32f1a42caac
 
-PODFILE CHECKSUM: 853ac811b730b0727ceca200c6f111fd9361034f
+PODFILE CHECKSUM: e330c9f423e31640357a0eb727724463d76c26f3
 
 COCOAPODS: 1.2.0
