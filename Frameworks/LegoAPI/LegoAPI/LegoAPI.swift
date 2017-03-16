@@ -6,17 +6,8 @@
 //  Copyright © 2017 CocoaPods. All rights reserved.
 //
 
+import Moya
 import MoyaSugar
-
-public protocol SugarTargetType: TargetType {
-    var headers: [String: String]? { get }
-}
-
-public extension SugarTargetType {
-    public var headers: [String: String]? {
-        return nil
-    }
-}
 
 protocol LegoAPI: SugarTargetType {}
 

@@ -6,6 +6,8 @@
 //  Copyright © 2017 CocoaPods. All rights reserved.
 //
 
+import Moya
+import Alamofire
 import MoyaSugar
 
 struct LegoManager {
@@ -39,7 +41,7 @@ struct LegoManager {
     }
 }
 
-class LegoProvider<Target: SugarTargetType>: MoyaProvider<Target> {
+public class LegoProvider<Target: SugarTargetType>: MoyaProvider<Target> {
 
     static func endpointClosure(_ target: Target) -> Endpoint<Target> {
         let sampleResponseClosure = { return EndpointSampleResponse.networkResponse(200, target.sampleData) }
@@ -49,7 +51,7 @@ class LegoProvider<Target: SugarTargetType>: MoyaProvider<Target> {
         return Endpoint<Target>(url: url, sampleResponseClosure: sampleResponseClosure, method: method, parameters: parameters, parameterEncoding: target.parameterEncoding, httpHeaderFields: target.headers)
     }
 
-    init(endpointClosure: @escaping EndpointClosure = LegoProvider.endpointClosure, manager: Manager = LegoManager.manager) {
+    public init(endpointClosure: @escaping EndpointClosure = LegoProvider.endpointClosure, manager: Manager = LegoManager.manager) {
         super.init(endpointClosure: endpointClosure, manager: manager)
     }
 }

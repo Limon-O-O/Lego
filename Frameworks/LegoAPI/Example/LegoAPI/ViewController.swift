@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import LegoProvider
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let userProvider = LegoProvider<UserAPI>()
     }
 
 }
