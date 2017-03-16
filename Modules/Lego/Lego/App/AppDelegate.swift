@@ -25,9 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         LegoContext.accessToken = Mediator.shared.door.accessToken()
         LegoContext.userID = Mediator.shared.door.userID()
 
-        Networking.ServiceConfigure.accessToken = LegoContext.accessToken
-        Networking.ServiceConfigure.Environment.stringValue = LegoContext.Environment.value.rawValue
-
         if !LegoContext.didLogin {
             // startDoorStory()
         }

@@ -1,12 +1,40 @@
 //
 //  Router.swift
-//  NetworkingService
+//  Router
 //
-//  Created by Limon on 20/02/2017.
-//  Copyright © 2017 Limon.F. All rights reserved.
+//  Created by Limon on 16/03/2017.
+//  Copyright © 2017 CocoaPods. All rights reserved.
 //
 
 import Alamofire
+import LegoContext
+
+private struct ServiceConfigure {
+
+    class Empty {}
+
+    static let apiHost: String = {
+        switch LegoContext.Environment.value {
+        case .debug:
+            return "test.limon.top"
+        case .enterprise, .release:
+            return "glb.limon.top"
+        }
+    }()
+
+    public static var accessToken: String?
+
+    static var bundle: Bundle {
+        let classBundle = Bundle(for: Empty.self)
+        if let bundleURL = classBundle.url(forResource: "RouterBundle", withExtension: "bundle") {
+            return Bundle(url: bundleURL) ?? classBundle
+        } else {
+            return classBundle
+        }
+    }
+
+    static let tableName: String = "RouterLocalizable"
+}
 
 public struct Router {
 
@@ -18,7 +46,7 @@ public struct Router {
     public static let userAgent: String = {
 
         let key: String = {
-            switch ServiceConfigure.Environment.value {
+            switch LegoContext.Environment.value {
             case .debug:
                 return "DEV"
             case .enterprise:
@@ -51,7 +79,7 @@ extension URLRequest {
         if let token = ServiceConfigure.accessToken {
             urlRequest.setValue(token, forHTTPHeaderField: "Lego-TOKEN")
         }
-
+        
         return urlRequest
     }
 }

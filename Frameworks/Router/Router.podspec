@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "Door"
-  s.version      = "1.0.0"
-  s.summary      = "Door."
+  s.name         = "Router"
+  s.version      = "0.0.1"
+  s.summary      = "Router."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                    this is Door
+                    this is Router
                    DESC
 
   s.homepage     = "https://github.com/Limon-O-O/Lego"
@@ -53,7 +53,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "Limon" => "fengninglong@gmail.com" }
+  s.author             = { "Limon" => 'fengninglong@gmail.com' }
   # Or just: s.author    = "CasaTaloyum"
   # s.authors            = { "CasaTaloyum" => "casatwy@msn.com" }
   # s.social_media_url   = "http://twitter.com/CasaTaloyum"
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Door/Door/**/*.swift"
+  s.source_files  = "Router/**/*.swift"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['Door/Door/**/*.storyboard', 'Door/Door/**/*.xib', 'Door/Door/**/*.xcassets', 'Door/Door/**/*.lproj']
+  s.resources = ['Router/**/*.storyboard', 'Router/**/*.xib', 'Router/**/*.xcassets', 'Router/**/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
@@ -134,14 +134,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "MonkeyKing"
-  s.dependency "RxSwift"
-  s.dependency "RxCocoa"
-  
-  s.dependency "Networking"
-  s.dependency "EggKit"
-  s.dependency "LegoKit"
+  s.dependency "Alamofire"
   s.dependency "LegoContext"
-  s.dependency "Router"
 
 end

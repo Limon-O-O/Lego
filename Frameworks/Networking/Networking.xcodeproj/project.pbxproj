@@ -14,8 +14,6 @@
 		EDCBBC891E5AF0D200769112 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDCBBC881E5AF0D200769112 /* Assets.xcassets */; };
 		EDCBBC8C1E5AF0D200769112 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDCBBC8A1E5AF0D200769112 /* LaunchScreen.storyboard */; };
 		EDCBBC971E5AF1B400769112 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCBBC941E5AF1B400769112 /* NetworkingService.swift */; };
-		EDCBBC981E5AF1B400769112 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCBBC951E5AF1B400769112 /* Router.swift */; };
-		EDCBBC991E5AF1B400769112 /* ServiceConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCBBC961E5AF1B400769112 /* ServiceConfigure.swift */; };
 		EDCBBC9C1E5AF1CD00769112 /* NetworkingLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EDCBBC9E1E5AF1CD00769112 /* NetworkingLocalizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -31,8 +29,6 @@
 		EDCBBC8B1E5AF0D200769112 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDCBBC8D1E5AF0D200769112 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDCBBC941E5AF1B400769112 /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
-		EDCBBC951E5AF1B400769112 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		EDCBBC961E5AF1B400769112 /* ServiceConfigure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfigure.swift; sourceTree = "<group>"; };
 		EDCBBC9D1E5AF1CD00769112 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/NetworkingLocalizable.strings; sourceTree = "<group>"; };
 		EDCBBC9F1E5AF1DB00769112 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/NetworkingLocalizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,9 +97,7 @@
 		EDCBBC931E5AF16600769112 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				EDCBBC951E5AF1B400769112 /* Router.swift */,
 				EDCBBC941E5AF1B400769112 /* NetworkingService.swift */,
-				EDCBBC961E5AF1B400769112 /* ServiceConfigure.swift */,
 				EDCBBC9E1E5AF1CD00769112 /* NetworkingLocalizable.strings */,
 			);
 			path = Networking;
@@ -234,8 +228,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDCBBC991E5AF1B400769112 /* ServiceConfigure.swift in Sources */,
-				EDCBBC981E5AF1B400769112 /* Router.swift in Sources */,
 				EDCBBC971E5AF1B400769112 /* NetworkingService.swift in Sources */,
 				EDCBBC841E5AF0D200769112 /* ViewController.swift in Sources */,
 				EDCBBC821E5AF0D200769112 /* AppDelegate.swift in Sources */,

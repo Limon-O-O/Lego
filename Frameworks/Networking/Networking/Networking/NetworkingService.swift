@@ -9,6 +9,22 @@
 import Alamofire
 import RxSwift
 
+private struct ServiceConfigure {
+
+    class Empty {}
+
+    static var bundle: Bundle {
+        let classBundle = Bundle(for: Empty.self)
+        if let bundleURL = classBundle.url(forResource: "NetworkingBundle", withExtension: "bundle") {
+            return Bundle(url: bundleURL) ?? classBundle
+        } else {
+            return classBundle
+        }
+    }
+
+    static let tableName: String = "NetworkingLocalizable"
+}
+
 public struct NetworkingErrorCode {
     public static let networkingError = 40000
     public static let invalidURL = 40001
@@ -71,9 +87,6 @@ extension Alamofire.DataRequest {
             }
 
             guard let httpURLResponse = response.response else {
-                if ServiceConfigure.Environment.value == .debug {
-                    print(response.debugDescription)
-                }
                 if let unwrappedError = response.result.error as? NSError {
                     // 错误码大全：https://github.com/apple/swift-corelibs-foundation/blob/master/Foundation/NSURLError.swift
                     error = NetworkingError(code: unwrappedError.code, failureReason: unwrappedError.localizedDescription + " " + "\(unwrappedError.code)")

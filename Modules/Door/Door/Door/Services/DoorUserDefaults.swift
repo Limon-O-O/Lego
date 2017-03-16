@@ -58,7 +58,6 @@ extension DoorUserDefaults {
             _accessToken = newValue
             defaults.set(newValue, forKey: Keys.accessTokenV1.rawValue)
             LegoContext.accessToken = newValue
-            Networking.ServiceConfigure.accessToken = newValue
         }
     }
 

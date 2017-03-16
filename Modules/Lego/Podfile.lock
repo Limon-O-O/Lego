@@ -6,6 +6,7 @@ PODS:
     - LegoKit
     - MonkeyKing
     - Networking
+    - Router
     - RxCocoa
     - RxSwift
   - EggKit (1.0.1)
@@ -30,6 +31,9 @@ PODS:
     - Alamofire
     - RxSwift
   - Profile (1.0.0)
+  - Router (0.0.1):
+    - Alamofire
+    - LegoContext
   - RxCocoa (3.2.0):
     - RxSwift (~> 3.1)
   - RxSwift (3.2.0)
@@ -50,6 +54,7 @@ DEPENDENCIES:
   - Mediator_Tower (from `../Mediator_Tower`)
   - Networking (from `../../Frameworks/Networking`)
   - Profile (from `../Profile`)
+  - Router (from `../../Frameworks/Router`)
   - Tower (from `../Tower`)
 
 EXTERNAL SOURCES:
@@ -74,6 +79,8 @@ EXTERNAL SOURCES:
     :path: "../../Frameworks/Networking"
   Profile:
     :path: "../Profile"
+  Router:
+    :path: "../../Frameworks/Router"
   Tower:
     :path: "../Tower"
 
@@ -84,7 +91,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
-  Door: b48042a33e028a56198bb0461e725b0e28772c63
+  Door: edef3e385eaf83a5e4cc9a0edfae04d7d1ab027f
   EggKit: 4ad8e40cd8ad4cc6ff8c415546e0544b1542b2d0
   LegoContext: eb4f3645642400d506edb1ea69ed68194e88e269
   LegoKit: 55617431b4cb0b53968ffc6fa0f105fff07bfbc4
@@ -97,10 +104,11 @@ SPEC CHECKSUMS:
   MonkeyKing: 443becfc5579a050cd8b7394b3631c8ed567aae3
   Networking: 80c33fee1291801025a7455e4f7fac49ea1ed3e8
   Profile: 2bdb720c9d782c6d3776f9f7e61827f20655e3ab
+  Router: 62ceb65ce7cbcbd598c8770c65b51180d2f49578
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   Tower: f80f250691ebb3f10af2eb9957e9ca52f1825157
 
-PODFILE CHECKSUM: 325b023ab0087edc3079af35fe11dafca87569da
+PODFILE CHECKSUM: 1f0a6b2544b6ac730cfd05ab89f1e3b82d4e28a1
 
 COCOAPODS: 1.2.0
