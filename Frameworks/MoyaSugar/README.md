@@ -1,6 +1,6 @@
 # MoyaSugar
 
-The Latest Version: 0.0.2
+The Latest Version: 0.0.3
 
 ## Example
 
