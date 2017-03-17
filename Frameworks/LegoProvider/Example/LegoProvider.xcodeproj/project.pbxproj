@@ -15,6 +15,9 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		945B56B5E986A3588BB22CC1 /* Pods_LegoProvider_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0C7F88B4A4E1D13E4271C1 /* Pods_LegoProvider_Tests.framework */; };
+		ED1FFFF21E7B97300006EF32 /* Observable+LegoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FFFF11E7B97300006EF32 /* Observable+LegoProvider.swift */; };
+		ED1FFFF41E7BBCE60006EF32 /* ServiceConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FFFF31E7BBCE60006EF32 /* ServiceConfigure.swift */; };
+		ED9D8F111E7BE68C003C8EB4 /* ProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9D8F101E7BE68B003C8EB4 /* ProviderError.swift */; };
 		EDB72EF61E7AA14000303FB1 /* LegoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB72EF51E7AA14000303FB1 /* LegoProvider.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +51,9 @@
 		92137AF8E35B2E35D3FCD23A /* Pods-LegoProvider_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LegoProvider_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LegoProvider_Tests/Pods-LegoProvider_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD0C7F88B4A4E1D13E4271C1 /* Pods_LegoProvider_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LegoProvider_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2F4A331EC501384B4AA59E2 /* Pods-LegoProvider_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LegoProvider_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LegoProvider_Example/Pods-LegoProvider_Example.release.xcconfig"; sourceTree = "<group>"; };
+		ED1FFFF11E7B97300006EF32 /* Observable+LegoProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+LegoProvider.swift"; sourceTree = "<group>"; };
+		ED1FFFF31E7BBCE60006EF32 /* ServiceConfigure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfigure.swift; sourceTree = "<group>"; };
+		ED9D8F101E7BE68B003C8EB4 /* ProviderError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderError.swift; sourceTree = "<group>"; };
 		EDB72EF51E7AA14000303FB1 /* LegoProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegoProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				EDB72EF51E7AA14000303FB1 /* LegoProvider.swift */,
+				ED1FFFF11E7B97300006EF32 /* Observable+LegoProvider.swift */,
+				ED1FFFF31E7BBCE60006EF32 /* ServiceConfigure.swift */,
+				ED9D8F101E7BE68B003C8EB4 /* ProviderError.swift */,
 			);
 			name = LegoProvider;
 			path = ../LegoProvider;
@@ -373,8 +382,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED1FFFF41E7BBCE60006EF32 /* ServiceConfigure.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				ED9D8F111E7BE68C003C8EB4 /* ProviderError.swift in Sources */,
+				ED1FFFF21E7B97300006EF32 /* Observable+LegoProvider.swift in Sources */,
 				EDB72EF61E7AA14000303FB1 /* LegoProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

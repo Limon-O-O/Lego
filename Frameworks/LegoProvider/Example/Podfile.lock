@@ -6,13 +6,14 @@ PODS:
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
   - LegoContext (1.0.1)
-  - Moya (8.0.2):
-    - Moya/Core (= 8.0.2)
-  - Moya/Core (8.0.2):
+  - Moya/Core (8.0.3):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
-  - MoyaSugar (0.0.2):
-    - Moya
+  - Moya/RxSwift (8.0.3):
+    - Moya/Core
+    - RxSwift (~> 3.0)
+  - MoyaSugar (0.0.3):
+    - Moya/RxSwift
   - Nimble (5.1.1)
   - Nimble-Snapshots (4.4.0):
     - Nimble-Snapshots/Core (= 4.4.0)
@@ -21,7 +22,8 @@ PODS:
     - Nimble
     - Quick
   - Quick (1.0.0)
-  - Result (3.2.0)
+  - Result (3.2.1)
+  - RxSwift (3.3.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -36,12 +38,13 @@ SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   LegoContext: 74526295eb4900618726525761766e096c3c8990
-  Moya: 47f61da5b634aa71f676431b64ee0f81e976296d
-  MoyaSugar: ca8ac13f86436b73abcf7e17b752d1b0e2857ee3
+  Moya: d3721622e3cc0cc2f038d69a258686f0b66e7252
+  MoyaSugar: f07f1199d62f0e69c43c2b2149ace22352099709
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   Nimble-Snapshots: e743439f26c2fa99d8f7e0d7c01c99bcb40aa6f2
   Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
-  Result: 5a6705171c0613cc5fbf6ec55ff520cc62a8e81d
+  Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
+  RxSwift: 8fc9f2de6275a9101d518444e00bf32f1a42caac
 
 PODFILE CHECKSUM: 4bba2338b511d5c2697b4daba70b3211ace0bbfd
 
