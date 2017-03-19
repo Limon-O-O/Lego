@@ -6,20 +6,7 @@
 //  Copyright © 2017 Limon.F. All rights reserved.
 //
 
-import RxSwift
-import Router
-import Alamofire
-import Networking
+import LegoAPI
+import LegoProvider
 
-extension NetworkingService {
-
-    static func login<T: Mappable>(phoneNumber: String, mapper: T.Type) -> Observable<T> {
-        let parameters = ["phone_number": phoneNumber]
-        return result(request: Router.User.login(parameters), mapper: mapper)
-    }
-
-    static func register<T: Mappable>(phoneNumber: String, mapper: T.Type) -> Observable<T> {
-        let parameters = ["phone_number": phoneNumber]
-        return result(request: Router.User.createUser(parameters), mapper: mapper)
-    }
-}
+let UserProvider = LegoProvider<UserAPI>()

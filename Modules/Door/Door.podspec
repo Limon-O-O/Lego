@@ -138,10 +138,10 @@ Pod::Spec.new do |s|
   s.dependency "RxSwift"
   s.dependency "RxCocoa"
   
-  s.dependency "Networking"
+  s.dependency "LegoAPI"
   s.dependency "EggKit"
   s.dependency "LegoKit"
   s.dependency "LegoContext"
-  s.dependency "Router"
+  s.dependency "LegoProvider"
 
 end

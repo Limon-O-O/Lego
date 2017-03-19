@@ -87,7 +87,7 @@
                                 <color key="textColor" red="0.57254901960000004" green="0.57254901960000004" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Door_logo" translatesAutoresizingMaskIntoConstraints="NO" id="2bJ-Jh-rQr">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Door_logo" translatesAutoresizingMaskIntoConstraints="NO" id="2bJ-Jh-rQr">
                                 <rect key="frame" x="123" y="285" width="129" height="97"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lai-6L-J6h" userLabel="Register Button">
@@ -105,11 +105,17 @@
                                     <action selector="register:" destination="9Yw-yu-sQD" eventType="touchUpInside" id="cfQ-37-LEU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCO-HH-PjR">
+                                <rect key="frame" x="159.5" y="213" width="57" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Login"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="N0N-Zv-tPu" firstAttribute="width" secondItem="yIG-c5-Y0V" secondAttribute="width" id="0eT-wt-1y1"/>
                             <constraint firstItem="V1o-qd-q9s" firstAttribute="centerX" secondItem="7Ml-jP-TBv" secondAttribute="centerX" id="4LO-dY-0nG"/>
+                            <constraint firstItem="vCO-HH-PjR" firstAttribute="centerX" secondItem="7Ml-jP-TBv" secondAttribute="centerX" id="4MH-OO-4wu"/>
                             <constraint firstItem="d67-rV-S9H" firstAttribute="top" secondItem="N0N-Zv-tPu" secondAttribute="top" id="6hN-GD-dta"/>
                             <constraint firstItem="yIG-c5-Y0V" firstAttribute="leading" secondItem="N0N-Zv-tPu" secondAttribute="trailing" constant="30" id="AYR-7S-YSg"/>
                             <constraint firstItem="lai-6L-J6h" firstAttribute="centerX" secondItem="7Ml-jP-TBv" secondAttribute="centerX" id="C52-FO-V8a"/>
@@ -130,11 +136,13 @@
                             <constraint firstItem="N0N-Zv-tPu" firstAttribute="height" secondItem="yIG-c5-Y0V" secondAttribute="height" id="rOH-X0-Vgg"/>
                             <constraint firstItem="d67-rV-S9H" firstAttribute="height" secondItem="N0N-Zv-tPu" secondAttribute="height" id="s0n-AC-cj2"/>
                             <constraint firstItem="2bJ-Jh-rQr" firstAttribute="centerY" secondItem="7Ml-jP-TBv" secondAttribute="centerY" id="uxF-zR-n0N"/>
+                            <constraint firstItem="2bJ-Jh-rQr" firstAttribute="top" secondItem="vCO-HH-PjR" secondAttribute="bottom" constant="32" id="yVs-QT-3Sk"/>
                             <constraint firstItem="d67-rV-S9H" firstAttribute="width" secondItem="N0N-Zv-tPu" secondAttribute="width" id="yXr-u3-wOW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vJi-pF-GMq"/>
                     <connections>
+                        <outlet property="loginButton" destination="vCO-HH-PjR" id="Y6Y-3M-55A"/>
                         <outlet property="loginWayLabel" destination="03e-FP-g3t" id="Vsh-y9-o7C"/>
                         <outlet property="phoneButton" destination="F9l-Gu-PfE" id="WyM-p8-Xrw"/>
                         <outlet property="qqButton" destination="N0N-Zv-tPu" id="2cp-Mn-pls"/>

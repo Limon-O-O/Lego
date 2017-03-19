@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Networking
+import LegoProvider
 
 enum LoginPlatform: String {
     case weChat = "wechat"
@@ -21,7 +21,7 @@ struct LoginUser {
     let nickname: String
 }
 
-extension LoginUser: Mappable {
+extension LoginUser: Decodable {
 
     init?(json: [String: Any]) {
         guard let userID = json["user_id"] as? Int,

@@ -11,7 +11,10 @@ target 'Lego' do
     ##### Framework ########
 
     pod "LegoContext", :path => "../../Frameworks/LegoContext"
-    pod "Router", :path => "../../Frameworks/Router"
+    pod "LegoProvider", :path => "../../Frameworks/LegoProvider"
+    pod "LegoAPI", :path => "../../Frameworks/LegoAPI"
+    pod "EggKit", :path => "../../Frameworks/EggKit"
+    pod "LegoKit", :path => "../../Frameworks/LegoKit"
 
     ##### 模块 ########
 
@@ -30,9 +33,5 @@ target 'Lego' do
     # Door
     pod "Mediator_Profile", :path => "../Mediator_Profile"
     pod "Profile", :path => "../Profile"
-
-    pod "Networking", :path => "../../Frameworks/Networking"
-    pod "EggKit", :path => "../../Frameworks/EggKit"
-    pod "LegoKit", :path => "../../Frameworks/LegoKit"
 
 end

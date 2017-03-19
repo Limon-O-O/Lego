@@ -10,11 +10,12 @@ import UIKit
 import EggKit
 import RxSwift
 import MonkeyKing
-import Networking
 
 class WelcomeViewController: UIViewController {
 
     var innateParams: [String: Any] = [:]
+
+    @IBOutlet private weak var loginButton: UIButton!
 
     @IBOutlet private weak var registerButton: UIButton!
     @IBOutlet private weak var weiboButton: UIButton!
@@ -29,6 +30,41 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Welcome"
+
+        loginWayLabel.text = "select_login_way".egg.localized
+        weiboButton.setTitle("button.weibo_login".egg.localized, for: .normal)
+        qqButton.setTitle("button.qq_login".egg.localized, for: .normal)
+        wechatButton.setTitle("button.wechat_login".egg.localized, for: .normal)
+        phoneButton.setTitle("button.phone_login".egg.localized, for: .normal)
+        registerButton.setTitle("button.register_by_phone".egg.localized, for: .normal)
+
+        loginButton.rx.tap
+            .throttle(0.3, scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] in
+
+                let accessToken = "002dS5ZGOoM5BCd78614ac1dJnIUWD"
+                let userID: Int = 007
+
+                DoorUserDefaults.accessToken = accessToken
+                DoorUserDefaults.userID = userID
+
+                let alertController = UIAlertController(title: nil, message: "登录成功", preferredStyle: .alert)
+                let action: UIAlertAction = UIAlertAction(title: "确定", style: .default) { _ in
+
+                    let deliverParams: [String: Any] = [
+                        "accessToken": accessToken,
+                        "userID": userID
+                    ]
+
+                    // 通过闭包回调出去，这样不用依赖 Main Project
+                    (self?.innateParams["callbackAction"] as? ([String: Any]) -> Void)?(deliverParams)
+                }
+
+                alertController.addAction(action)
+                self?.present(alertController, animated: true, completion: nil)
+            })
+            .addDisposableTo(disposeBag)
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -40,13 +76,6 @@ class WelcomeViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
-        loginWayLabel.text = "select_login_way".egg.localized
-        weiboButton.setTitle("button.weibo_login".egg.localized, for: .normal)
-        qqButton.setTitle("button.qq_login".egg.localized, for: .normal)
-        wechatButton.setTitle("button.wechat_login".egg.localized, for: .normal)
-        phoneButton.setTitle("button.phone_login".egg.localized, for: .normal)
-        registerButton.setTitle("button.register_by_phone".egg.localized, for: .normal)
 
         UIView.animate(withDuration: 0.2) {
             self.setNeedsStatusBarAppearanceUpdate()
@@ -109,7 +138,8 @@ extension WelcomeViewController {
 
     private func login(platform: LoginPlatform, token: String, openID: String) {
 
-        NetworkingService.login(phoneNumber: "", mapper: LoginUser.self)
+        UserProvider.request(.login(["": ""]))
+            .mapObject(type: LoginUser.self)
             .observeOn(MainScheduler.asyncInstance)
             .subscribe(onNext: { success in
 

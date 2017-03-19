@@ -1,54 +1,65 @@
 PODS:
-  - Alamofire (4.3.0)
+  - Alamofire (4.4.0)
   - EggKit (1.0.1)
+  - LegoAPI (0.0.1):
+    - LegoContext
+    - MoyaSugar
   - LegoContext (1.0.1)
   - LegoKit (1.0.1):
     - EggKit
     - RxSwift
+  - LegoProvider (0.0.1):
+    - MoyaSugar
   - MonkeyKing (1.2.1)
-  - Networking (1.0.1):
-    - Alamofire
-    - RxSwift
-  - Router (0.0.1):
-    - Alamofire
-    - LegoContext
+  - Moya/Core (8.0.3):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - Moya/RxSwift (8.0.3):
+    - Moya/Core
+    - RxSwift (~> 3.0)
+  - MoyaSugar (0.0.3):
+    - Moya/RxSwift
+  - Result (3.2.1)
   - RxCocoa (3.2.0):
     - RxSwift (~> 3.1)
   - RxSwift (3.2.0)
 
 DEPENDENCIES:
   - EggKit (from `../../Frameworks/EggKit`)
+  - LegoAPI (from `../../Frameworks/LegoAPI`)
   - LegoContext (from `../../Frameworks/LegoContext`)
   - LegoKit (from `../../Frameworks/LegoKit`)
+  - LegoProvider (from `../../Frameworks/LegoProvider`)
   - MonkeyKing
-  - Networking (from `../../Frameworks/Networking`)
-  - Router (from `../../Frameworks/Router`)
   - RxCocoa
   - RxSwift
 
 EXTERNAL SOURCES:
   EggKit:
     :path: "../../Frameworks/EggKit"
+  LegoAPI:
+    :path: "../../Frameworks/LegoAPI"
   LegoContext:
     :path: "../../Frameworks/LegoContext"
   LegoKit:
     :path: "../../Frameworks/LegoKit"
-  Networking:
-    :path: "../../Frameworks/Networking"
-  Router:
-    :path: "../../Frameworks/Router"
+  LegoProvider:
+    :path: "../../Frameworks/LegoProvider"
 
 SPEC CHECKSUMS:
-  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   EggKit: 4ad8e40cd8ad4cc6ff8c415546e0544b1542b2d0
+  LegoAPI: 8e5cc3018ab0bc2d61fad0922360284c7d8a06f4
   LegoContext: eb4f3645642400d506edb1ea69ed68194e88e269
   LegoKit: 55617431b4cb0b53968ffc6fa0f105fff07bfbc4
+  LegoProvider: a233f4430736449989fd774e33865be5e55b3dd5
   MonkeyKing: f44795a0ed91a785b0e0bd2e4b6145199901528e
-  Networking: 80c33fee1291801025a7455e4f7fac49ea1ed3e8
-  Router: 62ceb65ce7cbcbd598c8770c65b51180d2f49578
+  Moya: d3721622e3cc0cc2f038d69a258686f0b66e7252
+  MoyaSugar: f07f1199d62f0e69c43c2b2149ace22352099709
+  Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
 
-PODFILE CHECKSUM: a49584b266f40b3d889f74d6aa3cbe288405fc33
+PODFILE CHECKSUM: c8dd0064ca0f0276d87cd54f12b2739263f57359
 
 COCOAPODS: 1.2.0
