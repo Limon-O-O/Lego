@@ -28,11 +28,15 @@ public extension Decodable {
     }
 }
 
-extension Observable where Element: Moya.Response {
+extension Observable {
 
     public func mapObject<T: Decodable>(type: T.Type) -> Observable<T> {
 
-        return map { response in
+        return map { representor in
+
+            guard let response = (representor as? Moya.Response) ?? (representor as? Moya.ProgressResponse)?.response else {
+                throw ProviderError.noRepresentor
+            }
 
             try response.validStatusCode()
 
@@ -52,7 +56,11 @@ extension Observable where Element: Moya.Response {
 
     public func mapObjects<T: Decodable>(type: T.Type) -> Observable<[T]> {
 
-        return map { response in
+        return map { representor in
+
+            guard let response = (representor as? Moya.Response) ?? (representor as? Moya.ProgressResponse)?.response else {
+                throw ProviderError.noRepresentor
+            }
 
             try response.validStatusCode()
 
