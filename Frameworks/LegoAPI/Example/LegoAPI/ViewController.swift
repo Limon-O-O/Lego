@@ -20,23 +20,32 @@ struct Template: Decodable {
 
 class ViewController: UIViewController {
 
-    let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
+    private let provider = LegoProvider<GitHubUserContent>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         downloadRepositories("Limon-O-O")
     }
 
-    let provider = LegoProvider<GitHub>()
+    private func downloadRepositories(_ username: String) {
 
-    func downloadRepositories(_ username: String) {
+//        provider.request(.userRepositories(username)).mapObjects(type: Template.self).subscribe(onNext: { event in
+//            print(event)
+//        }, onError: { error in
+//            self.showAlert("GitHub Fetch", message: error.localizedDescription)
+//        }).disposed(by: disposeBag)
 
-        provider.request(.userRepositories(username)).mapObjects(type: Template.self).subscribe(onNext: { event in
+        provider.requestWithProgress((.downloadMoyaWebContent("logo_github.png"))) { progress in
+
+            print("progress \(progress) \(Thread.current.name)")
+
+        }.mapObjects(type: Template.self).subscribe(onNext: { event in
             print(event)
         }, onError: { error in
-            self.showAlert("GitHub Fetch", message: error.localizedDescription)
+            print((error as! ProviderError))
         }).disposed(by: disposeBag)
+
     }
 
     fileprivate func showAlert(_ title: String, message: String) {
@@ -49,6 +58,56 @@ class ViewController: UIViewController {
 }
 
 // MARK: - Provider support
+
+public enum GitHubUserContent {
+    case downloadMoyaWebContent(String)
+}
+
+extension GitHubUserContent: LegoAPI {
+    public var baseURL: URL { return URL(string: "https://raw.githubusercontent.com")! }
+    public var path: String {
+        switch self {
+        case .downloadMoyaWebContent(let contentPath):
+            return "/Moya/Moya/master/web/\(contentPath)"
+        }
+    }
+    public var method: Moya.Method {
+        switch self {
+        case .downloadMoyaWebContent:
+            return .get
+        }
+    }
+    public var parameters: [String: Any]? {
+        switch self {
+        case .downloadMoyaWebContent:
+            return nil
+        }
+    }
+    public var parameterEncoding: ParameterEncoding {
+        return URLEncoding.default
+    }
+    public var task: Task {
+        switch self {
+        case .downloadMoyaWebContent:
+            return .download(.request(DefaultDownloadDestination))
+        }
+    }
+    public var sampleData: Data {
+        return Data()
+    }
+
+}
+
+private let DefaultDownloadDestination: DownloadDestination = { temporaryURL, response in
+    let directoryURLs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+
+    if !directoryURLs.isEmpty {
+        return (directoryURLs[0].appendingPathComponent(response.suggestedFilename!), [])
+    }
+
+    return (temporaryURL, [])
+}
+
 
 private extension String {
     var urlEscaped: String {
