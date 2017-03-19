@@ -1,0 +1,16 @@
+PODS:
+  - Decodable (0.0.1)
+
+DEPENDENCIES:
+  - Decodable (from `../`)
+
+EXTERNAL SOURCES:
+  Decodable:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Decodable: 25d2b9e989113a22ccaa198627d55214ead20190
+
+PODFILE CHECKSUM: 33c3115072a6a91b43cfbb33a1a0ccea40c1092e
+
+COCOAPODS: 1.2.0
