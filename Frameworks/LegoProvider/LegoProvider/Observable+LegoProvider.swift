@@ -9,24 +9,7 @@
 import Foundation
 import RxSwift
 import Moya
-
-public protocol Decodable {
-
-    static func decoding(json: [String: Any]) -> Self?
-
-    init?(json: [String: Any])
-}
-
-public extension Decodable {
-
-    func decoding(json: [String: Any]) -> Self? {
-        return Self(json: json)
-    }
-
-    static func decoding(json: [String: Any]) -> Self? {
-        return Self(json: json)
-    }
-}
+import Decodable
 
 extension Observable {
 

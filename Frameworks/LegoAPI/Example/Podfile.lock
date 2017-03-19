@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.4.0)
+  - Decodable (1.0.0)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
@@ -7,6 +8,7 @@ PODS:
     - FBSnapshotTestCase/Core
   - LegoContext (1.0.1)
   - LegoProvider (0.0.1):
+    - Decodable
     - MoyaSugar
   - Moya (8.0.2):
     - Moya/Core (= 8.0.2)
@@ -45,9 +47,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Decodable: dcce84646aa58682fb0baa9fba67524494f1a5da
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   LegoContext: 74526295eb4900618726525761766e096c3c8990
-  LegoProvider: a233f4430736449989fd774e33865be5e55b3dd5
+  LegoProvider: b886a4964d4aeca05c418e43155e2219ac0cef9a
   Moya: 47f61da5b634aa71f676431b64ee0f81e976296d
   MoyaSugar: ca8ac13f86436b73abcf7e17b752d1b0e2857ee3
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29

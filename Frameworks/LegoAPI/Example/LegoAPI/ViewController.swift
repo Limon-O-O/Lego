@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import Moya
 import LegoProvider
+import Decodable
 
 struct Template: Decodable {
 

@@ -9,6 +9,7 @@ target 'LegoProvider_Example' do
     pod 'Alamofire'
     pod 'LegoContext'
     pod 'MoyaSugar'
+    pod 'Decodable'
 
     target 'LegoProvider_Tests' do
     	inherit! :search_paths

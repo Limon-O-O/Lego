@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import LegoProvider
+import Decodable
 
 enum LoginPlatform: String {
     case weChat = "wechat"

@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.4.0)
+  - Decodable (1.0.0)
   - Door (1.0.0):
     - EggKit
     - LegoAPI
@@ -18,6 +19,7 @@ PODS:
     - EggKit
     - RxSwift
   - LegoProvider (0.0.1):
+    - Decodable
     - MoyaSugar
   - Me (1.0.1):
     - EggKit
@@ -99,12 +101,13 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Decodable: dcce84646aa58682fb0baa9fba67524494f1a5da
   Door: 385effad4442e23c7ac8badd01be44d47c782b7d
   EggKit: 4ad8e40cd8ad4cc6ff8c415546e0544b1542b2d0
   LegoAPI: 8e5cc3018ab0bc2d61fad0922360284c7d8a06f4
   LegoContext: eb4f3645642400d506edb1ea69ed68194e88e269
   LegoKit: 55617431b4cb0b53968ffc6fa0f105fff07bfbc4
-  LegoProvider: a233f4430736449989fd774e33865be5e55b3dd5
+  LegoProvider: b886a4964d4aeca05c418e43155e2219ac0cef9a
   Me: 7268d637deb936aa14e9a19035793462d85e919a
   Mediator: 8af03cb1f7f8a086db007740f90abd5636eafd6a
   Mediator_Door: 5eb6db12e7196641aa0e94cbec8fc4d81974ada9
