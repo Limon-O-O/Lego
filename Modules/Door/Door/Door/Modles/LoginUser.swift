@@ -31,7 +31,7 @@ extension LoginUser: Decodable {
         self.nickname = nickname
     }
 
-    static func mapping(json: [String: Any]) -> LoginUser? {
+    static func decoding(json: [String: Any]) -> LoginUser? {
         return LoginUser(json: json)
     }
 }
