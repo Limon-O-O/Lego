@@ -1,6 +1,6 @@
 # Decodable
 
-The Latest Version: 1.0.0
+The Latest Version: 1.0.1
 
 ## Example
 
