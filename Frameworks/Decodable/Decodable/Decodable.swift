@@ -15,13 +15,9 @@ public protocol Decodable {
     init?(json: [String: Any])
 }
 
-public extension Decodable {
+extension Decodable {
 
-    func decoding(json: [String: Any]) -> Self? {
-        return Self(json: json)
-    }
-
-    static func decoding(json: [String: Any]) -> Self? {
+    public static func decoding(json: [String: Any]) -> Self? {
         return Self(json: json)
     }
 }
