@@ -1,6 +1,6 @@
 # Decodable
 
-Has not yet been released version. 🙈
+The Latest Version: 1.0.0
 
 ## Example
 
