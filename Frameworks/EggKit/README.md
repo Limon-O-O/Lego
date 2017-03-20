@@ -1,6 +1,6 @@
 # EggKit
 
-Has not yet been released version. 🙈
+The Latest Version: 0.0.2
 
 ## Example
 
