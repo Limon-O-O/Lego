@@ -1,0 +1,89 @@
+PODS:
+  - Alamofire (4.4.0)
+  - Decodable (1.0.0)
+  - EggKit (0.0.1)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - LegoAPI (0.0.1):
+    - LegoContext
+    - MoyaSugar
+  - LegoContext (0.0.1)
+  - LegoKit (0.0.1):
+    - EggKit
+    - RxSwift
+  - LegoProvider (0.0.1):
+    - Decodable
+    - MoyaSugar
+  - MonkeyKing (1.2.2)
+  - Moya/Core (8.0.3):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - Moya/RxSwift (8.0.3):
+    - Moya/Core
+    - RxSwift (~> 3.0)
+  - MoyaSugar (0.0.3):
+    - Moya/RxSwift
+  - Nimble (5.1.1)
+  - Nimble-Snapshots (4.4.0):
+    - Nimble-Snapshots/Core (= 4.4.0)
+  - Nimble-Snapshots/Core (4.4.0):
+    - FBSnapshotTestCase (~> 2.0)
+    - Nimble
+    - Quick
+  - Quick (1.0.0)
+  - Result (3.2.1)
+  - RxCocoa (3.3.1):
+    - RxSwift (~> 3.3)
+  - RxSwift (3.3.1)
+
+DEPENDENCIES:
+  - EggKit (from `../../../Frameworks/EggKit`)
+  - FBSnapshotTestCase
+  - LegoAPI (from `../../../Frameworks/LegoAPI`)
+  - LegoContext (from `../../../Frameworks/LegoContext`)
+  - LegoKit (from `../../../Frameworks/LegoKit`)
+  - LegoProvider (from `../../../Frameworks/LegoProvider`)
+  - MonkeyKing
+  - Nimble (~> 5.1.1)
+  - Nimble-Snapshots
+  - Quick (~> 1.0.0)
+  - RxCocoa
+  - RxSwift
+
+EXTERNAL SOURCES:
+  EggKit:
+    :path: "../../../Frameworks/EggKit"
+  LegoAPI:
+    :path: "../../../Frameworks/LegoAPI"
+  LegoContext:
+    :path: "../../../Frameworks/LegoContext"
+  LegoKit:
+    :path: "../../../Frameworks/LegoKit"
+  LegoProvider:
+    :path: "../../../Frameworks/LegoProvider"
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Decodable: dcce84646aa58682fb0baa9fba67524494f1a5da
+  EggKit: 3f9ad4412854518c218dcfada390b5d0f92383f5
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  LegoAPI: 8e5cc3018ab0bc2d61fad0922360284c7d8a06f4
+  LegoContext: 00526d76b50073092abf5095b30da69dd0e9f9b5
+  LegoKit: 80ceed807b02353887986e6686b40be81c3b4444
+  LegoProvider: b886a4964d4aeca05c418e43155e2219ac0cef9a
+  MonkeyKing: 443becfc5579a050cd8b7394b3631c8ed567aae3
+  Moya: d3721622e3cc0cc2f038d69a258686f0b66e7252
+  MoyaSugar: f07f1199d62f0e69c43c2b2149ace22352099709
+  Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
+  Nimble-Snapshots: e743439f26c2fa99d8f7e0d7c01c99bcb40aa6f2
+  Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
+  Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
+  RxCocoa: 7dcb7a1860fc9cd0e23dae67ab105fc2916670b6
+  RxSwift: 8fc9f2de6275a9101d518444e00bf32f1a42caac
+
+PODFILE CHECKSUM: 25e894dfa64c5040d62c42729be4ae36ce5937c0
+
+COCOAPODS: 1.2.0

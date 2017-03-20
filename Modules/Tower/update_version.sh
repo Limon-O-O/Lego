@@ -6,6 +6,7 @@
 plistBuddy="/usr/libexec/PlistBuddy"
 
 BGreen='\033[1;32m'
+Default='\033[0;m'
 
 # Parse input variables and update settings.
 for i in "$@"; do
@@ -110,14 +111,14 @@ while read -r thisPlist; do
 	thisBundleShortVersionString=$("${plistBuddy}" -c "Print CFBundleShortVersionString" "${thisPlist}")
 	# Update the CFBundleVersion if needed
 	if [[ ${thisBundleVersion} != ${mainBundleVersion} ]]; then
-		echo -e "${BGreen}Updating \"${thisPlist}\" with build ${mainBundleVersion}..."
+		echo -e "${BGreen}Updating \"${thisPlist}\" with build ${mainBundleVersion}...${Default}"
 		"${plistBuddy}" -c "Set :CFBundleVersion ${mainBundleVersion}" "${thisPlist}"
 	fi
 	# Update the CFBundleShortVersionString if needed
 	if [[ ${thisBundleShortVersionString} != ${mainBundleShortVersionString} ]]; then
-		echo -e "${BGreen}Updating \"${thisPlist}\" with marketing version ${mainBundleShortVersionString}..."
+		echo -e "${BGreen}Updating \"${thisPlist}\" with marketing version ${mainBundleShortVersionString}...${Default}"
 		"${plistBuddy}" -c "Set :CFBundleShortVersionString ${mainBundleShortVersionString}" "${thisPlist}"
 		git add "${thisPlist}"
 	fi
-	echo -e "${BGreen}Current \"${thisPlist}\" version is ${mainBundleShortVersionString} (${mainBundleVersion})."
+	echo -e "${BGreen}Current \"${thisPlist}\" version is ${mainBundleShortVersionString} (${mainBundleVersion}).${Default}"
 done <<< "${plist}"

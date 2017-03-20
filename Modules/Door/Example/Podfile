@@ -1,0 +1,30 @@
+source 'git@github.com:Limon-O-O/Lego.git'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+
+target 'Door_Example' do
+    # Uncomment this line if you're using Swift or would like to use dynamic frameworks
+    use_frameworks!
+
+    pod "EggKit", :path => "../../../Frameworks/EggKit"
+    pod "LegoKit", :path => "../../../Frameworks/LegoKit"
+    pod "LegoContext", :path => "../../../Frameworks/LegoContext"
+    pod "LegoProvider", :path => "../../../Frameworks/LegoProvider"
+    pod "LegoAPI", :path => "../../../Frameworks/LegoAPI"
+
+    pod 'MonkeyKing'
+
+    pod 'RxSwift'
+    pod 'RxCocoa'
+
+
+    target 'Door_Tests' do
+    	inherit! :search_paths
+
+    	pod 'Quick', '~> 1.0.0'
+        pod 'Nimble', '~> 5.1.1'
+        pod 'FBSnapshotTestCase'
+        pod 'Nimble-Snapshots'
+  	end
+
+end

@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Me"
-  s.version      = "1.0.1"
+  s.version      = "0.0.1"
   s.summary      = "Me."
 
   # This description is used to generate tags and improve search results.
@@ -53,7 +53,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "Limon" => "fengninglong@gmail.com" }
+  s.author             = { "Limon" => 'fengninglong@gmail.com' }
   # Or just: s.author    = "CasaTaloyum"
   # s.authors            = { "CasaTaloyum" => "casatwy@msn.com" }
   # s.social_media_url   = "http://twitter.com/CasaTaloyum"
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Me/Me/**/*.swift"
+  s.source_files  = "Me/**/*.swift"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['Me/Me/**/*.storyboard', 'Me/Me/**/*.xib', 'Me/Me/**/*.xcassets', 'Me/Me/**/*.lproj']
+  s.resources = ['Me/**/*.storyboard', 'Me/**/*.xib', 'Me/**/*.xcassets', 'Me/**/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
@@ -134,8 +134,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "Mediator"
-
   s.dependency "EggKit"
   s.dependency "LegoKit"
 

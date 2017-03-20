@@ -1,23 +1,26 @@
 # LegoKit
 
-[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects.
+Has not yet been released version. 🙈
 
-You can install it with the following command:
+## Example
 
-```bash
-$ [sudo] gem install cocoapods
-```
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-To integrate LegoKit into your Xcode project using CocoaPods, specify it in your `Podfile`:
+## Requirements
+
+## Installation
+
+LegoKit is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your `Podfile`:
 
 ```ruby
-source 'https://github.com/Limon-O-O/Lego.git'
+source 'git@github.com:Limon-O-O/Lego.git'
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 
 target <Your Target Name> do
 	use_frameworks!
-    pod 'LegoKit', '~> 1.0.1'
+    pod 'LegoKit'
 end
 ```
 
@@ -26,5 +29,13 @@ Then, run the following command:
 ```bash
 $ pod install
 ```
+
+## Author
+
+Limon-O-O, fengninglong@gmail.com
+
+## License
+
+LegoKit is available under the MIT license. See the LICENSE file for more info.
 
 
