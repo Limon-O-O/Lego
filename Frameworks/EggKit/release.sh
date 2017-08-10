@@ -7,6 +7,7 @@ podName="EggKit"
 homepage="https://github.com/Limon-O-O/Lego"
 httpsRepo="https://github.com/Limon-O-O/Lego.git"
 podspecFilePath="./EggKit.podspec"
+projectRootDirectory="Frameworks"
 
 version=""
 oldVersion=""
@@ -43,7 +44,7 @@ getPodInfo() {
 }
 
 getVersion() {
-    read -p "Enter Version: " version
+    read -p "Enter New Version: " version
 
     if test -z "$version"; then
         getVersion
@@ -60,6 +61,16 @@ updateVersion() {
 
     # update README.md file
     while read line; do
+        if [[ $line == *"Has not yet been released version. 🙈"* ]]; then
+            newLine="The Latest Version: ${version}"
+            sed -i '' "s#$line#$newLine#" "./README.md"
+        else
+            if [[ $line == *"The Latest Version: "* ]]; then
+            newLine=${line/$oldVersion/$version}
+            sed -i '' "s#$line#$newLine#" "./README.md"
+            fi
+        fi
+
         if [[ $line == *"pod"*"${oldVersion}"* ]]; then
             newLine=${line/$oldVersion/$version}
             sed -i '' "s#$line#$newLine#" "./README.md"
@@ -71,7 +82,7 @@ updateVersion() {
     done < "./README.md"
 
     # update Xcode project
-    ./update_version.sh --version=$version --target=$podName
+    # ./update_version.sh --version=$version --target=$podName
 }
 
 getInfomation() {
@@ -92,6 +103,9 @@ getInfomation() {
 getPodInfo
 
 echo -e "\n"
+
+echo "Current Version: ${oldVersion}"
+
 while [ "$confirmed" != "y" -a "$confirmed" != "Y" ]
 do
     if [ "$confirmed" == "n" -o "$confirmed" == "N" ]; then
@@ -101,6 +115,8 @@ do
 done
 
 updateVersion
+
+echo -e "\n--------------------------------------------------------------------------------\n"
 
 # Specs 目录相当于 CocoaPods 的 source，详见：https://github.com/CocoaPods/Specs
 specsPath="../../Specs/${podName}/${version}"
@@ -112,9 +128,8 @@ echo "copy $podspecFilePath to $specsPath"
 cp -f "$podspecFilePath" "$specsPath"
 
 # 修改 source file 的路径
-sed -i "" "s%${podName}/${podName}/%${projectRootDirectory}/${podName}/${podName}/${podName}/%g" "${specsPath}/${podName}.podspec"
+sed -i "" "s%${podName}/%${projectRootDirectory}/${podName}/${podName}/%g" "${specsPath}/${podName}.podspec"
 
-git pull
 git add "${specsPath}"
 git add "${podspecFilePath}"
 git add "./README.md"
@@ -122,5 +137,5 @@ git commit -m "[$podName] Update version $version"
 git push
 
 say "finished"
-echo "finished"
+echo -e "\n${Default}🚀  Finished and Remember to ${BGreen}'pod repo update [NAME]' 💯 ${Default}\n"
 

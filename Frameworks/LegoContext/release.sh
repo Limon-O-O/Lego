@@ -61,6 +61,16 @@ updateVersion() {
 
     # update README.md file
     while read line; do
+        if [[ $line == *"Has not yet been released version. 🙈"* ]]; then
+            newLine="The Latest Version: ${version}"
+            sed -i '' "s#$line#$newLine#" "./README.md"
+        else
+            if [[ $line == *"The Latest Version: "* ]]; then
+            newLine=${line/$oldVersion/$version}
+            sed -i '' "s#$line#$newLine#" "./README.md"
+            fi
+        fi
+
         if [[ $line == *"pod"*"${oldVersion}"* ]]; then
             newLine=${line/$oldVersion/$version}
             sed -i '' "s#$line#$newLine#" "./README.md"
@@ -72,7 +82,7 @@ updateVersion() {
     done < "./README.md"
 
     # update Xcode project
-    ./update_version.sh --version=$version --target=$podName
+    # ./update_version.sh --version=$version --target=$podName
 }
 
 getInfomation() {
@@ -118,9 +128,8 @@ echo "copy $podspecFilePath to $specsPath"
 cp -f "$podspecFilePath" "$specsPath"
 
 # 修改 source file 的路径
-sed -i "" "s%${podName}/${podName}/%${projectRootDirectory}/${podName}/${podName}/${podName}/%g" "${specsPath}/${podName}.podspec"
+sed -i "" "s%${podName}/%${projectRootDirectory}/${podName}/${podName}/%g" "${specsPath}/${podName}.podspec"
 
-git pull
 git add "${specsPath}"
 git add "${podspecFilePath}"
 git add "./README.md"

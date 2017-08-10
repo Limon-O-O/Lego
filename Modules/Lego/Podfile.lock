@@ -1,7 +1,7 @@
 PODS:
   - Alamofire (4.4.0)
   - Decodable (1.0.0)
-  - Door (1.0.0):
+  - Door (0.0.1):
     - EggKit
     - LegoAPI
     - LegoContext
@@ -10,12 +10,12 @@ PODS:
     - MonkeyKing
     - RxCocoa
     - RxSwift
-  - EggKit (1.0.1)
+  - EggKit (0.0.1)
   - LegoAPI (0.0.1):
     - LegoContext
     - MoyaSugar
-  - LegoContext (1.0.1)
-  - LegoKit (1.0.1):
+  - LegoContext (0.0.1)
+  - LegoKit (0.0.1):
     - EggKit
     - RxSwift
   - LegoProvider (0.0.1):
@@ -42,12 +42,12 @@ PODS:
     - RxSwift (~> 3.0)
   - MoyaSugar (0.0.3):
     - Moya/RxSwift
-  - Profile (1.0.0)
+  - Profile (0.0.1)
   - Result (3.2.1)
   - RxCocoa (3.3.1):
     - RxSwift (~> 3.3)
   - RxSwift (3.3.1)
-  - Tower (1.0.0):
+  - Tower (0.0.1):
     - LegoContext
     - Mediator_Door
 
@@ -102,11 +102,11 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Decodable: dcce84646aa58682fb0baa9fba67524494f1a5da
-  Door: 385effad4442e23c7ac8badd01be44d47c782b7d
-  EggKit: 4ad8e40cd8ad4cc6ff8c415546e0544b1542b2d0
+  Door: eda2e68820bade518ee3e3b26b852abfdb717fd6
+  EggKit: 3f9ad4412854518c218dcfada390b5d0f92383f5
   LegoAPI: 8e5cc3018ab0bc2d61fad0922360284c7d8a06f4
-  LegoContext: eb4f3645642400d506edb1ea69ed68194e88e269
-  LegoKit: 55617431b4cb0b53968ffc6fa0f105fff07bfbc4
+  LegoContext: 00526d76b50073092abf5095b30da69dd0e9f9b5
+  LegoKit: 80ceed807b02353887986e6686b40be81c3b4444
   LegoProvider: b886a4964d4aeca05c418e43155e2219ac0cef9a
   Me: 7268d637deb936aa14e9a19035793462d85e919a
   Mediator: 8af03cb1f7f8a086db007740f90abd5636eafd6a
@@ -117,11 +117,11 @@ SPEC CHECKSUMS:
   MonkeyKing: 443becfc5579a050cd8b7394b3631c8ed567aae3
   Moya: d3721622e3cc0cc2f038d69a258686f0b66e7252
   MoyaSugar: f07f1199d62f0e69c43c2b2149ace22352099709
-  Profile: 2bdb720c9d782c6d3776f9f7e61827f20655e3ab
+  Profile: 3402c74277adc45a56c0e6c7cc09514328a6815e
   Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
   RxCocoa: 7dcb7a1860fc9cd0e23dae67ab105fc2916670b6
   RxSwift: 8fc9f2de6275a9101d518444e00bf32f1a42caac
-  Tower: f80f250691ebb3f10af2eb9957e9ca52f1825157
+  Tower: c3bd47c0397a1277a44c082e31a349473647594c
 
 PODFILE CHECKSUM: 6afab827afbf857b0468fa85f6e6c66d7a8dc217
 

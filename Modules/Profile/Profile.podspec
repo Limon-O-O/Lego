@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Profile"
-  s.version      = "1.0.0"
+  s.version      = "0.0.1"
   s.summary      = "Profile."
 
   # This description is used to generate tags and improve search results.
@@ -53,7 +53,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "Limon" => "fengninglong@gmail.com" }
+  s.author             = { "Limon" => 'fengninglong@gmail.com' }
   # Or just: s.author    = "CasaTaloyum"
   # s.authors            = { "CasaTaloyum" => "casatwy@msn.com" }
   # s.social_media_url   = "http://twitter.com/CasaTaloyum"
@@ -65,7 +65,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  s.platform     = :ios, "8.0"
+  s.platform     = :ios, "9.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Profile/Profile/**/*.swift"
+  s.source_files  = "Profile/**/*.swift"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = ['Profile/Profile/**/*.storyboard', 'Profile/Profile/**/*.xib', 'Profile/Profile/**/*.xcassets', 'Profile/Profile/**/*.lproj']
+  s.resources = ['Profile/**/*.storyboard', 'Profile/**/*.xib', 'Profile/**/*.xcassets', 'Profile/**/*.lproj']
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
