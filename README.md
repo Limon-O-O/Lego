@@ -280,7 +280,7 @@ end
 
 ## 三、实践心得
 
-1. `Networking`，分模块。各个模块的 API，分别写到相对应的模块，没有一个 `集约型` 的文件。
+1. 网络层，`LegoProvider` + `LegoAPI`，全部 `API` 都放在一个 `Pod库` 内，方便测试。`Networking` 和 `API` 分开。
 
 2. `UserDefaults` 分模块，也稍微避免 `UserDefaults.standard` 存储大量数据之后，导致读写慢
 
