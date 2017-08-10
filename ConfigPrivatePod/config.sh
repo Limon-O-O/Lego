@@ -188,7 +188,8 @@ compareFilePath="${projectDirectoryPath}/version_compare.sh"
 podfilePath="${projectDirectoryPath}/templates/swift/Example/Podfile"
 updateVersionPath="${projectDirectoryPath}/update_version.sh"
 
-mkdir -p "${projectDirectoryPath}"
+mkdir -p "${projectDirectoryPath}/Pod"
+
 echo "Copy pod-template to $projectDirectoryPath"
 cp -rf ./pod-template/.      "$projectDirectoryPath"
 
